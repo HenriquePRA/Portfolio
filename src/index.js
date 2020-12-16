@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Portfolio from './Portfolio';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Portfolio />
   </React.StrictMode>,
   document.getElementById('root')
 );

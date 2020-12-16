@@ -1,0 +1,104 @@
+@import './colors.scss';
+
+.Skills {
+    width: 732px;
+    border-radius: .5rem;
+    flex-direction: column;
+    text-align: left;
+    background-color: $cor1;
+    margin: 6rem auto;
+    padding: 3rem 4rem 4rem 4rem;
+    color: $cor4;
+    box-shadow: 0 0 5px 3px rgba(15, 117, 117, 0.26), 0 0 2px 1px rgba(29, 29, 29, 0.55);
+}
+.Skills .front{
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        padding: .5rem;
+        margin-top: 0;
+    }
+    
+    .frontCardsContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .frontCard {
+        width: 13rem;
+        height: 5rem;
+        border-radius: .3rem;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+        display: flex;
+        flex-direction: row;
+        background-color: #e3e9ec;
+        overflow: hidden;
+        margin: .3rem;
+
+        img {
+            height: 3.5rem;
+            width: 3.5rem;
+            margin: auto 1rem;
+        }
+    }
+
+    .frontCard .frontCardTextBg{
+        width: 100%;
+        display: flex;        
+        
+        span {
+            margin: auto;
+            font-size: 1.3rem;
+            text-align: center;
+            font-family: RobotoCondensed;
+        }
+    }
+}
+
+.Skills .back {
+    display: flex;
+    flex-direction: column;
+    
+    h3 {
+        padding: .5rem;
+        margin-top: 3rem;
+    }
+    .backcardsContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .backCard {
+        width: 9rem;
+        height: 9rem;
+        margin: .3rem;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.12),inset 0 1px 2px rgba(0,0,0,0.24);
+        display: flex;
+        flex-direction: column;
+        background-color: #eceff1;
+        overflow: hidden;
+        
+        img {
+            margin: auto;
+            height: 4rem;
+        }
+    }
+
+    .backCard .backCardTxtbg{
+        width: 100%;
+        display: flex;   
+        
+        span {
+            margin: .7rem auto;
+            font-size: 1.1rem;
+            text-align: center;
+            font-family: RobotoCondensed;
+        }
+    }
+
+}
