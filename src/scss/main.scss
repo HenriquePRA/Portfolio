@@ -20,11 +20,20 @@
 // color palette
 @import './colors.scss';
 
-// about me block
+// navbar
+@import './navbar.scss';
+
+// profile block
 @import './profile.scss';
+
+// about me block
+@import './about.scss';
 
 // my skills
 @import './skills.scss';
+
+// projects
+@import './projects.scss';
 
 body {
     margin: 0;
@@ -35,4 +44,5 @@ body {
 .Portfolio {
     padding: 8rem 0 7rem 0;
     background: linear-gradient(to bottom right,  $cor3, $cor2);
+    position: relative;
 }

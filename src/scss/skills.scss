@@ -1,13 +1,12 @@
 @import './colors.scss';
 
 .Skills {
-    width: 800px;
+    width: 860px;
     border-radius: .5rem;
     flex-direction: column;
     text-align: left;
     background-color: $cor1;
     margin: 6rem auto;
-    padding: 4rem 2rem 4rem 2rem;
     color: $cor4;
     box-shadow: 0 0 5px 3px rgba(15, 117, 117, 0.26), 0 0 2px 1px rgba(29, 29, 29, 0.55);
 }
@@ -15,18 +14,17 @@
     display: flex;
     flex-direction: column;
 
-    h3 {
-        padding: .5rem;
-        margin-top: 0;
+    h4 {
+        padding: .3rem;
+        display: flex;
     }
     
     .cardsContainer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 2rem;
-        border: 1px solid red;
+        justify-content: space-between;
+        margin: 0 2rem;
     }
 
     .Card {

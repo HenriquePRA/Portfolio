@@ -1,0 +1,13 @@
+.About {
+    width: 700px;
+    border-radius: .5rem;
+    display: flex;
+    background-color: $cor1;
+    margin: auto;
+    padding: 4rem;
+    box-shadow: 0 0 5px 3px rgba(15, 117, 117, 0.26), 0 0 2px 1px rgba(29, 29, 29, 0.55);
+
+    h2 {
+        margin-top: 0;
+    }
+}
