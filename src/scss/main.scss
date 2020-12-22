@@ -1,20 +1,13 @@
 //---------------------- Predefinicoes de estilo ---------------------- //
 
-@font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Regular.ttf")
-}
-@font-face {
-    font-family: "Roboto-Medium";
-    src: url("../fonts/Roboto-Medium.ttf")
-}
-@font-face {
-    font-family: "Roboto-Bold";
-    src: url("../fonts/Roboto-Bold.ttf")
-}
+
 @font-face {
     font-family: "RobotoCondensed";
     src: url("../fonts/RobotoCondensed-Regular.ttf")
+}
+@font-face {
+    font-family: "CutiveMono";
+    src: url("../fonts/CutiveMono-Regular.ttf")
 }
 
 // color palette
@@ -38,11 +31,11 @@
 body {
     margin: 0;
     color: #3b475e;
-    font-family: "Roboto";  
+    font-family: "RobotoCondensed";  
 }
 
 .Portfolio {
-    padding: 8rem 0 7rem 0;
-    background: linear-gradient(to bottom right,  $cor3, $cor2);
+    padding: 0 0 7rem 0;
+    background: $cor3;
     position: relative;
 }

@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div className="About">
             <div id="About-Me">
-                <h2>Sobre Min</h2>
+                <h2>SOBRE MIN</h2>
                 <p>
                     Olá sou Henrique, há apróximadamente 2 anos venho adiquirindo experiencia e conhecimentos sobre 
                     desenvolvimento de aplicações web e desktop, sou estudante do curso de sistemas para internet

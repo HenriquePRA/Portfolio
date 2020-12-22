@@ -8,12 +8,10 @@ import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 
 let Portfolio = () => {
-
-
     return (
-        <div className="Portfolio">            
-            <Profile />
+        <div className="Portfolio">
             <Navbar />
+            <Profile />
             <About />
             <Projects />
         </div>

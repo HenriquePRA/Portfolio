@@ -1,18 +1,25 @@
 #navbar {
-    padding: 1rem 0;
+    width: 100%;
+    padding: .5rem 0;
     display: flex;
-    margin: auto;
     flex-direction: row;
     justify-content: center;
+    background-color: $cor1;
+    position: fixed;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+}
+
+.navContainer {
+    width: 828px;
 }
 
 #navbar button {
     padding: .8rem 1.5rem;
     margin-right: .5rem;
-    font-size: 15px;
-    background-color: #263238;
+    font-size: .8rem;
+    background-color: $cor4;
     font-family: RobotoCondensed;
-    color: $cor1;
+    color: $txt_cor1;
     border: none;
     border-radius: .3rem;
     cursor: pointer;
@@ -21,5 +28,6 @@
 }
 
 #navbar button:hover{    
-    background-color: #546eff;    
+    background-color: #32474abe;
+    box-shadow: none;
 }

@@ -2,19 +2,22 @@
     display: flex;
     justify-content: center;
     width: 828px;
-    padding: 2rem 0;
     margin: 10rem auto auto auto;
     border-radius: .5rem;
     background-color: $cor1;
     flex-direction: column;
-    box-shadow: 0 0 5px 3px rgba(15, 117, 117, 0.26), 0 0 2px 1px rgba(29, 29, 29, 0.55);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
     .blockDescription {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        background-color:$cor1_1;
-        margin: .5rem 2rem 1rem 2rem ;
-        padding: .5rem 2rem;
-        border-radius: .5rem;
+        background-color: $cor1;
+        border-radius: .45rem .45rem 0 0;
+        border-bottom: 1px solid #2632383d;
+        margin: 0 0 1rem 0 ;
+        padding: .5rem 3rem;
+    
+        h3, p {
+            font-family: "RobotoCondensed";
+        }
     }
 }
 
@@ -43,6 +46,7 @@
     }
 
     p {
+        font-family: "CutiveMono";
         grid-column: 1/7;
         grid-row: 2/4;
         font-size: 14px;
@@ -63,10 +67,10 @@
         grid-row: 5/6;
         margin: 0 .5rem .5rem 0;
         display: flex;
-        font-size: 15px;
-        background-color: #263238;
+        font-size: .8rem;
+        background-color: $cor4;
         font-family: RobotoCondensed;
-        color: $cor1;
+        color: $txt_cor1;
         border: none;
         border-radius: .3rem;
         cursor: pointer;
@@ -75,6 +79,10 @@
 
         span {
             margin: auto;
+        }
+
+        &:hover {
+            background-color: $cor4_1;
         }
     }
 
@@ -144,33 +152,62 @@
     }
 }
 
+.hidden {
+    display: none !important;
+}
+
+.alterPgBtnAnt, .alterPgBtnPrx {
+    border-radius: .4rem;
+    width: 3.0rem;
+    background-color: $cor4;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: .5rem .2rem;
+    transition: all ease-in-out .5s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    img {
+        margin: auto .3rem;
+        height: .8rem;
+    }
+
+    span {
+        font-family: RobotoCondensed;
+        margin: auto .5rem;
+        font-size: .8rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $cor4_1;
+    }
+} 
+.alterPgBtnAnt:hover, .alterPgBtnPrx:hover {
+    border-color: rgba(0, 0, 0, 0.24);
+} 
+
+.alterPgBtnAnt {
+    margin-right: 2.5rem;
+}
+
+#ProjNavCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 #LoadProj {
     display: flex;
-    height: 70px;
-    width: 99%;
-    justify-content: center;
+    height: 3.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: $cor1;
+    border-top: 1px solid #2632383d;
+    border-radius: 0 0 .45rem .45rem;
+    justify-content: space-between;
 
-    button {
-        margin: auto;
-        cursor: pointer;
-        border-radius: none;
-        border: none;
-        color: $cor3;
-        height: 45px;
-        width: 140px;
-        font-size: 16px;
-        font-family: "Roboto-Medium";
-        padding: 0 18px;
-        background-color: $cor1;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        border-radius: 5px;
-        transition: all .3s;
-
-        &:hover {
-            height: 50px;
-            width: 150px;
-            color: $cor1;
-            background-color: $cor3;
-        }
+    #navGuia {
+        margin: auto 2.5rem;
     }
 }

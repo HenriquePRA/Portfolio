@@ -3,9 +3,11 @@ import React from 'react'
 const Navbar = () => {
     return (
         <div id="navbar">
-            <button>Sobre</button>
-            <button>Projetos</button>
-            <button>Contato</button>
+            <div className="navContainer">
+                <button>SOBRE</button>
+                <button>PROJETOS</button>
+                <button>CONTATO</button>
+            </div>
         </div>
     )
 }

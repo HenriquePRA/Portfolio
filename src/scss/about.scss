@@ -5,9 +5,13 @@
     background-color: $cor1;
     margin: auto;
     padding: 4rem;
-    box-shadow: 0 0 5px 3px rgba(15, 117, 117, 0.26), 0 0 2px 1px rgba(29, 29, 29, 0.55);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
     h2 {
+        font-family: robotoCondensed;
         margin-top: 0;
+    }
+    h2, p {
+        color: $txt_cor2;
     }
 }
