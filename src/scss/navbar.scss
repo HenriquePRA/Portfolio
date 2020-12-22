@@ -1,5 +1,6 @@
 #navbar {
-    width: 100%;
+    width: 150px;
+    height: 100%;
     padding: .5rem 0;
     display: flex;
     flex-direction: row;
@@ -10,12 +11,15 @@
 }
 
 .navContainer {
-    width: 828px;
+    display: flex;
+    flex-direction: column;
 }
 
 #navbar button {
-    padding: .8rem 1.5rem;
-    margin-right: .5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem auto;
     font-size: .8rem;
     background-color: $cor4;
     font-family: RobotoCondensed;
@@ -25,6 +29,17 @@
     cursor: pointer;
     transition: all .3s;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: .8rem .5rem ;
+    }
+
+    span {
+        width: 100%;
+        margin: auto .5rem;
+    }
 }
 
 #navbar button:hover{    
