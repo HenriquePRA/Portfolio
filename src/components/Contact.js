@@ -5,6 +5,29 @@ import Github from '../img/tools/github.svg';
 import Linkedin from '../img/misc/linkedin.svg';
 
 const Contact = () => {
+
+
+    const copyBtn = (e, cls) => {
+        // copia o email
+        const email = document.querySelector(cls)
+        let aux = document.createElement("input")
+        aux.setAttribute("value", email.innerHTML)
+        document.body.appendChild(aux)
+        aux.select()
+        document.execCommand("copy")
+        document.body.removeChild(aux)
+
+        // aplica estilos no botão
+        const botao = e.currentTarget
+        botao.style.backgroundColor = "#4caf50";
+        botao.innerHTML = "<span>COPIADO !</span>"
+
+        setTimeout(() => {
+            botao.innerHTML = "<span>COPIAR</span>"
+            botao.removeAttribute('style');
+        }, 1500);
+    }
+
     return (
         <div className="Contact">
         <div className="contactHeader">
@@ -21,7 +44,11 @@ const Contact = () => {
             </div>
             <div className="numero">
                 <span className="tel-1">(83) 988900948</span>
-                <div className="contactButton">
+                <span style={{'display':'none'}} className="num_cel">83988900948</span>
+                <div 
+                    className="contactButton"
+                    onClick={(e) => copyBtn(e, ".num_cel")}
+                >
                    <span>COPIAR</span>
                 </div>                        
             </div>
@@ -35,13 +62,19 @@ const Contact = () => {
             <div id="emails">
                 <div className="emailBlock">
                     <span className="email-1">HenriqueP.R@hotmail.com</span> 
-                    <div className="contactButton">
+                    <div 
+                        className="contactButton" 
+                        onClick={(e) => copyBtn(e, ".email-1")}
+                    >
                         <span>COPIAR</span>
                     </div>
                 </div>
                 <div className="emailBlock">
                     <span className="email-2">HenriquePoggiRA@gmail.com</span> 
-                    <div className="contactButton">
+                    <div 
+                        className="contactButton"
+                        onClick={(e) => copyBtn(e, ".email-2")}
+                    >
                         <span>COPIAR</span>
                     </div>
                 </div>
