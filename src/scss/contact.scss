@@ -14,11 +14,11 @@
     }
 
     .contactButton {
+        display: flex;
         cursor: pointer;
         border: none;
         color: $txt_cor1;
         height: 30px;
-        width: 5rem;
         font-size: 12px;
         padding: 0 18px;
         background-color: #32474a;
@@ -29,6 +29,10 @@
 
         &:hover {
             background-color: $cor4_1;
+        }
+
+        span {
+            margin: auto;
         }
     
     }

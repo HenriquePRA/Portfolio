@@ -44,9 +44,9 @@ const Projects = () => {
                     <img src={springSvg} className="langicon three_of4_stk" alt="Spring Icon"></img>
                     <img src={mongoSvg} className="langicon four_of4_stk" alt="Mongo Icon"></img>
 
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
                 <div className="proj">
                     <h4>IF Mobile</h4>
@@ -59,9 +59,9 @@ const Projects = () => {
                     <img src={nodeSvg} className="langicon four_of5_stk" alt="Node Icon"></img>
                     <img src={bootstrapSvg} className="langicon five_of5_stk" alt="bootstrap Icon"></img>     
 
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div className="proj">
@@ -72,17 +72,17 @@ const Projects = () => {
                     <img src={springSvg} className="langicon two_of3_stk" alt="Spring Icon"></img>
                     <img src={mysqlSvg} className="langicon three_of3_stk" alt="mysql Icon"></img>
 
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
                 <div className="proj">
                     <h4>Swing Memory Game</h4>
                     <p>Esse projeto consiste em dois jogos de Memória onde um faz o uso do java swing e outro faz o console.</p>
                     <img src={javaSvg} className="langicon one_stk" alt="Java Icon"></img>
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div className="proj">
@@ -90,9 +90,9 @@ const Projects = () => {
                     <p>Criei esse portfolio como um projeto a fim de dominar o react com sass e exibir meus projetos.</p>
                     <img src={reactSvg} className="langicon one_of2_stk" alt="React Icon"></img>
                     <img src={sassSvg} className="langicon two_of2_stk" alt="Sass Icon"></img>                
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div className="proj">
@@ -100,9 +100,9 @@ const Projects = () => {
                     <p>Projeto final de estruturas de dados esse projeto resume-se em uma engine de busca.</p>
                     <img src={djangoSvg} className="langicon one_of2_stk" alt="Django Icon"></img>
                     <img src={bootstrapSvg} className="langicon two_of2_stk" alt="Bootstrap Icon"></img>                
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div className="proj hidden">
@@ -112,18 +112,18 @@ const Projects = () => {
                     <img src={CssSvg} className="langicon two_of4_stk" alt="CSS Icon"></img>
                     <img src={JavascriptSvg} className="langicon three_of4_stk" alt="Javascript Icon"></img>
                     <img src={firebaseSvg} className="langicon four_of4_stk" alt="Firebase Icon"></img>
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div className="proj hidden">
                     <h4>Naval Battle</h4>
                     <p>Esse projeto simula um jogo de batalha naval foi minha primeira experiencia com python.</p>
                     <img src={pythonSvg} className="langicon one_stk" alt="HTML Icon"></img>
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div className="proj hidden">
@@ -131,9 +131,9 @@ const Projects = () => {
                     <p>Esse é meu primeiro projeto front-end, simula um site catalogo de venda de propriedades em jogos.</p>
                     <img src={HtmlSvg} className="langicon one_of2_stk" alt="HTML Icon"></img>
                     <img src={CssSvg} className="langicon two_of2_stk" alt="CSS Icon"></img>
-                    <button className="projButton">
+                    <div className="projButton">
                         <span>VER MAIS</span>
-                    </button>
+                    </div>
                 </div>
 
                 <div id="LoadProj">
@@ -141,13 +141,13 @@ const Projects = () => {
                         Exibindo 0 a 6 de 18 projetos
                     </span>
                     <div id="ProjNavCont">
-                        <button className="alterPgBtnPrx" id="proxFatu">
+                        <div className="alterPgBtnPrx" id="proxFatu">
                             <img src={svgSetaEsquerda} alt="seta apontando a esquerda" />
-                        </button>
+                        </div>
 
-                        <button  className="alterPgBtnAnt" id="anteFatu">
+                        <div  className="alterPgBtnAnt" id="anteFatu">
                             <img src={svgSetaDireita} alt="seta apontando a direita" />
-                        </button >                         
+                        </div >                         
                     </div>
                 </div>   
             </div>

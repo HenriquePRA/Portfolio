@@ -93,7 +93,7 @@ const Navbar = () => {
             onMouseLeave={(e) => mouseLeaveNav(e)}        
         >
             <div className="navContainer">
-                <button
+                <div className="navBtn"
                     onMouseEnter={(e) => setbtnStyleEnter(e)}
                     onMouseLeave={(e) => setbtnStyleLeave(e)}
                     onClick={() => scrollProfile()}
@@ -102,8 +102,8 @@ const Navbar = () => {
                     <span className="navSpan">
                         SOBRE
                     </span>
-                </button>
-                <button
+                </div>
+                <div className="navBtn"
                     onMouseEnter={(e) => setbtnStyleEnter(e)}
                     onMouseLeave={(e) => setbtnStyleLeave(e)}
                     onClick={() => scrollProjects()}
@@ -112,8 +112,8 @@ const Navbar = () => {
                     <span className="navSpan">
                         PROJETOS
                     </span>                    
-                </button>
-                <button
+                </div>
+                <div className="navBtn"
                     onMouseEnter={(e) => setbtnStyleEnter(e)}
                     onMouseLeave={(e) => setbtnStyleLeave(e)}
                     onClick={() => scrollContact()}
@@ -122,7 +122,7 @@ const Navbar = () => {
                     <span className="navSpan">
                         CONTATO
                     </span>
-                </button>
+                </div>
             </div>
         </div>
     )

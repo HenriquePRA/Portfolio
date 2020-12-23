@@ -21,7 +21,9 @@ const Contact = () => {
             </div>
             <div className="numero">
                 <span className="tel-1">(83) 988900948</span>
-                <button className="contactButton">COPIAR</button>                        
+                <div className="contactButton">
+                   <span>COPIAR</span>
+                </div>                        
             </div>
         </div>
 
@@ -33,11 +35,15 @@ const Contact = () => {
             <div id="emails">
                 <div className="emailBlock">
                     <span className="email-1">HenriqueP.R@hotmail.com</span> 
-                    <button className="contactButton">COPIAR</button>
+                    <div className="contactButton">
+                        <span>COPIAR</span>
+                    </div>
                 </div>
                 <div className="emailBlock">
                     <span className="email-2">HenriquePoggiRA@gmail.com</span> 
-                    <button className="contactButton">COPIAR</button>
+                    <div className="contactButton">
+                        <span>COPIAR</span>
+                    </div>
                 </div>
             </div>
         </div>
