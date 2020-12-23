@@ -64,7 +64,27 @@ const Navbar = () => {
                 })
             }, 150)            
         }
+    }
 
+    const scrollProfile = () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    const scrollProjects = () => {
+        let projs_div = document.querySelector(".Proj_container");
+        if (window.innerHeight > projs_div.offsetHeight) {
+            projs_div.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+        } else {
+            projs_div.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+        }
+    }
+
+    const scrollContact = () => {
+        let cont_div = document.querySelector(".Contact");
+        if (window.innerHeight > cont_div.offsetHeight) {
+            cont_div.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
+        } else {
+            cont_div.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+        }
     }
 
     return (
@@ -76,6 +96,7 @@ const Navbar = () => {
                 <button
                     onMouseEnter={(e) => setbtnStyleEnter(e)}
                     onMouseLeave={(e) => setbtnStyleLeave(e)}
+                    onClick={() => scrollProfile()}
                 >
                     <img src={sobreSvg} alt="about icon"></img>
                     <span className="navSpan">
@@ -85,6 +106,7 @@ const Navbar = () => {
                 <button
                     onMouseEnter={(e) => setbtnStyleEnter(e)}
                     onMouseLeave={(e) => setbtnStyleLeave(e)}
+                    onClick={() => scrollProjects()}
                 >
                     <img src={projetosSvg} alt="projects icon"></img>
                     <span className="navSpan">
@@ -94,6 +116,7 @@ const Navbar = () => {
                 <button
                     onMouseEnter={(e) => setbtnStyleEnter(e)}
                     onMouseLeave={(e) => setbtnStyleLeave(e)}
+                    onClick={() => scrollContact()}
                 >
                     <img src={contatoSvg} alt="contact icon"></img>
                     <span className="navSpan">
