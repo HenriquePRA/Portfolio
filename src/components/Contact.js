@@ -43,13 +43,23 @@ const Contact = () => {
         </div>
 
         <div className="socialCards">
-            <div>
+            <div 
+                onClick={
+                    () => window.location.href = "https://github.com/HenriquePRA"
+                } 
+                className="socialCard"
+            >
                 <div className="SCimgCont">
                     <img src={Github} alt="github logo"></img>
                 </div>
                 <span>Github</span>
             </div>
-            <div>
+            <div 
+                onClick={
+                    () => window.location.href = "https://www.linkedin.com/in/henrique-poggi/"
+                } 
+                className="socialCard"
+            >
                 <div className="SCimgCont">
                     <img src={Linkedin} alt="linkedin logo"></img>
                 </div>

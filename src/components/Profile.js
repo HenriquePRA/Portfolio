@@ -15,8 +15,22 @@ const Profile = (props) => {
                 <h3>Henrique Poggi</h3>
                 <h5>Desenvolvedor junior</h5>
                 <div id="links">
-                    <img src={Github} alt="Github" className="lnk1"></img>
-                    <img src={Linkedin} alt="Linkedin" className="lnk2"></img>
+                    <img 
+                        src={Github} 
+                        alt="Github" 
+                        className="lnk1" 
+                        onClick={
+                            () => window.location.href = "https://github.com/HenriquePRA"
+                        }
+                    ></img>
+                    <img 
+                        src={Linkedin} 
+                        alt="Linkedin" 
+                        className="lnk2" 
+                        onClick={
+                            () => window.location.href = "https://www.linkedin.com/in/henrique-poggi/"
+                        }
+                    ></img>
                 </div>
             </div>            
         </div>
