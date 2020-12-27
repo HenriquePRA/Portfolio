@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './scss/main.scss';
 
@@ -10,14 +10,24 @@ import Project from './components/Project';
 import Contact from './components/Contact';
 
 let Portfolio = () => {
+
+    const [showproj, setShowproj] = useState(false);
+    const [projdata, setprojdata] = useState({});
+
     return (
-        <div className="Portfolio">
+        <div className={showproj ? "Portfolio filter" : "Portfolio"} >
             <Navbar />
             <Profile />
             <About />
-            <Projects />
+            <Projects 
+                setShowproj={setShowproj}
+                setprojdata={setprojdata} 
+            />
+            <Project 
+                setShowproj={setShowproj}
+                projdata={projdata}    
+            />
             <Contact />
-            <Project />
         </div>
     );
 }
