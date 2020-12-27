@@ -20,8 +20,20 @@ import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
 import svgSetaDireita from '../img/misc/seta-direita.svg'
 import svgSetaEsquerda from '../img/misc/seta-esquerda.svg'
+import jsonProjs from './projects_pt';
 
-const Projects = () => {
+const Projects = (props) => {
+
+    const updateProj = (name) => {
+        let select_proj;
+        jsonProjs.forEach(proj => {
+            if (proj.name === name) {
+                select_proj = proj;
+            }
+        })
+        props.setprojdata(select_proj);
+        props.setShowproj(true);
+    }
 
     return (
         <div className="Proj_container">
@@ -44,7 +56,7 @@ const Projects = () => {
                     <img src={springSvg} className="langicon three_of4_stk" alt="Spring Icon"></img>
                     <img src={mongoSvg} className="langicon four_of4_stk" alt="Mongo Icon"></img>
 
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("Must-Do List")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
