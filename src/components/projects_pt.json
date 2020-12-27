@@ -1,8 +1,12 @@
 [
     {
         "name": "Must-Do List",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "Esse é o primeiro projeto no qual desenvolvo um sistema para plataforma android, trata-se de um to do list ao qual permite o usuário a criar uma conta e várias listas de tarefas, o sistema também pode ser acessado pela web onde o usuário pode autenticar-se e realizar as mesmas operações que na sua versão de aplicativo mobile.",
+            "Feito utilizando springboot, vue e mongo fiz esse projeto (parcialmente) para a disciplida de persistencia de dados."
+        ],
+        "imgLinkList": [],
+        "tools": ["vue", "springboot", "androidstudio", "mongo"]
     },{
         "name": "IF Mobile",
         "description": "",
