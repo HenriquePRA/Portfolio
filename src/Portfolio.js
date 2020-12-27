@@ -6,7 +6,7 @@ import About from './components/About';
 import Profile from './components/Profile';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
-import Project from './components/Project';
+import Details from './components/Details';
 import Contact from './components/Contact';
 
 let Portfolio = () => {
@@ -21,11 +21,12 @@ let Portfolio = () => {
             <About />
             <Projects 
                 setShowproj={setShowproj}
-                setprojdata={setprojdata} 
+                setprojdata={setprojdata}
             />
-            <Project 
+            <Details
+                showproj={showproj}
+                projdata={projdata}
                 setShowproj={setShowproj}
-                projdata={projdata}    
             />
             <Contact />
         </div>
