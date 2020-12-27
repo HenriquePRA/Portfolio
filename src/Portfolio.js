@@ -15,20 +15,23 @@ let Portfolio = () => {
     const [projdata, setprojdata] = useState({});
 
     return (
-        <div className={showproj ? "Portfolio filter" : "Portfolio"} >
-            <Navbar />
-            <Profile />
-            <About />
-            <Projects 
-                setShowproj={setShowproj}
-                setprojdata={setprojdata}
-            />
+        <div  >
+            <div className={showproj ? "Portfolio filter" : "Portfolio"}>
+                <Navbar />
+                <Profile />
+                <About />
+                <Projects 
+                    setShowproj={setShowproj}
+                    setprojdata={setprojdata}
+                />
+                
+                <Contact />
+            </div>
             <Details
-                showproj={showproj}
-                projdata={projdata}
-                setShowproj={setShowproj}
-            />
-            <Contact />
+                    showproj={showproj}
+                    projdata={projdata}
+                    setShowproj={setShowproj}
+                />
         </div>
     );
 }
