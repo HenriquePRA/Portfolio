@@ -84,7 +84,7 @@ const Projects = (props) => {
                     <img src={springSvg} className="langicon two_of3_stk" alt="Spring Icon"></img>
                     <img src={mysqlSvg} className="langicon three_of3_stk" alt="mysql Icon"></img>
 
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("Vendor Pop")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const Projects = (props) => {
                     <h4>Swing Memory Game</h4>
                     <p>Esse projeto consiste em dois jogos de Memória onde um faz o uso do java swing e outro faz o console.</p>
                     <img src={javaSvg} className="langicon one_stk" alt="Java Icon"></img>
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("Swing Memory Game")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ const Projects = (props) => {
                     <p>Criei esse portfolio como um projeto a fim de dominar o react com sass e exibir meus projetos.</p>
                     <img src={reactSvg} className="langicon one_of2_stk" alt="React Icon"></img>
                     <img src={sassSvg} className="langicon two_of2_stk" alt="Sass Icon"></img>                
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("React/Sass Portfolio")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ const Projects = (props) => {
                     <p>Projeto final de estruturas de dados esse projeto resume-se em uma engine de busca.</p>
                     <img src={djangoSvg} className="langicon one_of2_stk" alt="Django Icon"></img>
                     <img src={bootstrapSvg} className="langicon two_of2_stk" alt="Bootstrap Icon"></img>                
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("Engine de busca (Framework de detecção Sinonímia)")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ const Projects = (props) => {
                     <img src={CssSvg} className="langicon two_of4_stk" alt="CSS Icon"></img>
                     <img src={JavascriptSvg} className="langicon three_of4_stk" alt="Javascript Icon"></img>
                     <img src={firebaseSvg} className="langicon four_of4_stk" alt="Firebase Icon"></img>
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("My Book List")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
@@ -133,7 +133,7 @@ const Projects = (props) => {
                     <h4>Naval Battle</h4>
                     <p>Esse projeto simula um jogo de batalha naval foi minha primeira experiencia com python.</p>
                     <img src={pythonSvg} className="langicon one_stk" alt="HTML Icon"></img>
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("Naval Battle")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ const Projects = (props) => {
                     <p>Esse é meu primeiro projeto front-end, simula um site catalogo de venda de propriedades em jogos.</p>
                     <img src={HtmlSvg} className="langicon one_of2_stk" alt="HTML Icon"></img>
                     <img src={CssSvg} className="langicon two_of2_stk" alt="CSS Icon"></img>
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("Byte Barrage")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>

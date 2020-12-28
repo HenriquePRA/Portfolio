@@ -46,10 +46,25 @@ const Details = (props) => {
 
 							{/* cards com tecnologias utilizadas */}
 							<h4>Ferramentas Utilizadas</h4>
-							<div className="projDetailCards">
+							<div 
+								className="projDetailCards"
+								style={(projeto.tools.length > 3) ?
+									{"justifyContent": "space-around"}
+								: 
+									{"justifyContent": "flex-start"}
+								}
+							>
 								{projeto.tools.map((ferramenta) => {
 									return (
-										<div className="projLangCard" key={ferramenta}>
+										<div 
+											className="projLangCard" 
+											key={ferramenta}
+											style={(projeto.tools.length <= 3) ?
+												{"marginRight": "1rem"}
+											:
+												null
+											}	
+										>
 											<DynamicImg nome={ferramenta}/>
 											<div className="CardTextBg bg-minicard">
 												<span>{ferramenta}</span>
@@ -64,7 +79,7 @@ const Details = (props) => {
 								<h4>Link para o repositório do projeto</h4>
 								<p
 									onClick={projeto.repo !== "PROJETO EM ANDAMENTO" ? 
-										() => window.location.href = "https://github.com/HenriquePRA/nodemobile"
+										() => window.location.href = projeto.repo
 									: null
 								}
 									className={projeto.repo === "PROJETO EM ANDAMENTO" ? 

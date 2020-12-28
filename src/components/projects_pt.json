@@ -2,44 +2,65 @@
     {
         "name": "Must-Do List",
         "description": [
-            "Esse é o primeiro projeto no qual desenvolvo um sistema para plataforma android, trata-se de um to do list ao qual permite o usuário a criar uma conta e várias listas de tarefas, o sistema também pode ser acessado pela web onde o usuário pode autenticar-se e realizar as mesmas operações que na sua versão de aplicativo mobile.",
-            "Feito utilizando springboot, vue e mongo fiz esse projeto (parcialmente) para a disciplida de persistencia de dados."
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
         ],
         "tools": ["Vue", "Springboot", "Android Studio", "Mongo"],
         "repo": "PROJETO EM ANDAMENTO"
     },{
         "name": "IF Mobile",
         "description": [
-            "Feito como projeto final de banco de dados relacionais na disciplina de banco de dados 2 foi feito de forma a simular o banco de dados de uma pequena operadora de telefonia, permite o cadastro de usuários, criação/exclusão de   números telefonicos, associação/remoção de números telefonicos aos usuários, geração de ligações e faturas", "feito com o intuitio de testar minhas habilidades no banco de dados postgreSQl faz o uso de funções, rotinas com e sem controle transacional, triggers e views. alem disso faz uso de ReactJS/Bootstrap no Front-End e de NodeJS/ExpressJS no Back-End."],
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
         "tools": ["Postgres", "Express", "React", "Node", "Bootstrap"],
         "repo": "https://github.com/HenriquePRA/nodemobile"
     },{
         "name": "Vendor Pop",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Angular", "Springboot", "Mysql"],
+        "repo": "https://github.com/HenriquePRA/Vendor-Pop"
     },{
         "name": "Swing Memory Game",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Java"],
+        "repo": "https://github.com/HenriquePRA/Memory-Game"
     },{
         "name": "React/Sass Portfolio",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["React", "Sass"],
+        "repo": "https://github.com/HenriquePRA/react-sass-portfolio"
     },{
-        "name": "Engine de busca",
-        "description": "",
-        "imgLinkList": []
+        "name": "Engine de busca (Framework de detecção Sinonímia)",
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Python"],
+        "repo": "https://github.com/HenriquePRA/Curriculum-Base"
     },{
         "name": "My Book List",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["html", "css"],
+        "repo": "PROJETO EM ANDAMENTO"
     },{
         "name": "Naval Battle",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Python"],
+        "repo": "https://github.com/HenriquePRA/Naval-Battle"
     },{
         "name": "Byte Barrage",
-        "description": "",
-        "imgLinkList": []
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["html", "css"],
+        "repo": "https://github.com/HenriquePRA/Byte-Barrage"
     }
 ]

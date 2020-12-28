@@ -19,7 +19,7 @@ import androidSvg from '../img/tools/android.svg'
 import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
 
-const Dynamic_img = (f) => {
+const DynamicIMG = (f) => {
     if (f.nome === "html") {
         return <img src={HtmlSvg} alt=""></img>
     } else if (f.nome === "css") {
@@ -63,4 +63,4 @@ const Dynamic_img = (f) => {
     }
 } 
 
-export default Dynamic_img;
+export default DynamicIMG;
