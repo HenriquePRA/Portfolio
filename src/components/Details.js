@@ -58,6 +58,24 @@ const Details = (props) => {
 									)
 								})}
 							</div>
+
+							{/* link para o repositorio do projeto */}
+							<div className="projRepoLink">
+								<h4>Link para o repositório do projeto</h4>
+								<p
+									onClick={projeto.repo !== "PROJETO EM ANDAMENTO" ? 
+										() => window.location.href = "https://github.com/HenriquePRA/nodemobile"
+									: null
+								}
+									className={projeto.repo === "PROJETO EM ANDAMENTO" ? 
+										"projEmAndamento"
+									:
+										"projConcluido"
+									}
+								>
+									{projeto.repo}
+								</p>
+							</div>
 						</div>
 					)
 				})}

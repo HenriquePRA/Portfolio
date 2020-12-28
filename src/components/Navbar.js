@@ -4,12 +4,12 @@ import projetosSvg from '../img/misc/projects.svg'
 import contatoSvg from '../img/misc/contato.svg'
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     
     const [tLock, setTlock] = useState(false);
 
     const setbtnStyleEnter = (e) => {
-        if (!tLock) {
+        if (!tLock && !props.showproj) {
             const alvo = e.currentTarget
             alvo.style.backgroundColor = '#32474abe'
             alvo.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)'            
@@ -17,7 +17,7 @@ const Navbar = () => {
     }
 
     const setbtnStyleLeave = (e) => {
-        if (!tLock) {
+        if (!tLock && !props.showproj) {
             const alvo = e.currentTarget
             alvo.style.backgroundColor = '#32474a'            
         }
@@ -25,7 +25,7 @@ const Navbar = () => {
     }
 
     const mouseOverNav = (e) => {
-        if (!tLock) {
+        if (!tLock && !props.showproj) {
             setTlock(true)
             const nav = e.currentTarget
             nav.style.width = '8.5rem'        
@@ -46,7 +46,7 @@ const Navbar = () => {
     }
 
     const mouseLeaveNav = (e) => {
-        if (!tLock) {
+        if (!tLock && !props.showproj) {
             setTlock(true)
             const nav = e.currentTarget
             setTimeout(() => {

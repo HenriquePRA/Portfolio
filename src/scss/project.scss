@@ -9,7 +9,7 @@
         background-color: $cor1;
         border-radius: .5rem;
         width: 700px;
-        padding: 4rem;
+        padding: 3rem 4rem 2rem 4rem;
         left: 50%;
         top: 20%;
         transform: translate(-50%, 0);
@@ -80,5 +80,24 @@
         margin: auto;
         width: 14px;
         height: 14px;
+    }
+
+    .projEmAndamento {
+        width: 11rem;
+        cursor: not-allowed;
+        color: #ff3d00;
+    }
+
+    .projConcluido {
+        cursor: pointer;
+        color: #3b59ff;
+        &:hover {
+            color:#546eff;
+        }
+    }
+
+    .projRepoLink {
+        border-top: 1px solid #2632383d;
+        margin-top: 1rem;
     }
 }

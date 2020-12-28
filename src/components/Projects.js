@@ -71,7 +71,7 @@ const Projects = (props) => {
                     <img src={nodeSvg} className="langicon four_of5_stk" alt="Node Icon"></img>
                     <img src={bootstrapSvg} className="langicon five_of5_stk" alt="bootstrap Icon"></img>     
 
-                    <div className="projButton">
+                    <div className="projButton" onClick={() => updateProj("IF Mobile")}>
                         <span>VER MAIS</span>
                     </div>
                 </div>

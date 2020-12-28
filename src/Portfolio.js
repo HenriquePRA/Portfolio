@@ -17,7 +17,7 @@ let Portfolio = () => {
     return (
         <div  >
             <div className={showproj ? "Portfolio filter" : "Portfolio"}>
-                <Navbar />
+                <Navbar showproj={showproj} />
                 <Profile />
                 <About />
                 <Projects 
@@ -28,10 +28,10 @@ let Portfolio = () => {
                 <Contact />
             </div>
             <Details
-                    showproj={showproj}
-                    projdata={projdata}
-                    setShowproj={setShowproj}
-                />
+                showproj={showproj}
+                projdata={projdata}
+                setShowproj={setShowproj}
+            />
         </div>
     );
 }
