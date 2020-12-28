@@ -46,7 +46,6 @@
     }
 
     p {
-        font-family: "CutiveMono";
         grid-column: 1/7;
         grid-row: 2/4;
         font-size: 14px;
@@ -69,7 +68,6 @@
         display: flex;
         font-size: .8rem;
         background-color: $cor4;
-        font-family: RobotoCondensed;
         color: $txt_cor1;
         border: none;
         border-radius: .3rem;
@@ -150,10 +148,6 @@
         grid-row: 5/6;
         margin-bottom: .8rem;
     }
-}
-
-.hidden {
-    display: none !important;
 }
 
 .alterPgBtnAnt, .alterPgBtnPrx {

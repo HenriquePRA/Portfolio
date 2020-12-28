@@ -24,6 +24,7 @@ import jsonProjs from './projects_pt';
 
 const Projects = (props) => {
 
+    // função que atualiza o modal com detalhamento de um projeto
     const updateProj = (name) => {
         let select_proj;
         jsonProjs.forEach(proj => {
@@ -35,6 +36,7 @@ const Projects = (props) => {
         props.setShowproj(true);
     }
 
+    // array com todos os projetos
     const projetos = [
         <div className="proj" key="prj9">
             <h4>Must-Do List</h4>
@@ -104,7 +106,7 @@ const Projects = (props) => {
                 <span>VER MAIS</span>
             </div>
         </div>,
-        <div className="proj hidden" key="prj3">
+        <div className="proj" key="prj3">
             <h4>My Book List</h4>
             <p>Usando o servico firebase e uma api de livros esse projeto faz o crud de usuarios e livros.</p>
             <img src={HtmlSvg} className="langicon one_of4_stk" alt="HTML Icon"></img>
@@ -115,7 +117,7 @@ const Projects = (props) => {
                 <span>VER MAIS</span>
             </div>
         </div>,
-        <div className="proj hidden" key="prj2">
+        <div className="proj" key="prj2">
             <h4>Naval Battle</h4>
             <p>Esse projeto simula um jogo de batalha naval foi minha primeira experiencia com python.</p>
             <img src={pythonSvg} className="langicon one_stk" alt="HTML Icon"></img>
@@ -123,7 +125,7 @@ const Projects = (props) => {
                 <span>VER MAIS</span>
             </div>
         </div>,
-        <div className="proj hidden" key="prj1">
+        <div className="proj" key="prj1">
             <h4>Byte Barrage</h4>
             <p>Esse é meu primeiro projeto front-end, simula um site catalogo de venda de propriedades em jogos.</p>
             <img src={HtmlSvg} className="langicon one_of2_stk" alt="HTML Icon"></img>
@@ -134,14 +136,57 @@ const Projects = (props) => {
         </div>
     ]
 
+    // variáveis de controle na navegação do módulo
     const [ini, setIni] = useState(0);
     const [fim, setFim] = useState(6);
-    const projSel = [];
 
-	for (let i = ini; i < fim; i++) {
-		projSel.push(projetos[i])
+    let projSel = [];
+    for (let i = ini; i < fim; i++) {
+        projSel.push(projetos[i])
     }
     
+    // função que navega as páginas mais antigas do módulo
+    const proxPg = () => {
+        if (ini < (projetos.length - 6)) {
+            new Promise((resolve) => {
+                if ((fim + 6) >= projetos.length) {
+                    setFim(projetos.length)
+                    setIni(projetos.length - 6)                    
+                } else {
+                    setFim(fim + 6)
+                    setIni(fim - 6)
+                }
+                resolve()
+            }).then(() => {
+                projSel = [];
+                for (let i = ini; i < fim; i++) {
+                    projSel.push(projetos[i])
+                }
+            })
+        }
+    }
+    
+    // função que navega as páginas mais recentes do módulo
+    const antePg = () => {
+        if (ini > 0) {
+            new Promise((resolve) => {
+                if ((ini - 6) <= 0) {
+                    setFim(6)
+                    setIni(0)
+                } else {
+                    setFim(ini)
+                    setIni(ini - 6)
+                }
+                resolve()
+            }).then(() => {
+                projSel = [];
+                for (let i = ini; i < fim; i++) {
+                    projSel.push(projetos[i])
+                }
+            })
+        }
+    }
+
     return (
         <div className="Proj_container">
             <div className="blockDescription">
@@ -157,15 +202,23 @@ const Projects = (props) => {
                 
                 <div id="LoadProj">
                     <span id="navGuia">
-                        Exibindo 0 a 6 de 18 projetos
+                        {"Exibindo " + ini + " a " + fim + " de " + projetos.length + " projetos"}
                     </span>
                     <div id="ProjNavCont">
-                        <div className="alterPgBtnPrx" id="proxFatu">
-                            <img src={svgSetaEsquerda} alt="seta apontando a esquerda" />
+                        <div 
+                            className="alterPgBtnPrx"
+                            style={(ini === 0) ? {"opacity": "0", "cursor": "auto"} : null }
+                            onClick={() => antePg()}
+                        >
+                            <img src={svgSetaEsquerda} alt="Esquerda" />
                         </div>
 
-                        <div  className="alterPgBtnAnt" id="anteFatu">
-                            <img src={svgSetaDireita} alt="seta apontando a direita" />
+                        <div  
+                            className="alterPgBtnAnt"
+                            style={(fim === projetos.length) ? {"opacity": "0", "cursor": "auto"} : null }
+                            onClick={() => proxPg()}
+                        >
+                            <img src={svgSetaDireita} alt="Direita" />
                         </div >                         
                     </div>
                 </div>   
