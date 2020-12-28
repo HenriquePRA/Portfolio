@@ -58,4 +58,27 @@
             text-align: center;
         }
     }
+        
+    .fechar {
+        position: absolute;
+        right: -7px;
+        top: -7px;
+        width: 26px;
+        height: 26px;
+        background-color: #dd2c00;
+        border-radius: 50%;
+        opacity: 1;
+        cursor: pointer;
+        transition: all .3s;
+        display: flex;
+    }
+    .fechar:hover {
+        background-color: #ff3d00;    
+    }
+
+    .fechar_btn {
+        margin: auto;
+        width: 14px;
+        height: 14px;
+    }
 }

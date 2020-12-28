@@ -18,6 +18,7 @@ import angularSvg from '../img/tools/angular.svg'
 import androidSvg from '../img/tools/android.svg'
 import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
+import cruzSvg from '../img/misc/cruz.svg'
 
 const DinamicIMG = (f) => {
     if (f.nome === "html") {
@@ -64,63 +65,66 @@ const DinamicIMG = (f) => {
 } 
 
 const Details = (props) => {
-    if (Object.keys(props.projdata).length !== 0) {
+	if ((Object.keys(props.projdata).length !== 0) && (props.showproj)) {
+		let dados = [props.projdata]
+		return (
+			<div 
+				className="grayarea"
+				style={
+					props.showproj ?
+						{"display":"flex"}
+					: 
+						{"display":"none"}
+				}
+			>
+				{dados.map((projeto) => {
+					return (
+						<div className="projDetailBlock" key={projeto.name}>
+							<div 
+								className="fechar"
+								onClick={() => props.setShowproj(false)}
+							>
+								<img src={cruzSvg} className="fechar_btn" alt="fechar modal" />
+							</div>
+							<h2 className="detailHeader">
+								{projeto.name}
+							</h2>
+							{/* insert description if exists */}
+							{projeto.description[0] ? 
+								<p className="detailDescription">
+												{projeto.description[0]}
+								</p> 
+							: 
+								null
+							}
+							{projeto.description[1] ? 
+								<p className="detailDescription">
+									{projeto.description[1]}
+								</p> 
+							: 
+								null
+							}
 
-        let dados = [props.projdata]
-
-        return (
-            <div 
-                className="grayarea"
-                style={
-                    props.showproj ? 
-                        {"display":"flex"} 
-                    : 
-                        {"display":"none"}
-                }
-            >
-                {dados.map((projeto) => {
-                    return (
-                        <div className="projDetailBlock" key={projeto.name}>
-                            <h2 className="detailHeader">
-                                {projeto.name}
-                            </h2>
-                            {/* insert description if exists */}
-                            {projeto.description[0] ? 
-                                <p className="detailDescription">
-                                    {projeto.description[0]}
-                                </p> 
-                            : 
-                                null
-                            }
-                            {projeto.description[1] ? 
-                                <p className="detailDescription">
-                                    {projeto.description[1]}
-                                </p> 
-                            : 
-                                null
-                            }
-
-                            {/* cards com tecnologias utilizadas */}
-
-                            <h4>Ferramentas Utilizadas</h4>
-                            <div className="projDetailCards">
-                            {projeto.tools.map((ferramenta) => {
-                                return (
-                                    <div className="projLangCard" key={ferramenta}>
-                                        <DinamicIMG nome={ferramenta}/>
-                                        <div className="CardTextBg bg-minicard">
-                                            <span>{ferramenta}</span>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
-        ) 
-    } else return null
+							{/* cards com tecnologias utilizadas */}
+							<h4>Ferramentas Utilizadas</h4>
+							<div className="projDetailCards">
+								{projeto.tools.map((ferramenta) => {
+									return (
+										<div className="projLangCard" key={ferramenta}>
+											<DinamicIMG nome={ferramenta}/>
+											<div className="CardTextBg bg-minicard">
+												<span>{ferramenta}</span>
+											</div>
+										</div>
+									)
+								})}
+							</div>
+						</div>
+					)
+				})}
+			</div>
+		) 
+	} else return null
 }
 
 export default Details;
