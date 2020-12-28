@@ -22,4 +22,40 @@
     .projDetailBlock h2 {
         margin-top: 0;
     }
+
+    .projDetailBlock .projDetailCards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .projDetailCards .projLangCard {
+        width: 10rem;
+        height: 4rem;
+        border-radius: .3rem;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+        display: flex;
+        flex-direction: row;
+        background-color: #e3e9ec;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        img {
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: auto 1rem;
+        }
+    }
+
+    .projLangCard .CardTextBg{
+        width: 100%;
+        display: flex;        
+        
+        span {
+            margin: auto;
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
 }

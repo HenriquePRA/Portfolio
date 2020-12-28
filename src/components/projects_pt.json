@@ -6,7 +6,7 @@
             "Feito utilizando springboot, vue e mongo fiz esse projeto (parcialmente) para a disciplida de persistencia de dados."
         ],
         "imgLinkList": [],
-        "tools": ["vue", "springboot", "androidstudio", "mongo"]
+        "tools": ["Vue", "Springboot", "Android Studio", "Mongo"]
     },{
         "name": "IF Mobile",
         "description": "",
