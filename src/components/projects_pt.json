@@ -65,7 +65,7 @@
     },{
         "name": "Byte Barrage",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 somado ao CSS3.", "Possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main."
         ],
         "tools": ["html", "css"],
         "repo": "https://github.com/HenriquePRA/Byte-Barrage"

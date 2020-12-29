@@ -205,32 +205,31 @@ const Projects = (props) => {
                 </p>
             </div>
             <div className="Projects">
-
                 {projSel.map(projeto => { return projeto })}
-                
-                <div id="LoadProj">
-                    <span id="navGuia">
-                        {"Exibindo " + ini + " a " + fim + " de " + projetos.length + " projetos"}
-                    </span>
-                    <div id="ProjNavCont">
-                        <div 
-                            className="alterPgBtnPrx"
-                            style={(ini === 0) ? {"opacity": "0", "cursor": "auto"} : null }
-                            onClick={() => antePg()}
-                        >
-                            <img src={svgSetaEsquerda} alt="Esquerda" />
-                        </div>
 
-                        <div  
-                            className="alterPgBtnAnt"
-                            style={(fim === projetos.length) ? {"opacity": "0", "cursor": "auto"} : null }
-                            onClick={() => proxPg()}
-                        >
-                            <img src={svgSetaDireita} alt="Direita" />
-                        </div >                         
-                    </div>
-                </div>   
             </div>
+            <div id="LoadProj">
+                <span id="navGuia">
+                    {"Exibindo " + ini + " a " + fim + " de " + projetos.length + " projetos"}
+                </span>
+                <div id="ProjNavCont">
+                    <div 
+                        className="alterPgBtnPrx"
+                        style={(ini === 0) ? {"opacity": "0", "cursor": "auto"} : null }
+                        onClick={() => antePg()}
+                    >
+                        <img src={svgSetaEsquerda} alt="Esquerda" />
+                    </div>
+
+                    <div  
+                        className="alterPgBtnAnt"
+                        style={(fim === projetos.length) ? {"opacity": "0", "cursor": "auto"} : null }
+                        onClick={() => proxPg()}
+                    >
+                        <img src={svgSetaDireita} alt="Direita" />
+                    </div >                         
+                </div>
+            </div>   
         </div>
     )
 }

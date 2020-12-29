@@ -15,7 +15,7 @@ let Portfolio = () => {
     const [projdata, setprojdata] = useState({});
 
     return (
-        <div  >
+        <div>
             <div className={showproj ? "Portfolio filter" : "Portfolio"}>
                 <Navbar showproj={showproj} />
                 <Profile />
