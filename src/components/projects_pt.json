@@ -35,6 +35,13 @@
         "tools": ["React", "Sass"],
         "repo": "https://github.com/HenriquePRA/react-sass-portfolio"
     },{
+        "name": "Modelagem de Banco de Dados",
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Mysql"],
+        "repo": "https://github.com/HenriquePRA/Database-Modeling"
+    },{
         "name": "Engine de busca (Framework de detecção Sinonímia)",
         "description": [
             "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
