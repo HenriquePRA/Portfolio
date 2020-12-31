@@ -127,7 +127,7 @@ const Projects = (props) => {
         </div>,
         <div className="proj" key="prj2">
             <h4>Naval Battle</h4>
-            <p>Esse projeto simula um jogo de batalha naval foi minha primeira experiencia com python.</p>
+            <p>Feito em python trata-se de um jogo de batalha naval que pode ser jogado entre jogadores ou contra o computador</p>
             <img src={pythonSvg} className="langicon one_stk" alt="HTML"></img>
             <div className="projButton" onClick={() => updateProj("Naval Battle")}>
                 <span>VER MAIS</span>
