@@ -49,12 +49,12 @@
         "tools": ["Python"],
         "repo": "https://github.com/HenriquePRA/Curriculum-Base"
     },{
-        "name": "My Book List",
+        "name": "Visar Livros",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "Projeto final da disciplina de linguagens de script, trata-se de uma página web integrada com a API de livros do google, permite que o usuário realize buscas baseadas em título, autor, editora ou gênero de um livro, faz uso de webpack para modularização e do babel js para transpilação dos scripts."
         ],
-        "tools": ["html", "css"],
-        "repo": "PROJETO EM ANDAMENTO"
+        "tools": ["HTML", "CSS", "Javascript", "Webpack", "Babel JS"],
+        "repo": "https://github.com/HenriquePRA/Visar-Livros"
     },{
         "name": "Naval Battle",
         "description": [
@@ -67,7 +67,7 @@
         "description": [
             "Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 somado ao CSS3.", "Possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main."
         ],
-        "tools": ["html", "css"],
+        "tools": ["HTML", "CSS"],
         "repo": "https://github.com/HenriquePRA/Byte-Barrage"
     }
 ]

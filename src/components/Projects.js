@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import HtmlSvg from '../img/tools/html-5.svg'
 import CssSvg from '../img/tools/css.svg'
 import JavascriptSvg from '../img/tools/javascript.svg'
-import firebaseSvg from '../img/tools/firebase.svg'
 import pythonSvg from '../img/tools/python.svg'
 import reactSvg from '../img/tools/react.svg'
 import sassSvg from '../img/tools/sass.svg'
@@ -18,8 +17,11 @@ import angularSvg from '../img/tools/angular.svg'
 import androidSvg from '../img/tools/android.svg'
 import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
+import webpackSvg from '../img/tools/webpack.svg'
+import babelSvg from '../img/tools/babel.svg'
 import svgSetaDireita from '../img/misc/seta-direita.svg'
 import svgSetaEsquerda from '../img/misc/seta-esquerda.svg'
+
 import jsonProjs from './projects_pt';
 
 const Projects = (props) => {
@@ -115,13 +117,19 @@ const Projects = (props) => {
             </div>
         </div>,
         <div className="proj" key="prj3">
-            <h4>My Book List</h4>
-            <p>Usando o servico firebase e uma api de livros esse projeto faz o crud de usuarios e livros.</p>
-            <img src={HtmlSvg} className="langicon one_of4_stk" alt="HTML"></img>
-            <img src={CssSvg} className="langicon two_of4_stk" alt="CSS"></img>
-            <img src={JavascriptSvg} className="langicon three_of4_stk" alt="Javascript"></img>
-            <img src={firebaseSvg} className="langicon four_of4_stk" alt="Firebase"></img>
-            <div className="projButton" onClick={() => updateProj("My Book List")}>
+            <h4>Visar Livros</h4>
+            <p>Projeto final da disciplina de linguagens de script, com suporte a navegadores antigos trata-se de uma página de busca integrada com a API de livros do Google.</p>
+            <img src={HtmlSvg} className="langicon one_of6_stk" alt="HTML"></img>
+            <img src={CssSvg} className="langicon two_of6_stk" alt="CSS"></img>
+            <img src={bootstrapSvg} className="langicon three_of6_stk" alt="Bootstrap"></img>
+            <img src={JavascriptSvg} className="langicon four_of6_stk" alt="Javascript"></img>
+            <img src={webpackSvg} className="langicon five_of6_stk" alt="Webpack"></img>            
+            <img src={babelSvg} 
+                className="langicon six_of6_stk" 
+                style={{"height": "auto", "width": "4rem", "justifySelf":"right"}}
+                alt="Babel"
+            ></img>
+            <div className="projButton" onClick={() => updateProj("Visar Livros")}>
                 <span>VER MAIS</span>
             </div>
         </div>,

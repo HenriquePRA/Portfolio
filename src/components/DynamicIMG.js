@@ -2,7 +2,8 @@ import React from 'react'
 import HtmlSvg from '../img/tools/html-5.svg'
 import CssSvg from '../img/tools/css.svg'
 import JavascriptSvg from '../img/tools/javascript.svg'
-import firebaseSvg from '../img/tools/firebase.svg'
+import webpackSvg from '../img/tools/webpack.svg'
+import babelSvg from '../img/tools/babel.svg'
 import pythonSvg from '../img/tools/python.svg'
 import reactSvg from '../img/tools/react.svg'
 import sassSvg from '../img/tools/sass.svg'
@@ -20,14 +21,16 @@ import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
 
 const DynamicIMG = (f) => {
-    if (f.nome === "html") {
+    if (f.nome === "HTML") {
         return <img src={HtmlSvg} alt=""></img>
-    } else if (f.nome === "css") {
+    } else if (f.nome === "CSS") {
         return <img src={CssSvg} alt=""></img>
     } else if (f.nome === "Javascript") {
         return <img src={JavascriptSvg} alt=""></img>
-    } else if (f.nome === "Firebase") {
-        return <img src={firebaseSvg} alt=""></img>
+    } else if (f.nome === "Webpack") {
+        return <img src={webpackSvg} alt=""></img>
+    } else if (f.nome === "Babel JS") {
+        return <img src={babelSvg} style={{"height": "auto"}} alt=""></img>
     } else if (f.nome === "Python") {
         return <img src={pythonSvg} alt=""></img>
     } else if (f.nome === "React") {
