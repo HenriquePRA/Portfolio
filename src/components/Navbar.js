@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import sobreSvg from '../img/misc/sobre.svg'
 import projetosSvg from '../img/misc/projects.svg'
 import contatoSvg from '../img/misc/contato.svg'
 
 
 const Navbar = (props) => {
-    
+
+    const [mouseOverNavSt, setMouseOverNavSt] = useState(false)
+
+    // controle de estilo e responsividade da navbar
     const mouseOverNav = (e) => {
         if (!props.showproj) {
             const nav = e.currentTarget
-            nav.style.width = '8.5rem'
+            setMouseOverNavSt(true)
             const botoes = nav.firstChild.childNodes
             botoes.forEach(btn => {
                 btn.style.backgroundColor = '#32474a'
@@ -34,12 +37,13 @@ const Navbar = (props) => {
                     btn.style.boxShadow = 'none'
                     btn.style.width = '3.2rem'
                     btn.style.backgroundColor = 'transparent'
-                    nav.style.width = '5rem'
+                    setMouseOverNavSt(false)
                 })
             }, 100)
         }
     }
 
+    // scroll automatico 
     const scrollProfile = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
@@ -64,6 +68,7 @@ const Navbar = (props) => {
     return (
         <div id="navbar"
             style={props.showproj ? {"left": "-5rem"} : {"left": "0"}}
+            className={mouseOverNavSt ?  "navBarExpandida" : "navBarOculta"}
             onMouseEnter={(e) => mouseOverNav(e)}
             onMouseLeave={(e) => mouseLeaveNav(e)}
         >
