@@ -14,3 +14,22 @@
         color: $txt_cor2;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .About {
+        width:  auto;
+        margin: auto 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .About {
+        margin: auto 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .About {
+        margin: auto .5rem;
+    }
+}
