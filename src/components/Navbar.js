@@ -15,9 +15,7 @@ const Navbar = (props) => {
             setMouseOverNavSt(true)
             const botoes = nav.firstChild.childNodes
             botoes.forEach(btn => {
-                btn.style.backgroundColor = '#32474a'
-                btn.style.width = '8rem'
-                btn.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)'
+                btn.className = "navBtn overNavBtn";
                 setTimeout(() => {
                     btn.lastChild.style.display = 'block'
                     btn.lastChild.style.opacity = '1'
@@ -34,9 +32,7 @@ const Navbar = (props) => {
                 botoes.forEach(btn => {
                     btn.lastChild.style.opacity = '0'
                     btn.lastChild.style.display = 'none'
-                    btn.style.boxShadow = 'none'
-                    btn.style.width = '3.2rem'
-                    btn.style.backgroundColor = 'transparent'
+                    btn.className = "navBtn outNavBtn";
                     setMouseOverNavSt(false)
                 })
             }, 100)
@@ -75,7 +71,7 @@ const Navbar = (props) => {
             <div className="navContainer">
                 <div className="navBtn" onClick={() => scrollProfile()}>
                     <img src={sobreSvg} alt="about icon"></img>
-                    <span className="navSpan">
+                    <span className="navSpan" style={{"margin":"auto .5rem auto 1rem"}}>
                         SOBRE
                     </span>
                 </div>
