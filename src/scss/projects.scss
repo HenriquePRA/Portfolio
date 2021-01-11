@@ -148,12 +148,6 @@
     @media screen and (max-width: 850px) {
         .long_stk {
             width: 3rem;
-        }
-    }
-
-    @media screen and (max-width: 650px) {
-        .long_stk {
-            width: 3rem;
             justify-self: center;
         }
         .row_4-6, .row_4-5 {
@@ -162,8 +156,7 @@
         .row_5-6 {
             margin-bottom: 2.8rem;
         }
-    } 
-
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -172,13 +165,14 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     .Projects .proj {
+        width: 25rem;
         grid-template-rows: 3.5rem 3rem 3.5rem 3.5rem 3.5rem;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 576px) {
     .Projects .proj {
         width: 100%;
         grid-template-rows: 3.5rem 3rem 3rem 3rem 3rem;
