@@ -100,10 +100,15 @@ const Projects = (props) => {
             </div>
         </div>,
         <div className="proj" key="prj5">
-            <h4>Modelagem de Banco de Dados</h4>
-            <p>Feito na disciplina de banco de dados 1 neste projeto eu modelo um banco de dados relacional.</p>
-            <img src={mysqlSvg} className="langicon col_1-3 row_4-6" alt="MySql"></img>
-            <div className="projButton" onClick={() => updateProj("Modelagem de Banco de Dados")}>
+            <h4>Visar Livros</h4>
+            <p>Projeto final da disciplina de linguagens de script, com suporte a navegadores antigos trata-se de uma página de busca integrada com a API de livros do Google.</p>
+            <img src={HtmlSvg} className="langicon col_1-3 row_4-5" alt="HTML"></img>
+            <img src={CssSvg} className="langicon col_2-4 row_4-5" alt="CSS"></img>
+            <img src={bootstrapSvg} className="langicon col_3-5 row_4-5" alt="Bootstrap"></img>
+            <img src={JavascriptSvg} className="langicon col_1-3 row_5-6" alt="Javascript"></img>
+            <img src={webpackSvg} className="langicon col_2-4 row_5-6" alt="Webpack"></img>            
+            <img src={babelSvg} className="langicon col_3-5 row_5-6 long_stk" alt="Babel"></img>
+            <div className="projButton" onClick={() => updateProj("Visar Livros")}>
                 <span>VER MAIS</span>
             </div>
         </div>,
@@ -117,15 +122,10 @@ const Projects = (props) => {
             </div>
         </div>,
         <div className="proj" key="prj3">
-            <h4>Visar Livros</h4>
-            <p>Projeto final da disciplina de linguagens de script, com suporte a navegadores antigos trata-se de uma página de busca integrada com a API de livros do Google.</p>
-            <img src={HtmlSvg} className="langicon col_1-3 row_4-5" alt="HTML"></img>
-            <img src={CssSvg} className="langicon col_2-4 row_4-5" alt="CSS"></img>
-            <img src={bootstrapSvg} className="langicon col_3-5 row_4-5" alt="Bootstrap"></img>
-            <img src={JavascriptSvg} className="langicon col_1-3 row_5-6" alt="Javascript"></img>
-            <img src={webpackSvg} className="langicon col_2-4 row_5-6" alt="Webpack"></img>            
-            <img src={babelSvg} className="langicon col_3-5 row_5-6 long_stk" alt="Babel"></img>
-            <div className="projButton" onClick={() => updateProj("Visar Livros")}>
+            <h4>Modelagem de Banco de Dados</h4>
+            <p>Projeto final da disciplina de Banco de Dados 1, nele eu modelo um banco de dados relacional, passando pelos modelos Conceitual, Lógico e Físico.</p>
+            <img src={mysqlSvg} className="langicon col_1-3 row_4-6" alt="MySql"></img>
+            <div className="projButton" onClick={() => updateProj("Modelagem de Banco de Dados")}>
                 <span>VER MAIS</span>
             </div>
         </div>,

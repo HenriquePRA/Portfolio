@@ -28,13 +28,11 @@
         margin: 10rem 5rem auto 5rem;
     }
 }
-
 @media screen and (max-width: 768px) {
     .Proj_container {
         margin: 10rem 3rem auto 3rem;
     }
 }
-
 @media screen and (max-width: 576px) {
     .Proj_container {
         margin: 10rem .5rem auto .5rem;
@@ -144,7 +142,6 @@
             justify-self: right;
         }
     }
-
     @media screen and (max-width: 850px) {
         .long_stk {
             width: 3rem;
@@ -164,14 +161,12 @@
         grid-template-rows: 3.5rem 2.5rem 3rem 3rem 3rem;
     }
 }
-
 @media screen and (max-width: 850px) {
     .Projects .proj {
         width: 25rem;
         grid-template-rows: 3.5rem 3rem 3.5rem 3.5rem 3.5rem;
     }
 }
-
 @media screen and (max-width: 576px) {
     .Projects .proj {
         width: 100%;
@@ -234,5 +229,11 @@
 
     #navGuia {
         margin: auto 2.5rem;
+    }
+
+    @media screen and (max-width: 576px) {
+        #navGuia {
+            margin: auto 0rem auto .5rem;
+        }
     }
 }

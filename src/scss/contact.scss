@@ -104,7 +104,6 @@
 
     .socialCards {
         margin: 3rem 0;
-        padding: 1rem;
         display: flex;
         flex-direction: row;
         justify-content: center;        
@@ -122,6 +121,12 @@
                 margin: auto;
                 font-size: 1.2rem;
                 color: $txt_cor1;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .socialCard {
+                margin: auto .3rem;
             }
         }
 
@@ -154,6 +159,22 @@
                 filter: saturate(1.5);
             }
         }
+    }
+}
 
+@media screen and (max-width: 992px) {
+    .Contact {
+        width:  auto;
+        margin: 10rem 5rem auto 5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .Contact {
+        margin: 10rem 3rem auto 3rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .Contact {
+        margin: 10rem .5rem auto .5rem;
     }
 }

@@ -37,10 +37,10 @@
     },{
         "name": "Modelagem de Banco de Dados",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "Feito em 2019 como projeto final da disciplina de Banco de Dados 1 esse projeto foi modelado de forma a englobar toda organização interna de um jogo estilo RPG, como por exemplo relações entre, classes, criaturas e etc.","Esse projeto engloba a modelagem de um banco de dados desde a idealização de como seria o minimundo em que será inserido passando pelos modelos conceitual, lógico até chegar ao físico."
         ],
         "tools": ["Mysql"],
-        "repo": "https://github.com/HenriquePRA/Database-Modeling"
+        "repo": "https://github.com/HenriquePRA/Modelagem-BD-RPG"
     },{
         "name": "Engine de busca (Framework de detecção Sinonímia)",
         "description": [
