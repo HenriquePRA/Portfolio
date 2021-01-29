@@ -37,17 +37,19 @@
     },{
         "name": "Modelagem de Banco de Dados",
         "description": [
-            "Feito em 2019 como projeto final da disciplina de Banco de Dados 1 esse projeto foi modelado de forma a englobar toda organização interna de um jogo estilo RPG, como por exemplo relações entre, classes, criaturas e etc.","Esse projeto engloba a modelagem de um banco de dados desde a idealização de como seria o minimundo em que será inserido passando pelos modelos conceitual, lógico até chegar ao físico."
+            "Feito em 2019 como projeto final da disciplina de Banco de Dados 1 esse projeto foi modelado de forma a englobar toda organização interna de um jogo estilo RPG, como por exemplo relações entre, classes, criaturas e etc.",
+            "Esse projeto engloba a modelagem de um banco de dados desde a idealização de como seria o minimundo em que será inserido passando pelos modelos conceitual, lógico até chegar ao físico."
         ],
         "tools": ["Mysql"],
         "repo": "https://github.com/HenriquePRA/Modelagem-BD-RPG"
     },{
-        "name": "Engine de busca (Framework de detecção Sinonímia)",
+        "name": "Synonyms Detection Framework",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "Feito em 2019 como projeto da disciplina de Estruturas de Dados, esse projeto tem por objetivo de criar um framework capaz de carregar dados de um arquivo csv.",
+            "Na base de dados é capaz de gerar dados estatísticos e realizar buscas de forma a detectar sinônimos do que for pesquisado."
         ],
         "tools": ["Python"],
-        "repo": "https://github.com/HenriquePRA/Curriculum-Base"
+        "repo": "https://github.com/HenriquePRA/Synonyms-Detection-Framework"
     },{
         "name": "Visar Livros",
         "description": [
@@ -65,7 +67,8 @@
     },{
         "name": "Byte Barrage",
         "description": [
-            "Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 somado ao CSS3.", "Possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main."
+            "Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 somado ao CSS3.", 
+            "Possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main."
         ],
         "tools": ["HTML", "CSS"],
         "repo": "https://github.com/HenriquePRA/Byte-Barrage"

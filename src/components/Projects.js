@@ -6,7 +6,6 @@ import pythonSvg from '../img/tools/python.svg'
 import reactSvg from '../img/tools/react.svg'
 import sassSvg from '../img/tools/sass.svg'
 import javaSvg from '../img/tools/java.svg'
-import djangoSvg from '../img/tools/django.svg'
 import bootstrapSvg from '../img/tools/bootstrap.svg'
 import postgreSvg from '../img/tools/postgresql.svg'
 import expressSvg from '../img/tools/express.svg'
@@ -74,7 +73,7 @@ const Projects = (props) => {
             <h4>Vendor Pop</h4>
             <p>Projeto final da disciplina de programação orientada a objetos, esse projeto trata-se app de vendas. 
             </p>
-            <img src={angularSvg} className="langicon col_1-3 row_4-6" alt="Spring"></img>
+            <img src={angularSvg} className="langicon col_1-3 row_4-6" alt="Angular"></img>
             <img src={springSvg} className="langicon col_2-4 row_4-6" alt="Spring"></img>
             <img src={mysqlSvg} className="langicon col_3-5 row_4-6" alt="mysql"></img>
 
@@ -113,11 +112,10 @@ const Projects = (props) => {
             </div>
         </div>,
         <div className="proj" key="prj4">
-            <h4>Engine de busca</h4>
-            <p>Projeto final de estruturas de dados esse projeto resume-se em uma engine de busca.</p>
-            <img src={djangoSvg} className="langicon col_1-3 row_4-6" alt="Django"></img>
-            <img src={bootstrapSvg} className="langicon col_2-4 row_4-6" alt="Bootstrap"></img>                
-            <div className="projButton" onClick={() => updateProj("Engine de busca (Framework de detecção Sinonímia)")}>
+            <h4>Synonyms Detection Framework</h4>
+            <p>Feito em 2019 como projeto da disciplina de Estruturas de Dados, capaz de realizar buscas de forma a detectar sinônimos do que for pesquisado.</p>
+            <img src={pythonSvg} className="langicon col_1-3 row_4-6" alt="Python"></img>
+            <div className="projButton" onClick={() => updateProj("Synonyms Detection Framework")}>
                 <span>VER MAIS</span>
             </div>
         </div>,
@@ -132,7 +130,7 @@ const Projects = (props) => {
         <div className="proj" key="prj2">
             <h4>Naval Battle</h4>
             <p>Feito em python trata-se de um jogo de batalha naval que pode ser jogado entre jogadores ou contra o computador</p>
-            <img src={pythonSvg} className="langicon col_1-3 row_4-6" alt="HTML"></img>
+            <img src={pythonSvg} className="langicon col_1-3 row_4-6" alt="Python"></img>
             <div className="projButton" onClick={() => updateProj("Naval Battle")}>
                 <span>VER MAIS</span>
             </div>
