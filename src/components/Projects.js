@@ -90,11 +90,11 @@ const Projects = (props) => {
             </div>
         </div>,
         <div className="proj" key="prj6">
-            <h4>React/Sass Portfolio</h4>
-            <p>Criei esse portfolio como um projeto a fim de dominar o react com sass e exibir meus projetos.</p>
+            <h4>Portfolio</h4>
+            <p>Criado para mostrar de forma mais fluida os projetos que tenho trabalhado e as tecnologias que venho aprendendo.</p>
             <img src={reactSvg} className="langicon col_1-3 row_4-6" alt="React"></img>
             <img src={sassSvg} className="langicon col_2-4 row_4-6" alt="Sass"></img>                
-            <div className="projButton" onClick={() => updateProj("React/Sass Portfolio")}>
+            <div className="projButton" onClick={() => updateProj("Portfolio")}>
                 <span>VER MAIS</span>
             </div>
         </div>,

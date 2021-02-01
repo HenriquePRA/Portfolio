@@ -28,12 +28,12 @@
         "tools": ["Java"],
         "repo": "https://github.com/HenriquePRA/Memory-Game"
     },{
-        "name": "React/Sass Portfolio",
+        "name": "Portfolio",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "É um projeto de front-end feito a com react e sass que foi criado para mostrar de forma mais fluida os projetos que tenho trabalhado e as tecnologias que venho aprendendo."
         ],
         "tools": ["React", "Sass"],
-        "repo": "https://github.com/HenriquePRA/react-sass-portfolio"
+        "repo": "https://github.com/HenriquePRA/Portfolio"
     },{
         "name": "Modelagem de Banco de Dados",
         "description": [
