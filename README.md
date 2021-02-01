@@ -13,8 +13,6 @@ que fiz, geralmente projetos finais de disciplina como por exemplo o byte barrag
 marcação (https://github.com/HenriquePRA/Byte-Barrage), neste componente é possível ver todas as informações sobre o projeto 
 seja tecnologia, arquitetura ou métodos utilizados no projeto.
 
-o componente habilidades ilustra as habilidades que possuo sejam elas técnicas ou tecnologias que domino e o grau de confiança
-que tenho em minhas habilidades ao usar tal técnica ou tecnologia.
-
 por ultimo o componente contato possui todas as formas de contato das quais posso ser contatado assim como as redes sociais
 de que faço parte.
+
