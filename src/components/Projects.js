@@ -12,12 +12,12 @@ import expressSvg from '../img/tools/express.svg'
 import nodeSvg from '../img/tools/nodejs.svg'
 import springSvg from '../img/tools/spring.svg'
 import mysqlSvg from '../img/tools/mysql.svg'
-import angularSvg from '../img/tools/angular.svg'
 import androidSvg from '../img/tools/android.svg'
 import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
 import webpackSvg from '../img/tools/webpack.svg'
 import babelSvg from '../img/tools/babel.svg'
+import guiSvg from '../img/tools/gui.svg'
 import svgSetaDireita from '../img/misc/seta-direita.svg'
 import svgSetaEsquerda from '../img/misc/seta-esquerda.svg'
 
@@ -71,11 +71,9 @@ const Projects = (props) => {
         </div>,
         <div className="proj" key="prj8">
             <h4>Vendor Pop</h4>
-            <p>Projeto final da disciplina de programação orientada a objetos, esse projeto trata-se app de vendas. 
-            </p>
-            <img src={angularSvg} className="langicon col_1-3 row_4-6" alt="Angular"></img>
-            <img src={springSvg} className="langicon col_2-4 row_4-6" alt="Spring"></img>
-            <img src={mysqlSvg} className="langicon col_3-5 row_4-6" alt="mysql"></img>
+            <p>Projeto final da disciplina de POO nele eu exploro conceitos avançados de programação orientada a objetos com a linguagem java.</p>
+            <img src={javaSvg} className="langicon col_1-3 row_4-6" alt="Java"></img>
+            <img src={guiSvg} className="langicon col_2-4 row_4-6" alt="GUI"></img>
 
             <div className="projButton" onClick={() => updateProj("Vendor Pop")}>
                 <span>VER MAIS</span>
@@ -83,8 +81,9 @@ const Projects = (props) => {
         </div>,
         <div className="proj" key="prj7">
             <h4>Swing Memory Game</h4>
-            <p>Esse projeto consiste em dois jogos de Memória onde um faz o uso do java swing e outro faz o console.</p>
+            <p>Projeto inicial da disciplina de Programação orientada a objetos, consiste em dois jogos de Memória onde um faz o uso do java swing e outro faz uso do console.</p>
             <img src={javaSvg} className="langicon col_1-3 row_4-6" alt="Java"></img>
+            <img src={guiSvg} className="langicon col_2-4 row_4-6" alt="GUI"></img>
             <div className="projButton" onClick={() => updateProj("Swing Memory Game")}>
                 <span>VER MAIS</span>
             </div>

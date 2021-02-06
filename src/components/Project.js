@@ -3,7 +3,7 @@ import DynamicImg from './DynamicIMG'
 import cruzSvg from '../img/misc/cruz.svg'
 
 
-const Details = (props) => {
+const Project = (props) => {
 	if ((Object.keys(props.projdata).length !== 0) && (props.showproj)) {
 		let dados = [props.projdata]
 		return (
@@ -95,8 +95,8 @@ const Details = (props) => {
 					)
 				})}
 			</div>
-		) 
+		)
 	} else return null
 }
 
-export default Details;
+export default Project;

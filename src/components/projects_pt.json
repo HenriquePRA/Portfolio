@@ -16,16 +16,18 @@
     },{
         "name": "Vendor Pop",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "Projeto final da disciplina de POO nele eu exploro conceitos avançados de programação orientada a objetos com a linguagem java.",
+            "Sendo eles herança, polimorfismo, relacionamentos entre objetos (1 para 1, 1 para *, * para *), sobrecarga de métodos e construtores."
         ],
-        "tools": ["Angular", "Springboot", "Mysql"],
+        "tools": ["Java", "Swing GUI"],
         "repo": "https://github.com/HenriquePRA/Vendor-Pop"
     },{
         "name": "Swing Memory Game",
         "description": [
-            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+            "Esse projeto consiste em dois jogos de Memória onde um faz o uso do java swing para ser jogado e outro faz o uso do console, ambos compartilham a classe MemoryGame para executar o jogo internamente.",
+            "Nele são explorados conceitos básicos de programação orientada a objetos como abstração, classes, métodos e encapsulamento."
         ],
-        "tools": ["Java"],
+        "tools": ["Java", "Swing GUI"],
         "repo": "https://github.com/HenriquePRA/Memory-Game"
     },{
         "name": "Portfolio",

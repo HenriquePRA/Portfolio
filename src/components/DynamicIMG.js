@@ -19,6 +19,7 @@ import angularSvg from '../img/tools/angular.svg'
 import androidSvg from '../img/tools/android.svg'
 import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
+import guiSvg from '../img/tools/gui.svg'
 
 const DynamicIMG = (f) => {
     if (f.nome === "HTML") {
@@ -61,6 +62,8 @@ const DynamicIMG = (f) => {
         return <img src={vueSvg} alt=""></img>
     } else if (f.nome === "Mongo") {
         return <img src={mongoSvg} alt=""></img>
+    } else if (f.nome === "Swing GUI") {
+        return <img src={guiSvg} alt=""></img>
     } else {
         return null
     }
