@@ -101,6 +101,15 @@
     }
 }
 
+.destaquebtn {
+    background-color: $cor5;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+@media screen and (max-width: 1200px) {
+    .destaquebtn {
+        background-color: #455a64;
+    }
+}
 
 #navbar .navBtn:first-child{    
     margin: 12rem auto .5rem auto;
