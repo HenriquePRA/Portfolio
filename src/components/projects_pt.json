@@ -17,7 +17,7 @@
         "name": "Vendor Pop",
         "description": [
             "Projeto final da disciplina de POO nele eu exploro conceitos avançados de programação orientada a objetos com a linguagem java.",
-            "Sendo eles herança, polimorfismo, relacionamentos entre objetos (1 para 1, 1 para *, * para *), sobrecarga de métodos e construtores."
+            "Sendo esses conceitos herança, polimorfismo, relacionamentos entre objetos (1 para 1, 1 para *, * para *), sobrecarga de métodos e construtores."
         ],
         "tools": ["Java", "Swing GUI"],
         "repo": "https://github.com/HenriquePRA/Vendor-Pop"

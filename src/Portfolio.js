@@ -71,7 +71,10 @@ let Portfolio = () => {
     return (
         <div>
             <div className={showproj ? "Portfolio filter" : "Portfolio"}>
-                <Navbar showproj={showproj} />
+                <Navbar 
+                    showproj={showproj}
+                    blocoatual={blocoatual}
+                />
                 <Profile />
                 <About />
                 <Projects 
