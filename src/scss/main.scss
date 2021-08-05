@@ -39,6 +39,10 @@ body {
     transition: all .3s;
 }
 
+.proj_mode {
+    height: 100%;
+}
+
 .filter {
     filter: contrast(30%) grayscale(90%);
     height: 100%;
