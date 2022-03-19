@@ -1,0 +1,152 @@
+.Contact {
+  margin: 10rem auto 5rem auto;
+  background-color: #f5f5f5;
+  width: 828px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.Contact .contactIcon {
+  margin-right: 0.8rem;
+  height: 2rem;
+  width: 2rem;
+}
+.Contact .contactButton {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  color: #ffffffba;
+  height: 30px;
+  width: 5rem;
+  font-size: 12px;
+  background-color: #32474a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 0.3rem;
+  transition: all 0.3s;
+  right: 0;
+}
+.Contact .contactButton:hover {
+  background-color: #546e7a;
+}
+.Contact .contactButton span {
+  margin: auto;
+}
+.Contact .contactHeader {
+  background-color: #f5f5f5;
+  border-radius: 0.45rem 0.45rem 0 0;
+  border-bottom: 1px solid #2632383d;
+  padding: 0.5rem 3rem;
+}
+.Contact #tel-wpp, .Contact #email {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 300px;
+  margin: 3rem auto auto auto;
+  background-color: #ececec;
+}
+.Contact #tel-wpp #tel-header {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.Contact #tel-wpp .numero {
+  display: flex;
+  justify-content: space-between;
+}
+.Contact #tel-wpp .numero .tel-1 {
+  margin: 8px 20px auto 3px;
+}
+.Contact #email #email-Header {
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+}
+.Contact #email #email-Header h4 {
+  margin: auto 0;
+}
+.Contact #email #emails {
+  display: flex;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.Contact #email #emails .emailBlock {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.Contact #email #emails .email-1, .Contact #email #emails .email-2, .Contact #email #emails .email-3 {
+  margin: 8px 20px auto 3px;
+}
+.Contact .socialCards {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Contact .socialCards .socialCard {
+  text-decoration: none;
+  border-radius: 0.4rem;
+  display: flex;
+  margin: auto 1rem;
+  width: 160px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+.Contact .socialCards .socialCard span {
+  margin: auto;
+  font-size: 1.2rem;
+  color: #ffffffba;
+}
+@media screen and (max-width: 576px) {
+  .Contact .socialCards .socialCard {
+    margin: auto 0.3rem;
+  }
+}
+.Contact .socialCards .socialCard .SCimgCont {
+  border-radius: 0.3rem 0 0 0.3rem;
+  display: flex;
+  background-color: #ececec;
+}
+.Contact .socialCards .socialCard .SCimgCont img {
+  margin: 0.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.Contact .socialCards .socialCard:first-child {
+  background-color: #384949;
+}
+.Contact .socialCards .socialCard:first-child:hover {
+  filter: contrast(1.2);
+}
+.Contact .socialCards .socialCard:last-child {
+  background-color: #007ab9;
+}
+.Contact .socialCards .socialCard:last-child:hover {
+  filter: saturate(1.5);
+}
+
+@media screen and (max-width: 992px) {
+  .Contact {
+    width: auto;
+    margin: 10rem 5rem auto 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Contact {
+    margin: 10rem 3rem auto 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .Contact {
+    margin: 10rem 0.5rem auto 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

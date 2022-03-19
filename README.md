@@ -1,38 +1,70 @@
-# Portfolio :rocket:
+# Getting Started with Create React App
 
-<p>
- <a href="#Sobre">Sobre</a> •  
- <a href="#Características">Características</a> • 
- <a href="#Status">Status do Projeto</a> • 
- <a href="#Teste">Testando o Projeto</a> 
- :open_file_folder:
-</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<a name="Sobre"></a>
-## Sobre :information_source:
-É um projeto de front-end feito a com react e sass que foi criado para mostrar de forma mais fluida os projetos que tenho trabalhado e as tecnologias que venho aprendendo.
+## Available Scripts
 
-<a name="Características"></a>
-## Características :page_facing_up:
-Possúi múltiplos componentes que podem ser alternados dos quais são eles sobre, projetos, projeto e contato.
+In the project directory, you can run:
 
-O componente sobre descreve em dois parágrafos meu caminho no mundo da tecnologia até os dias atuais de forma simples.
+### `npm start`
 
-O componente projetos possui todos os projetos feitos por mim sejam eles projetos pessoais ou projetos feitos na faculdade, neste componente é possível ver informações rápidas sobre os vários projetos em vários cards sendo para cada card uma pequena descrição, ícones das tecnologias utilizadas e um botão com o texto VER MAIS para ver o projeto de forma detalhada.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-O componente projeto é um modal oculto que é exibido apenas quando o usuário clicar no botão VER MAIS no cartão do projeto, ele exibe uma descrição mais detalhada do projeto, estado, tecnologias usadas e link para o repositório do mesmo.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Por último, o componente contato possui todas as formas de contato das quais posso ser contatado, assim como as redes sociais das quais faço parte.
+### `npm test`
 
-<a name="Status"></a>
-## Status do Projeto :construction_worker:
-:construction: Em andamento :construction:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<a name="Teste"></a>
-## Testando o Projeto :running:
+### `npm run build`
 
-1. Instale o Node Js em sua versão estável mais atual.
-2. Clone este repositório para um local de preferência.
-3. Em um terminal dentro do diretório Portfolio para instalar as dependências do projeto execute: npm install 
-4. Após a instalação das dependências do projeto execute-o com o comando npm start.
-5. Se tudo estiver certo o portfólio pode ser acessado em no seu localhost pela porta 3000
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -3,34 +3,35 @@ import DynamicImg from './DynamicIMG'
 
 const ProjectCard = (props) => {
 
-	const ferramenta = props.ferramenta;
+	const tool = props.tool;
 
 	return (
-		<div
-			className="projLangCard" 
-			key={ferramenta.name}
-		>
+		<div className="projLangCard">
 			<div className="projLangHeader">
-				<DynamicImg nome={ferramenta.name}/>
+				<DynamicImg nome={tool.name}/>
 				<div className="projLangName">
-					<h4>{ferramenta.name}</h4>
+					<h4>{tool.name}</h4>
 				</div>
 			</div>
-			{/*Mapeamento da descrição de cada ferramenta*/}
+
+			{/*
+				Mapeamento da descrição de cada ferramenta dependendo do tipo de 
+				descrição que estiver atribuida a ferramenta
+			*/}
 			<div style={{"margin":"1rem"}}>
-				{ferramenta.type_description === "text" ? 
-					<p>{ferramenta.description}</p>
-				:
+				{tool.type_description === "list" ? 
 					<ul className="langUseList">
-						{ferramenta.description.map((item) =>{
+						{tool.description.map((item) =>{
 							return (
-								<li>
+								<li key={tool.name + "_description_" + tool.description.indexOf(item)}>
 									<strong>{item.header}</strong>
 									<p>{item.text}</p>
 								</li>
 							)
 						})}
 					</ul>
+				:
+					<p>{tool.description}</p>
 				}
 			</div>
 		</div>

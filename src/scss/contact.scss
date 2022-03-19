@@ -1,6 +1,6 @@
 .Contact {
     margin: 10rem auto 5rem auto;
-    background-color: $cor1;    
+    background-color: #f5f5f5;    
     width: 828px;
     border-radius: .5rem;
     display: flex;
@@ -17,7 +17,7 @@
         display: flex;
         cursor: pointer;
         border: none;
-        color: $txt_cor1;
+        color: #ffffffba;
         height: 30px;
         width: 5rem;
         font-size: 12px;
@@ -28,7 +28,7 @@
         right: 0;
 
         &:hover {
-            background-color: $cor4_1;
+            background-color: #546e7a;
         }
 
         span {
@@ -50,7 +50,7 @@
         padding: 1rem;
         width: 300px;
         margin: 3rem auto auto auto;
-        background-color: $cor1_1;
+        background-color: #ececec;
     }
 
     #tel-wpp {
@@ -120,7 +120,7 @@
             span {
                 margin: auto;
                 font-size: 1.2rem;
-                color: $txt_cor1;
+                color: #ffffffba;
             }
         }
 
@@ -133,7 +133,7 @@
         .socialCard .SCimgCont {
             border-radius: .3rem 0 0 .3rem;
             display: flex;
-            background-color: $cor1_1;
+            background-color: #ececec;
 
             img {
                 margin: .5rem;

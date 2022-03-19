@@ -176,7 +176,7 @@
 
 
 
-.alterPgBtnAnt, .alterPgBtnPrx {
+.alterPgBtnAnt, .alterPgBtnPrx, .screenshotBtnPrx, .screenshotBtnAnt {
     border-radius: .4rem;
     width: 3.0rem;
     background-color: $cor4;
@@ -203,7 +203,7 @@
         background-color: $cor4_1;
     }
 } 
-.alterPgBtnAnt:hover, .alterPgBtnPrx:hover {
+.alterPgBtnAnt:hover, .alterPgBtnPrx:hover, .screenshotBtnPrx, .screenshotBtnAnt {
     border-color: rgba(0, 0, 0, 0.24);
 } 
 
@@ -211,7 +211,7 @@
     margin-right: 2.5rem;
 }
 
-#ProjNavCont {
+#ProjNavCont, #carrNavCont {
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Must-Do List",
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Vue", "Springboot", "Android Studio", "Mongo"],
+        "repo": "PROJETO EM ANDAMENTO"
+    },{
+        "name": "IF Mobile",
+        "description": [
+            "DESCRIÇÃO SOBRE ATUALIZAÇÃO"
+        ],
+        "tools": ["Postgres", "Express", "React", "Node", "Bootstrap"],
+        "repo": "https://github.com/HenriquePRA/nodemobile"
+    },{
+        "name": "Vendor Pop",
+        "description": [
+            "Projeto final da disciplina de POO nele eu exploro conceitos avançados de programação orientada a objetos com a linguagem java.",
+            "Sendo esses conceitos herança, polimorfismo, relacionamentos entre objetos (1 para 1, 1 para *, * para *), sobrecarga de métodos e construtores."
+        ],
+        "tools": ["Java", "Swing GUI"],
+        "repo": "https://github.com/HenriquePRA/Vendor-Pop"
+    },{
+        "name": "Swing Memory Game",
+        "description": [
+            "Esse projeto consiste em dois jogos de Memória onde um faz o uso do java swing para ser jogado e outro faz o uso do console, ambos compartilham a classe MemoryGame para executar o jogo internamente.",
+            "Nele são explorados conceitos básicos de programação orientada a objetos como abstração, classes, métodos e encapsulamento."
+        ],
+        "tools": ["Java", "Swing GUI"],
+        "repo": "https://github.com/HenriquePRA/Memory-Game"
+    },{
+        "name": "Portfolio",
+        "description": [
+            "É um projeto de front-end feito a com react e sass que foi criado para mostrar de forma mais fluida os projetos que tenho trabalhado e as tecnologias que venho aprendendo."
+        ],
+        "tools": ["React", "Sass"],
+        "repo": "https://github.com/HenriquePRA/Portfolio"
+    },{
+        "name": "Modelagem de Banco de Dados",
+        "description": [
+            "Feito em 2019 como projeto final da disciplina de Banco de Dados 1 esse projeto foi modelado de forma a englobar toda organização interna de um jogo estilo RPG, como por exemplo relações entre, classes, criaturas e etc.",
+            "Esse projeto engloba a modelagem de um banco de dados desde a idealização de como seria o minimundo em que será inserido passando pelos modelos conceitual, lógico até chegar ao físico."
+        ],
+        "tools": ["Mysql"],
+        "repo": "https://github.com/HenriquePRA/Modelagem-BD-RPG"
+    },{
+        "name": "Synonyms Detection Framework",
+        "description": [
+            "Feito em 2019 como projeto da disciplina de Estruturas de Dados, esse projeto tem por objetivo de criar um framework capaz de carregar dados de um arquivo csv.",
+            "Na base de dados é capaz de gerar dados estatísticos e realizar buscas de forma a detectar sinônimos do que for pesquisado."
+        ],
+        "tools": ["Python"],
+        "repo": "https://github.com/HenriquePRA/Synonyms-Detection-Framework"
+    },{
+        "name": "Visar Livros",
+        "description": [
+            "Projeto final da disciplina de linguagens de script, trata-se de uma página web integrada com a API de livros do google, permite que o usuário realize buscas baseadas em título, autor, editora ou gênero de um livro, faz uso de webpack para modularização e do babel js para transpilação dos scripts."
+        ],
+        "tools": ["HTML", "CSS", "Javascript", "Webpack", "Babel JS"],
+        "repo": "https://github.com/HenriquePRA/Visar-Livros"
+    },{
+        "name": "Naval Battle",
+        "description": [
+            "Feito em python como projeto final da disciplina de Algoritimo e Programação Estruturada, trata-se de um jogo de batalha naval que pode ser jogado usando o console do python no modo jogador contra jogador ou jogador contra bot, faz uso de modularização, funções, POO básico, e estruturas de dados simples."
+        ],
+        "tools": ["Python"],
+        "repo": "https://github.com/HenriquePRA/Naval-Battle"
+    },{
+        "name": "Byte Barrage",
+        "description": [
+            "Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 somado ao CSS3.", 
+            "Possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main."
+        ],
+        "tools": ["HTML", "CSS"],
+        "repo": "https://github.com/HenriquePRA/Byte-Barrage"
+    }
+]
