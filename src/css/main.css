@@ -589,6 +589,10 @@
   padding: 2rem 2rem 3rem 2rem;
 }
 
+.projDescriptionList {
+  margin-right: 40px;
+}
+
 @media screen and (max-width: 992px) {
   .projdetailCont .projDetailBlock {
     margin: auto 5rem;
@@ -637,6 +641,21 @@
   height: 344px;
 }
 
+.loneImg {
+  margin: 3rem 0 2rem 0;
+}
+.loneImg p {
+  color: #546e7a;
+}
+
+.mr_7 {
+  margin-left: 7.5rem;
+}
+
+.mr_9 {
+  margin-left: 9rem;
+}
+
 #carrNavCont {
   border-radius: 0.3rem 0.3rem 0 0;
   background-color: #263238;
@@ -662,11 +681,14 @@
   position: fixed;
 }
 .imgContainer .selpic {
-  max-height: 80%;
-  width: 1200px;
-  height: auto;
   border-radius: 0.5rem;
   box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.12), 0 1px 20px 0px rgba(0, 0, 0, 0.24);
+}
+.imgContainer .horizontal_selpic {
+  width: 90vw;
+}
+.imgContainer .vertical_selpic {
+  height: 90vh;
 }
 
 .bg-modal {

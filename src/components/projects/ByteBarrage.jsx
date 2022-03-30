@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate } from './dealNavigate';
+import { dealNavigate, showImg, hideImg } from './ultil';
 import DynamicIMG from '../DynamicIMG';
 
 import Github from '../../img/tools/github.svg'
@@ -24,27 +24,6 @@ const ByteBarrage = (props) => {
     const navigate = useNavigate();
     const [ showPic, setShowPic ] = useState(false)
     const [ selPic, setSelpic ] = useState([])
-
-    // function responsable for showing an image
-    const showImg = (target) => {
-        setShowPic(true)
-        setSelpic([
-            <img 
-                src={target.src} 
-                alt={target.alt + " onViewMode"}
-                className="selpic"
-                key={target.alt}
-            />
-        ])
-    }
-
-    // function responsible for hiding an image
-    const hideImg = (target) => {
-        let clsTarget = target.target.className
-        if (!(clsTarget === "selpic")) {
-            setShowPic(false)
-        }
-    }
 
     // effect responsible for scrolling to top when loading the page
     useEffect(() => {
@@ -82,12 +61,7 @@ const ByteBarrage = (props) => {
                     </p>
 
                     <div className="projBtn">
-                        <div 
-                            className='repoLinkButton greenCheckBg'
-                            onClick={
-                                () => window.location.href = "https://github.com/HenriquePRA/Byte-Barrage"
-                            }
-                        >
+                        <div className='repoLinkButton greenCheckBg'>
                             <img src={Checkmark} alt="greenCheck"></img> 
                             <span>Projeto Finalizado</span>
                         </div>
@@ -141,7 +115,7 @@ const ByteBarrage = (props) => {
                             Por se tratar de um projeto final de faculdade tem como requisitos o a demonstração do domínio de múltiplas 
                             funcionalidades do CSS3 sendo elas:
                         </p>
-                        <ul className="langUseList">
+                        <ul className="projDescriptionList">
                             <li key="CSS_description_1">
                                 <strong>Seletores</strong>
                                 <p>Faz utilização de seletores na estilização com CSS: ID, class, cascata e herança, pseudo-classes e pseudo-elementos</p>
@@ -167,12 +141,12 @@ const ByteBarrage = (props) => {
                         <h3>Screnshots</h3>
                     </div>
                     <section className="screenshots">
-                        <img src={Img1} alt="pagina de pesquisa" onClick={(e) => (showImg(e.currentTarget))} />
-                        <img src={Img2} alt="pagina principal" onClick={(e) => (showImg(e.currentTarget))} />
-                        <img src={Img4} alt="pagina de contato" onClick={(e) => (showImg(e.currentTarget))} />
-                        <img src={Img5} alt="pagina de cadastro" onClick={(e) => (showImg(e.currentTarget))} />
-                        <img src={Img6} alt="pagina de login" onClick={(e) => (showImg(e.currentTarget))} />
-                        <img src={Img3} alt="pagina principal mobile" onClick={(e) => (showImg(e.currentTarget))}/>
+                        <img src={Img1} alt="pagina de pesquisa" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                        <img src={Img2} alt="pagina principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                        <img src={Img4} alt="pagina de contato" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                        <img src={Img5} alt="pagina de cadastro" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                        <img src={Img6} alt="pagina de login" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                        <img src={Img3} alt="pagina principal mobile" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))}/>
                     </section>
 
                 </div>
@@ -186,7 +160,7 @@ const ByteBarrage = (props) => {
                 :
                     {"display":"flex"}
                 }
-                onClick={(e) => (hideImg(e))}
+                onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
                     <div className="fechar" id="fecharImg" >
