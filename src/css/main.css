@@ -534,8 +534,7 @@
 
 .screenshotsheader {
   border-top: 1px solid #2632383d;
-  margin: 2rem 0 0 0;
-  padding: 2rem 0 0 0;
+  padding: 1rem 0 0 0;
   display: flex;
 }
 .screenshotsheader img {
@@ -548,18 +547,16 @@
 
 .screenshots {
   display: flex;
-  padding: 3rem 2rem 1.5rem 2rem;
+  padding: 2rem 2rem 1.5rem 2rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .screenshots img {
-  border-radius: 0.3rem;
   width: 46%;
   margin: 0 1.5rem 1.5rem 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .screenshots img:hover {
-  filter: contrast(1.2);
+  filter: contrast(1.1);
   cursor: pointer;
 }
 
@@ -586,7 +583,7 @@
 }
 
 .toolDetail {
-  padding: 2rem 2rem 3rem 2rem;
+  padding: 0.5rem 2rem 2rem 2rem;
 }
 
 .projDescriptionList {
@@ -643,17 +640,56 @@
 
 .loneImg {
   margin: 3rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.loneImg p {
+.loneImg .loneImgSubContainer {
+  display: flex;
+  flex-direction: column;
+}
+.loneImg .loneImgSubContainer p {
   color: #546e7a;
 }
+.loneImg .loneImgSubContainer img:hover {
+  cursor: pointer;
+  filter: contrast(1.1);
+}
 
-.mr_7 {
+.pt_0 {
+  padding-top: 0;
+}
+
+.pt_1 {
+  padding-top: 1rem;
+}
+
+.pb_1 {
+  padding-bottom: 1rem;
+}
+
+.mt_1 {
+  margin-top: 1rem;
+}
+
+.ml_7 {
   margin-left: 7.5rem;
 }
 
-.mr_9 {
+.ml_9 {
   margin-left: 9rem;
+}
+
+.ml_14 {
+  margin-left: 14.5rem;
+}
+
+.ml_1_auto {
+  margin: 1rem auto;
+}
+
+.width_100 {
+  width: 100%;
 }
 
 #carrNavCont {

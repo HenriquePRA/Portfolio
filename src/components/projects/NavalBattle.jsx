@@ -71,7 +71,7 @@ const NavalBattle = (props) => {
                         </div>
                     </div>
 
-                    {/* detalhamento do uso do html */}
+                    
                     <div className="projLangHeader">
                         <DynamicIMG nome={"Python"}/>
                         <div className="projLangName">
@@ -92,10 +92,12 @@ const NavalBattle = (props) => {
                                 </p>
                             </li>
                             <div className="loneImg">
-                                <img src={Img1} alt="Menu Principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
-                                <p className="mr_7">
-                                    <em>Menu Principal.</em>
-                                </p>
+                                <div className="loneImgSubContainer">
+                                    <img src={Img1} alt="Menu Principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                                    <p className="ml_1_auto">
+                                        <em>Menu Principal.</em>
+                                    </p>
+                                </div>
                             </div>
                             <li>
                                 <p>
@@ -119,10 +121,12 @@ const NavalBattle = (props) => {
                                 </p>
                             </li>
                             <div className="loneImg">
-                                <img src={Img2} alt="Jogadas durante uma partida" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
-                                <p className="mr_9">
-                                    <em>Jogadas durante uma partida.</em>
-                                </p>
+                                <div className="loneImgSubContainer">
+                                    <img src={Img2} alt="Jogadas durante uma partida" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                                    <p className="ml_1_auto">
+                                        <em>Jogadas durante uma partida.</em>
+                                    </p>
+                                </div>
                             </div>
                             <li>
                                 <p>
@@ -138,16 +142,15 @@ const NavalBattle = (props) => {
                             </li>
                             
                             <div className="loneImg">
-                                <img src={Img3} alt="menu_principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
-                                <p className="mr_9">
-                                    <em>
-                                        Finalização de uma partida.
-                                    </em>
-                                </p>
+                                <div className="loneImgSubContainer">
+                                    <img src={Img3} alt="menu_principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                                    <p className="ml_1_auto">
+                                        <em>
+                                            Finalização de uma partida.
+                                        </em>
+                                    </p>                                    
+                                </div>
                             </div>
-                            
-
-
                         </ul>
                     </div>
                 </div>

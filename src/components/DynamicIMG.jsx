@@ -15,11 +15,14 @@ import expressSvg from '../img/tools/express.svg'
 import nodeSvg from '../img/tools/nodejs.svg'
 import springSvg from '../img/tools/spring.svg'
 import mysqlSvg from '../img/tools/mysql.svg'
+import sqlSvg from '../img/tools/sql.svg'
 import angularSvg from '../img/tools/angular.svg'
 import androidSvg from '../img/tools/android.svg'
 import vueSvg from '../img/tools/vue.svg'
 import mongoSvg from '../img/tools/mongodb.svg'
 import guiSvg from '../img/tools/gui.svg'
+import entitySvg from '../img/tools/entity.svg'
+import txtSvg from '../img/tools/txt.svg'
 
 // Esse componente recebe uma string com o nome de um svg e retorna uma elemento
 // html contendo esse svg, acredito que exista uma forma mais facil simples de fazer isso
@@ -59,6 +62,8 @@ const DynamicIMG = (f) => {
             return <img src={springSvg} alt=""></img>
         case "Mysql":
             return <img src={mysqlSvg} alt=""></img>
+        case "SQL":
+            return <img src={sqlSvg} alt=""></img>
         case "Angular":
             return <img src={angularSvg} alt=""></img>
         case "Android Studio":
@@ -69,6 +74,10 @@ const DynamicIMG = (f) => {
             return <img src={mongoSvg} alt=""></img>
         case "Swing GUI":
             return <img src={guiSvg} alt=""></img>
+        case "Entity":
+            return <img src={entitySvg} alt=""></img>
+        case "Txt":
+            return <img src={txtSvg} alt=""></img>
         default:
             return null;
     }

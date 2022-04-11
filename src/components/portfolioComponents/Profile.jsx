@@ -1,5 +1,5 @@
 import React from 'react';
-import Fotoperfil from '../../img/misc/profile.png';
+import Fotoperfil from '../../img/misc/profile.jpg';
 import Github from '../../img/tools/github.svg';
 import Linkedin from '../../img/misc/linkedin.svg';
 

@@ -20,6 +20,9 @@ import mongoSvg from '../../img/tools/mongodb.svg'
 import webpackSvg from '../../img/tools/webpack.svg'
 import babelSvg from '../../img/tools/babel.svg'
 import guiSvg from '../../img/tools/gui.svg'
+import entityRelSvg from '../../img/tools/entity.svg'
+import sqlSvg from '../../img/tools/sql.svg'
+
 import svgSetaDireita from '../../img/misc/seta-direita.svg'
 import svgSetaEsquerda from '../../img/misc/seta-esquerda.svg'
 
@@ -147,9 +150,11 @@ const Projects = (props) => {
             </div>
         </div>,
         <div className="proj" key="prj3">
-            <h4>Modelagem de Banco de Dados</h4>
+            <h4>Modelagem de BD Relacional</h4>
             <p>Projeto final da disciplina de Banco de Dados 1, nele eu modelo um banco de dados relacional, passando pelos modelos Conceitual, Lógico e Físico.</p>
-            <img src={mysqlSvg} className="langicon col_1-3 row_4-6" alt="MySql"></img>
+            <img src={sqlSvg} className="langicon col_1-3 row_4-6" alt="SQL"></img>            
+            <img src={mysqlSvg} className="langicon col_2-4 row_4-6" alt="MySql"></img>
+            <img src={entityRelSvg} className="langicon col_3-5 row_4-6" alt="EntityRelation"></img>
             <div
                 className="projButton"
                 onClick={() => {
