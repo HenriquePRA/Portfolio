@@ -7,10 +7,10 @@ import Github from '../../img/tools/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
 
-import Img1 from '../../img/project/ModelagemBDRel_1.jpg'
-import Img2 from '../../img/project/ModelagemBDRel_2.jpg'
-import Img3 from '../../img/project/ModelagemBDRel_3.jpg'
-import Img4 from '../../img/project/ModelagemBDRel_4.jpg'
+import Img1 from '../../img/project/synonymsFramework_1.jpg'
+import Img2 from '../../img/project/synonymsFramework_2.svg'
+import Img3 from '../../img/project/synonymsFramework_3.jpg'
+import Img4 from '../../img/project/synonymsFramework_4.jpg'
 
 import '../../css/main.css';
 
@@ -63,7 +63,7 @@ const SynonymsFramework = (props) => {
                         <div 
                             className='repoLinkButton'
                             onClick={
-                                () => window.location.href = "https://github.com/HenriquePRA/Modelagem-BD-RPG"
+                                () => window.location.href = "https://github.com/HenriquePRA/Synonyms-Detection-Framework"
                             }
                         >
                             <img src={Github} alt="Github"></img> 
@@ -71,61 +71,148 @@ const SynonymsFramework = (props) => {
                         </div>
                     </div>
                     
-                    {/* Requisitos */}
+                    {/* Processo de carga */}
                     <div className="projLangHeader">
                         <DynamicIMG nome={"Python"}/>
                         <div className="projLangName">
-                            <h4>Requisitos do Projeto </h4>
+                            <h4>Carga da Base de dados</h4>
                         </div>
                     </div>
                     <div className="toolDetail pt_0 pb_1">
                         <p>
-                            Por se tratar de um projeto final de disciplina, este projeto possúi vários requisitos técnicos 
-                            em suas diversas etapas de modelagem especialmente quanto ao script SQL em seu modelo físico, sendo eles:
+                            A parte de carga é feita pela função CreatDicionario() essa função utiliza a biblioteca csv do python, 
+                            ela abre o arquivo csv com aproximadamente 1600 registros não tratados e para cada registro do 
+                            arquivo csv é criado um dicionário de dados de acordo.
                         </p>
-                        <ul className="projDescriptionList">
-                            <li>
-                                <p>
-                                    <strong>Introdução</strong>: descrição da finalidade do banco de dados. A introdução deverá conter as informações 
-                                    da realidade a ser modelada (minimundo) com a descrição detalhada das regras de negócio e a definição do escopo do 
-                                    projeto.
-                                </p> 
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Esquema Conceitual:</strong> Foi modelado diagrama E-R (Entidade-Relacionamento) contendo as cardinalidades 
-                                    máxima e mínima de cada relacionamento onde foi Uilizada a notação de Peter Chen com o brModelo.
-                                </p> 
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Esquema lógico:</strong> foi modelado o diagrama relacional normalizado contendo as cardinalidades máxima e
-                                     mínima de cada relacionamento onde foi utilizado a notação crow's foot (IE) com o MySQL Workbench. 
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Dicionário de Dados:</strong> feito de modo a descrever tabelas e seus atributos de forma a detalhar seu tipo, 
-                                    descrição, se pode receber valores nulos, o domínio de origem (em caso de chave estrangeira) e se o atributo é chave 
-                                    estrangeira our primária. 
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Script de Criaçao:</strong> Sript separado para criação das tabelas do projeto escrito utilizando a 
-                                    linguagem de consulta estruturada SQL. 
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Script de Povoamento:</strong> Um sript separado para o povoamento das tabelas do projeto escrito utilizando a linguagem de 
-                                    consulta estruturada SQL, deve possuir uma quantidade mínima de dados necessários para o uso do script de consultas. 
-                                </p>
-                            </li>                        
-                        </ul>
                     </div>
 
+                    {/* Dados Estatísticos sobre a Base de Dados*/}
+                    <div className="projLangHeader">
+                        <DynamicIMG nome={"Python"}/>
+                        <div className="projLangName">
+                            <h4>Dados Estatísticos sobre a Base de Dados</h4>
+                        </div>
+                    </div>
+                    <div className="toolDetail pt_0 pb_1">
+                        <p>
+                            A geração de dados estatísticos depende apenas da função estatisitcas() que recebe como argumento 
+                            a lista de currículos atualmente carregada, que caso não esteja carregada retornará uma mensagem 
+                            de erro. caso essa lista exista a função retorna ao usuário o número de currículos, número de palavras, 
+                            porcentagem de Graduações, Especializações, Mestrados, Doutorados e Pós Doutorados.
+                        </p>
+                    </div>
+                    
+                    <div className="loneImg">
+                        <div className="loneImgSubContainer">
+                            <img 
+                                src={Img1} 
+                                className="width_100"
+                                alt="Imagem Modelo Entidade-Relacionamento" 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                />
+                            <p className="ml_1_auto">
+                                <em>Resultado da geração de dados estatísticos</em>
+                            </p>
+                        </div>
+                    </div> 
 
+                    {/* Framework de busca */}
+                    <div className="projLangHeader">
+                        <DynamicIMG nome={"Python"}/>
+                        <div className="projLangName">
+                            <h4>Framework de Busca</h4>
+                        </div>
+                    </div>
+
+                    <div className="toolDetail pt_0 pb_1">
+                        <p>
+                            São exibidas as opções de pesquisa baseadas nas seguintes chaves:
+                        </p>
+                        <ul className="projDescriptionList">
+                            <li>Graduação</li>
+                            <li>Especialização</li>
+                            <li>Mestrado</li>
+                            <li>Doutorado</li>
+                            <li>Pós-Doutorado</li>        
+                        </ul>
+                        <p>
+                            Após o usuário informar a qualificação desejada desejada outro input 
+                            espera receber uma string que será utilizada como filtro para o campo 
+                            qualificação de todos os registros.
+                        </p>
+                        <p>
+                            Com a chave qualificação e a string com área do conhecimento uma função percorre 
+                            todos os registros carregados utilizando uma implementação da distância 
+                            de edição damerau levenshtein para comparar a string informada com cada string 
+                            armazenada no array da qualificação cuja chave foi informada.
+                        </p>
+                    </div>
+
+                    <div className="loneImg mt_1 mb_1">
+                        <div className="loneImgSubContainer">
+                            <img 
+                                src={Img2} 
+                                className="width_100"
+                                alt="Imagem Modelo Entidade-Relacionamento" 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "horizontal"))} 
+                                />
+                            <p className="ml_1_auto">
+                                <em>Definição Damerau–Levenshtein distance</em>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="toolDetail pt_0 pb_1">
+                        <p>
+                            A comparação é feita ignorando caracteres com acentos e com todas os caracteres de ambas 
+                            as strings em caixa alta, e por fim caso o resultado da comparação apresentar uma 
+                            similaridade aceitável entre ambas as strings o currículo do docente é inserido ao 
+                            final de uma lista que é retornada ao usuário.
+                        </p>
+                    </div>
+
+                    <div className="loneImg mt_1 mb_1">
+                        <div className="loneImgSubContainer">
+                            <img 
+                                src={Img3} 
+                                className="width_80 ml_1_auto"
+                                alt="Imagem Modelo Entidade-Relacionamento" 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                />
+                            <p className="ml_1_auto">
+                                <em>Resultado da Busca</em>
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Sobre */}
+                    <div className="projLangHeader">
+                        <DynamicIMG nome={"Python"}/>
+                        <div className="projLangName">
+                            <h4>Sobre </h4>
+                        </div>
+                    </div>
+                    <div className="toolDetail pt_0 pb_1">
+                        <p>
+                            A opção sobre explica em mais detalhes o funcionamento interno do projeto, desde a 
+                            estrutura do dicionário usado pelos registros até a descrição detalhada de funções do
+                            projeto. 
+                        </p>
+                    </div>
+
+                    <div className="loneImg mt_1">
+                        <div className="loneImgSubContainer">
+                            <img 
+                                src={Img4} 
+                                className="width_100"
+                                alt="Imagem Modelo Entidade-Relacionamento" 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                />
+                            <p className="ml_1_auto">
+                                <em>Exibição do Sobre</em>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

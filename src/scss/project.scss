@@ -278,8 +278,17 @@ $navBack: #32474a1c;
 .pb_1 {
     padding-bottom: 1rem;
 }
+.mt_0 {
+    margin-top: 0;
+}
 .mt_1 {
     margin-top: 1rem;
+}
+.mb_0 {
+    margin-bottom: 0;
+}
+.mb_1 {
+    margin-bottom: 1rem;
 }
 .ml_7 {
     margin-left: 7.5rem;
@@ -293,6 +302,11 @@ $navBack: #32474a1c;
 .ml_1_auto {
     margin: 1rem auto;
 }
+
+.width_80 {
+    width: 80%;
+}
+
 .width_100 {
     width: 100%;
 }
@@ -327,6 +341,7 @@ $navBack: #32474a1c;
     .selpic {
         border-radius: .5rem;
         box-shadow: 0 1px 20px 5px rgb(0 0 0 / 12%), 0 1px 20px 0px rgb(0 0 0 / 24%);
+        background-color: white;    
     }
 
     .horizontal_selpic {

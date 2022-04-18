@@ -40,7 +40,7 @@
   flex-direction: row;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #2632383d;
+  border-top: 1px solid rgba(38, 50, 56, 0.2392156863);
 }
 .projLangHeader img {
   height: 2.5rem;
@@ -106,7 +106,7 @@
 }
 
 .screenshotsheader {
-  border-top: 1px solid #2632383d;
+  border-top: 1px solid rgba(38, 50, 56, 0.2392156863);
   padding: 1rem 0 0 0;
   display: flex;
 }
@@ -135,7 +135,7 @@
 
 .projHeader {
   border-radius: 0.4rem 0.4rem 0 0;
-  border-bottom: 1px solid #2632383d;
+  border-bottom: 1px solid rgba(38, 50, 56, 0.2392156863);
 }
 
 .projNameHeader {
@@ -241,8 +241,20 @@
   padding-bottom: 1rem;
 }
 
+.mt_0 {
+  margin-top: 0;
+}
+
 .mt_1 {
   margin-top: 1rem;
+}
+
+.mb_0 {
+  margin-bottom: 0;
+}
+
+.mb_1 {
+  margin-bottom: 1rem;
 }
 
 .ml_7 {
@@ -261,6 +273,10 @@
   margin: 1rem auto;
 }
 
+.width_80 {
+  width: 80%;
+}
+
 .width_100 {
   width: 100%;
 }
@@ -269,7 +285,7 @@
   border-radius: 0.3rem 0.3rem 0 0;
   background-color: #263238;
   height: 56px;
-  border-top: 1px solid #2632383d;
+  border-top: 1px solid rgba(38, 50, 56, 0.2392156863);
   justify-content: space-between;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -292,6 +308,7 @@
 .imgContainer .selpic {
   border-radius: 0.5rem;
   box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.12), 0 1px 20px 0px rgba(0, 0, 0, 0.24);
+  background-color: white;
 }
 .imgContainer .horizontal_selpic {
   width: 90vw;

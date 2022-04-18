@@ -16,7 +16,7 @@
   display: flex;
   cursor: pointer;
   border: none;
-  color: #ffffffba;
+  color: rgba(255, 255, 255, 0.7294117647);
   height: 30px;
   width: 5rem;
   font-size: 12px;
@@ -35,7 +35,7 @@
 .Contact .contactHeader {
   background-color: #f5f5f5;
   border-radius: 0.45rem 0.45rem 0 0;
-  border-bottom: 1px solid #2632383d;
+  border-bottom: 1px solid rgba(38, 50, 56, 0.2392156863);
   padding: 0.5rem 3rem;
 }
 .Contact #tel-wpp, .Contact #email {
@@ -100,7 +100,7 @@
 .Contact .socialCards .socialCard span {
   margin: auto;
   font-size: 1.2rem;
-  color: #ffffffba;
+  color: rgba(255, 255, 255, 0.7294117647);
 }
 @media screen and (max-width: 576px) {
   .Contact .socialCards .socialCard {
