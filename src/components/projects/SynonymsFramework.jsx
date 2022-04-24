@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg } from './ultil';
-import DynamicIMG from '../DynamicIMG';
+import { dealNavigate, showImg, hideImg } from './UtilFunctions';
+import DynamicIMG from '../util/DynamicIMG';
 
 import Github from '../../img/tools/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'

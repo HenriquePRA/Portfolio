@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import '../css/main.css';
+import '../../css/main.css';
 
-import Navbar from './portfolioComponents/Navbar';
-import Profile from './portfolioComponents/Profile';
-import About from './portfolioComponents/About';
-import Projects from './portfolioComponents/Projects';
-import Contact from './portfolioComponents/Contact';
+import Navbar from '../util/Navbar';
+import Profile from './Profile';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
 
-let Portfolio = (props) => {
+let Main = (props) => {
 
     const [blocoatual, setblocoatual] = useState('sobre');
 
@@ -79,4 +79,4 @@ let Portfolio = (props) => {
     )
 }
 
-export default Portfolio;
+export default Main;

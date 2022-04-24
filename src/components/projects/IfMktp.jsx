@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate } from './ultil';
+import { dealNavigate } from './UtilFunctions';
 
 const IfMktp = (props) => {
 

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './css/main.css';
 
-import Portfolio from './components/Portfolio';
+import Main from './components/main/Main';
 
 // Projects
 import ByteBarrage from './components/projects/ByteBarrage'
@@ -11,7 +11,7 @@ import NavalBattle from './components/projects/NavalBattle'
 import VisarLivros from './components/projects/VisarLivros'
 import ModelagemBD from './components/projects/ModelagemBD';
 import SynonymsFramework from './components/projects/SynonymsFramework';
-import ReactPortfolio from './components/projects/reactPortfolio';
+import ReactPortfolio from './components/projects/ReactPortfolio';
 import SwingMemoryGame from './components/projects/SwingMemoryGame';
 import VendorPop from './components/projects/VendorPop';
 import IfMktp from './components/projects/IfMktp';
@@ -22,6 +22,7 @@ import MustDoList from './components/projects/mustDoList';
 let App = () => {
 
     const [ isRedirect, setIsRedirect ] = useState(false);
+    const [ lang, setLang ] = useState("PT"); 
 
     return (
         <div className="App">
@@ -31,8 +32,9 @@ let App = () => {
                         path="/" 
                         exact 
                         element={
-                            <Portfolio 
+                            <Main 
                                 setIsRedirect={setIsRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -43,6 +45,7 @@ let App = () => {
                         element={
                             <ByteBarrage 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -53,6 +56,7 @@ let App = () => {
                         element={
                             <NavalBattle 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />                
@@ -63,6 +67,7 @@ let App = () => {
                         element={
                             <ModelagemBD
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -73,6 +78,7 @@ let App = () => {
                         element={
                             <SynonymsFramework 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -83,6 +89,7 @@ let App = () => {
                         element={
                             <VisarLivros 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -93,6 +100,7 @@ let App = () => {
                         element={
                             <ReactPortfolio 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -103,6 +111,7 @@ let App = () => {
                         element={
                             <SwingMemoryGame 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -113,6 +122,7 @@ let App = () => {
                         element={
                             <VendorPop 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -123,6 +133,7 @@ let App = () => {
                         element={
                             <IfMktp 
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
@@ -133,6 +144,7 @@ let App = () => {
                         element={
                             <MustDoList
                                 isRedirect={isRedirect}
+                                lang={lang}
                             />
                         }
                     />
