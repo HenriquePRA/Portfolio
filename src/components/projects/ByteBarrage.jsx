@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { dealNavigate, showImg, hideImg } from './UtilFunctions';
 import DynamicIMG from '../util/DynamicIMG';
 
-import Github from '../../img/tools/github.svg'
+import Github from '../../img/tools/icons/github.svg'
 import Camera from '../../img/misc/camera.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
@@ -89,7 +89,8 @@ const ByteBarrage = (props) => {
 
                     {/* detalhamento do uso do html */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"HTML"}/>
+                        <DynamicIMG type="icon" name={"HTML"}/>
+                        
                         <div className="projLangName">
                             <h4>HTML5</h4>
                         </div>
@@ -104,7 +105,7 @@ const ByteBarrage = (props) => {
 
                     {/* detalhamento do css3 */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"CSS"}/>
+                        <DynamicIMG type="icon" name={"CSS"}/>
                         <div className="projLangName">
                             <h4>CSS3</h4>
                         </div>

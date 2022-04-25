@@ -1,7 +1,7 @@
 import React from 'react' 
 import WhatsIcon from '../../img/misc/whatsapp.svg'
 import EmailIcon from '../../img/misc/email.svg'
-import Github from '../../img/tools/github.svg';
+import Github from '../../img/tools/icons/github.svg';
 import Linkedin from '../../img/misc/linkedin.svg';
 
 const Contact = (props) => {

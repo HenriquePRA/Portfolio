@@ -1,6 +1,6 @@
 import React from 'react';
 import Fotoperfil from '../../img/misc/profile.jpg';
-import Github from '../../img/tools/github.svg';
+import Github from '../../img/tools/icons/github.svg';
 import Linkedin from '../../img/misc/linkedin.svg';
 
 // Retorna uma div com uma imagem de foto de perfil e outras duas imagens com

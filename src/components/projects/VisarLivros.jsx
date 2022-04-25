@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { dealNavigate, showImg, hideImg } from './UtilFunctions';
 import DynamicIMG from '../util/DynamicIMG';
 
-import Github from '../../img/tools/github.svg'
+import Github from '../../img/tools/icons/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
 
@@ -73,7 +73,7 @@ const VisarLivros = (props) => {
                     
                     {/* Requisitos funcionais do projeto */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Javascript"}/>
+                        <DynamicIMG type="icon" name={"Javascript"}/>
                         <div className="projLangName">
                             <h4>Requisitos funcionais do projeto</h4>
                         </div>
@@ -123,7 +123,7 @@ const VisarLivros = (props) => {
 
                     {/* Características*/}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Webpack"}/>
+                        <DynamicIMG type="icon" name={"Webpack"}/>
                         <div className="projLangName">
                             <h4>Características</h4>
                         </div>
@@ -213,7 +213,7 @@ const VisarLivros = (props) => {
                     </div>
 
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Bootstrap"}/>
+                        <DynamicIMG type="icon" name={"Bootstrap"}/>
                         <div className="projLangName">
                             <h4>Executando o Projeto localmente</h4>
                         </div>

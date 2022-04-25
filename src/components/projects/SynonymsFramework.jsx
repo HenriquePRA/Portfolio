@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { dealNavigate, showImg, hideImg } from './UtilFunctions';
 import DynamicIMG from '../util/DynamicIMG';
 
-import Github from '../../img/tools/github.svg'
+import Github from '../../img/tools/icons/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
 
@@ -73,7 +73,7 @@ const SynonymsFramework = (props) => {
                     
                     {/* Processo de carga */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Python"}/>
+                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="projLangName">
                             <h4>Carga da Base de dados</h4>
                         </div>
@@ -88,7 +88,7 @@ const SynonymsFramework = (props) => {
 
                     {/* Dados Estatísticos sobre a Base de Dados*/}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Python"}/>
+                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="projLangName">
                             <h4>Dados Estatísticos sobre a Base de Dados</h4>
                         </div>
@@ -118,7 +118,7 @@ const SynonymsFramework = (props) => {
 
                     {/* Framework de busca */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Python"}/>
+                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="projLangName">
                             <h4>Framework de Busca</h4>
                         </div>
@@ -187,7 +187,7 @@ const SynonymsFramework = (props) => {
 
                     {/* Sobre */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Python"}/>
+                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="projLangName">
                             <h4>Sobre </h4>
                         </div>

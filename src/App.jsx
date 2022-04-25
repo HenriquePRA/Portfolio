@@ -11,7 +11,7 @@ import NavalBattle from './components/projects/NavalBattle'
 import VisarLivros from './components/projects/VisarLivros'
 import ModelagemBD from './components/projects/ModelagemBD';
 import SynonymsFramework from './components/projects/SynonymsFramework';
-import ReactPortfolio from './components/projects/ReactPortfolio';
+import Portfolio from './components/projects/Portfolio';
 import SwingMemoryGame from './components/projects/SwingMemoryGame';
 import VendorPop from './components/projects/VendorPop';
 import IfMktp from './components/projects/IfMktp';
@@ -95,10 +95,10 @@ let App = () => {
                     />
 
                     <Route 
-                        path="/projetos/reactPortfolio" 
+                        path="/projetos/portfolio" 
                         exact 
                         element={
-                            <ReactPortfolio 
+                            <Portfolio 
                                 isRedirect={isRedirect}
                                 lang={lang}
                             />

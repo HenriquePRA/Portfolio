@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { dealNavigate, showImg, hideImg } from './UtilFunctions';
 import DynamicIMG from '../util/DynamicIMG';
 
-import Github from '../../img/tools/github.svg'
+import Github from '../../img/tools/icons/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
 
@@ -72,7 +72,7 @@ const ModelagemBD = (props) => {
                     
                     {/* Requisitos */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"SQL"}/>
+                        <DynamicIMG type="icon" name={"SQL"}/>
                         <div className="projLangName">
                             <h4>Requisitos do Projeto </h4>
                         </div>
@@ -126,7 +126,7 @@ const ModelagemBD = (props) => {
 
                     {/* Minimundo */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Txt"}/>
+                        <DynamicIMG type="icon" name={"Txt"}/>
                         <div className="projLangName">
                             <h4>Minimundo</h4>
                         </div>
@@ -140,7 +140,7 @@ const ModelagemBD = (props) => {
 
                     {/* Modelo Conceitual */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Entity"}/>
+                        <DynamicIMG type="icon" name={"Entity"}/>
                         <div className="projLangName">
                             <h4>Modelo Conceitual</h4>
                         </div>
@@ -202,7 +202,7 @@ const ModelagemBD = (props) => {
 
                     {/* Modelo Físico */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Mysql"}/>
+                        <DynamicIMG type="icon" name={"Mysql"}/>
                         <div className="projLangName">
                             <h4>Modelo Físico (Criação, Povoamento, Atualização)</h4>
                         </div>
@@ -235,7 +235,7 @@ const ModelagemBD = (props) => {
 
                     {/* Modelo Físico parte2 */}
                     <div className="projLangHeader">
-                        <DynamicIMG nome={"Mysql"}/>
+                        <DynamicIMG type="icon" name={"Mysql"}/>
                         <div className="projLangName">
                             <h4>Modelo Físico (Consultas)</h4>
                         </div>
