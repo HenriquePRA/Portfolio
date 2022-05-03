@@ -1,21 +1,4 @@
-
-// color palette
-$cor1: #ffffff;
-$cor1_1:#ececec;
-$cor2: #01ecd5;
-$cor3: #4586ff;
-$cor4: #32474a;
-$cor4_1: #32474abe;
-$cor4_2: #546e7a;
-$cor5: #263238;
-
-$txt_cor1: #ffffffba;
-$txt_cor2: #13191dce;
-
-$semitransBlack:  #2632383d;
-
-$navBack: #32474a1c;
-
+@import './colors.scss';
 
 .Proj_container {
     display: flex;
@@ -23,15 +6,15 @@ $navBack: #32474a1c;
     width: 828px;
     overflow-anchor: none;
     margin: 10rem auto auto auto;
-    border-radius: .5rem;
-    background-color: $cor1;
+    border-radius: .3rem;
+    background-color: $maxWhite;
     flex-direction: column;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 
     .blockDescription {
-        background-color: $cor1;
-        border-radius: .45rem .45rem 0 0;
-        border-bottom: 1px solid #2632383d;
+        background-color: $maxWhite;
+        border-radius: .3rem .3rem 0 0;
+        border-bottom: 1px solid $gray_line;
         margin: 0 0 1rem 0 ;
         padding: .5rem 3rem;
     
@@ -66,11 +49,11 @@ $navBack: #32474a1c;
 
 .Projects .proj {
     margin: 10px;
-    background-color: $cor1_1;
+    background-color: $darkWhite;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 1px solid $gray_line;
     display: grid;
-    border-radius: .5rem;
+    border-radius: .3rem;
     width: 46%;
     grid-template-columns: 3fr 3fr 3fr 3fr 4fr 7fr;
     grid-template-rows: 3.5rem 2.5rem 2rem 3rem 3rem;
@@ -78,7 +61,7 @@ $navBack: #32474a1c;
     h4 {
         grid-column: 1/7;
         grid-row: 1/2;
-        color: $cor4;
+        color: $darkBlueDark;
         margin: 1rem 1rem .5rem 1.5rem;
         align-self: center;
     }
@@ -89,8 +72,6 @@ $navBack: #32474a1c;
         font-size: 14px;
         padding: 0;
         margin: .5rem 1.5rem 0 1.5rem;
-        color: darken($color: $cor4, $amount: 10);
-
     }
     .langicon {
         justify-self: center;
@@ -105,20 +86,20 @@ $navBack: #32474a1c;
         margin: 0 .5rem .5rem 0;
         display: flex;
         font-size: .8rem;
-        background-color: $cor4;
-        color: $txt_cor1;
+        background-color: $blueDark;
+        color: $darkWhite;
         border: none;
         border-radius: .3rem;
         cursor: pointer;
         transition: all .3s;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 
         span {
             margin: auto;
         }
 
         &:hover {
-            background-color: $cor4_1;
+            background-color: $lightBlueDark;
         }
     }
 
@@ -196,15 +177,15 @@ $navBack: #32474a1c;
 
 
 .alterPgBtnAnt, .alterPgBtnPrx, .screenshotBtnPrx, .screenshotBtnAnt {
-    border-radius: .4rem;
+    border-radius: .3rem;
     width: 3.0rem;
-    background-color: $cor4;
+    background-color: $blueDark;
     border: none;
     display: flex;
     justify-content: center;
     margin: .5rem .2rem;
     transition: all ease-in-out .5s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 
     img {
         margin: auto .3rem;
@@ -219,7 +200,7 @@ $navBack: #32474a1c;
 
     &:hover {
         cursor: pointer;
-        background-color: $cor4_1;
+        background-color: $lightBlueDark;
     }
 } 
 .alterPgBtnAnt:hover, .alterPgBtnPrx:hover, .screenshotBtnPrx, .screenshotBtnAnt {
@@ -241,9 +222,9 @@ $navBack: #32474a1c;
     height: 3.5rem;
     width: 100%;
     margin-top: 1rem;
-    background-color: $cor1;
-    border-top: 1px solid $semitransBlack;
-    border-radius: 0 0 .45rem .45rem;
+    background-color: $maxWhite;
+    border-top: 1px solid $gray_line;
+    border-radius: 0 0 .3rem .3rem;
     justify-content: space-between;
 
     #navGuia {

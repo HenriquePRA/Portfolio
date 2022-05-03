@@ -1,7 +1,9 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg } from './UtilFunctions';
+import { dealNavigate, showImg, hideImg, getLangText } from './UtilFunctions';
 import DynamicIMG from '../util/DynamicIMG';
+import PT_ByteBarrage from './texts/PT_ByteBarrage.json';
+import EN_ByteBarrage from './texts/EN_ByteBarrage.json';
 
 import Github from '../../img/tools/icons/github.svg'
 import Camera from '../../img/misc/camera.svg'
@@ -22,8 +24,18 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 const ByteBarrage = (props) => {
     
     const navigate = useNavigate();
+    
+    // State responsible for storing all the page displayed text on a json
+    const [pageText, setPageText] = useState({})
+
+    // states required for displaying images in the page modal
     const [ showPic, setShowPic ] = useState(false)
     const [ selPic, setSelpic ] = useState([])
+
+    // effect responsible for defining and switching the page language
+    useEffect(() => {
+        setPageText(getLangText(props.lang, PT_ByteBarrage, EN_ByteBarrage))
+    }, [props.lang])
 
     // effect responsible for scrolling to top when loading the page
     useEffect(() => {
@@ -50,40 +62,46 @@ const ByteBarrage = (props) => {
                 >
                     <div className="projHeader">
                         <div className="projNameHeader">
-                            <h2>Byte Barrage</h2>
+                            <h2>{pageText.header}</h2>
                         </div>
                     </div>
                     <p className="detailDescription">
-                        Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação
-                        nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 e de estilos CSS3. 
-                        possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e 
-                        todas as páginas utilizam a folha de estilo main.
+                        {pageText.about}
                     </p>
 
-                    <div className="projBtn">
-                        <div className='repoLinkButton greenCheckBg'>
-                            <img src={Checkmark} alt="greenCheck"></img> 
-                            <span>Projeto Finalizado</span>
+                    <div className='statusAndTools'>
+                        <div className="badgeBlock">
+                            <h4>{pageText.toolsHeader}</h4>
+                            <DynamicIMG type={"badge"} name={"HTML"} />
+                            <DynamicIMG type={"badge"} name={"CSS"} />
                         </div>
+                        
+                        <div className="projBtn">
+                            <h4>{pageText.projStatusHeader}</h4>
+                            <div className='repoLinkButton greenCheckBg'>
+                                <img src={Checkmark} alt="greenCheck"></img> 
+                                <span>{pageText.projectStatus}</span>
+                            </div>
 
-                        <div 
-                            className='repoLinkButton linkBg'
-                            onClick={
-                                () => window.location.href = "https://henriquepra.github.io/Byte-Barrage/"
-                            }
-                        >
-                            <img src={LinkSvg} alt="projOn"></img> 
-                            <span>Projeto Online</span>
-                        </div>
+                            <div 
+                                className='repoLinkButton linkBg'
+                                onClick={
+                                    () => window.location.href = "https://henriquepra.github.io/Byte-Barrage/"
+                                }
+                            >
+                                <img src={LinkSvg} alt="projOn"></img> 
+                                <span>Projeto Online</span>
+                            </div>
 
-                        <div 
-                            className='repoLinkButton'
-                            onClick={
-                                () => window.location.href = "https://github.com/HenriquePRA/Byte-Barrage"
-                            }
-                        >
-                            <img src={Github} alt="Github"></img> 
-                            <span>Ir ao Repositório</span>
+                            <div 
+                                className='repoLinkButton'
+                                onClick={
+                                    () => window.location.href = "https://github.com/HenriquePRA/Byte-Barrage"
+                                }
+                            >
+                                <img src={Github} alt="Github"></img> 
+                                <span>{pageText.projectRepo}</span>
+                            </div>
                         </div>
                     </div>
 
@@ -92,14 +110,12 @@ const ByteBarrage = (props) => {
                         <DynamicIMG type="icon" name={"HTML"}/>
                         
                         <div className="projLangName">
-                            <h4>HTML5</h4>
+                            <h4>{pageText.htmlHeader}</h4>
                         </div>
                     </div>
                     <div className="toolDetail">
                         <p style={{"margin":"0"}}>
-                            Faz uso de entidades para a exibição em texto de caracteres reservados, tags variadas como elementos 
-                            semânticos presentes no HTML5 para as páginas assim como elementos não semânticos e atributos desde
-                            os mais comuns como class e id até os menos usados como tabindex para a exploração de suas funcionalidades.
+                            {pageText.htmlDescription}
                         </p>
                     </div>
 
@@ -107,47 +123,46 @@ const ByteBarrage = (props) => {
                     <div className="projLangHeader">
                         <DynamicIMG type="icon" name={"CSS"}/>
                         <div className="projLangName">
-                            <h4>CSS3</h4>
+                            <h4>{pageText.cssHeader}</h4>
                         </div>
                     </div>
 
                     <div className="toolDetail">
                         <p style={{"margin":"0 0 2rem 0"}}>
-                            Por se tratar de um projeto final de faculdade tem como requisitos o a demonstração do domínio de múltiplas 
-                            funcionalidades do CSS3 sendo elas:
+                            {pageText.cssDescrition}
                         </p>
                         <ul className="projDescriptionList">
                             <li key="CSS_description_1">
-                                <strong>Seletores</strong>
-                                <p>Faz utilização de seletores na estilização com CSS: ID, class, cascata e herança, pseudo-classes e pseudo-elementos</p>
+                                <strong>{pageText.cssSelectorsHeader}</strong>
+                                <p>{pageText.cssSelectorsBody}</p>
                             </li>
                             <li key="CSS_description_2">
-                                <strong>Posicionamento</strong>
-                                <p>Para posicionar os elementos das páginas usa grid, flexbox, float e position.</p>
+                                <strong>{pageText.cssPositionHeader}</strong>
+                                <p>{pageText.cssPositionBody}</p>
                             </li>
                             <li key="CSS_description_3">
-                                <strong>Animações</strong>
-                                <p>faz uso de animações, transitions e transform.</p>
+                                <strong>{pageText.cssAnimationHeader}</strong>
+                                <p>{pageText.cssAnimationBody}</p>
                             </li>
                             <li key="CSS_description_4">
-                                <strong>Responsividade</strong>
-                                <p>Possui responsividade para dispositivos com largura de tela de 350px até 2560px</p>
+                                <strong>{pageText.cssResponsivenessHeader}</strong>
+                                <p>{pageText.cssResponsivenessBody}</p>
                             </li>
                         </ul>
                     </div>
 
                     {/* screenshots */}
-                    <div className='screenshotsheader'>
+                    <div className="projLangHeader">
                         <img src={Camera} alt="camera img" />
-                        <h3>Screnshots</h3>
+                        <h3>{pageText.screenshotsHeader}</h3>
                     </div>
                     <section className="screenshots">
-                        <img src={Img1} alt="pagina de pesquisa" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
-                        <img src={Img2} alt="pagina principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
-                        <img src={Img4} alt="pagina de contato" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
-                        <img src={Img5} alt="pagina de cadastro" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
-                        <img src={Img6} alt="pagina de login" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
-                        <img src={Img3} alt="pagina principal mobile" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))}/>
+                        <img src={Img1} alt="pagina de pesquisa" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                        <img src={Img2} alt="pagina principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                        <img src={Img4} alt="pagina de contato" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                        <img src={Img5} alt="pagina de cadastro" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                        <img src={Img6} alt="pagina de login" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
+                        <img src={Img3} alt="pagina principal mobile" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))}/>
                     </section>
 
                 </div>

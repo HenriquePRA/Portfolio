@@ -68,6 +68,9 @@ let Main = (props) => {
         <div className={"Portfolio"}>
             <Navbar
                 blocoatual={blocoatual}
+                setLang={props.setLang}
+                lang={props.lang}
+                page={"main"}
             />
             <Profile />
             <About />

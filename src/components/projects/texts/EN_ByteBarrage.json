@@ -1,0 +1,21 @@
+{
+    "header": "Byte Barrage",
+    "about":"Made in 2018, this project was the final requirement for me to complete my university markup language course in which a vast group of features on the HTML5 markup language and CSS3 styles are explored. has 5 pages, index, search, contact, registration and login. each page has its own style sheet and all pages use the main style sheet.",
+    "toolsHeader":"Tools",
+    "projStatusHeader":"Info",
+    "projectStatus":"Project Finished",
+    "projectRepo":"Go to Repository",
+    "htmlHeader":"HTML 5",
+    "htmlDescription": "It makes use of entities to display reserved characters in text, various tags such as semantic elements present in HTML5 for pages as well as non-semantic elements and attributes from the most common such as class and id to the less used such as tabindex to explore their functionalities.",
+    "cssHeader":"CSS 3",
+    "cssDescrition": "Por se tratar de um projeto final de faculdade tem como requisito a demonstração do domínio de múltiplas funcionalidades do CSS3 sendo elas:",
+    "cssSelectorsHeader": "Seletores",
+    "cssSelectorsBody": "Faz utilização de seletores na estilização com CSS: ID, class, cascata e herança, pseudo-classes e pseudo-elementos",
+    "cssPositionHeader": "Posicionamento",
+    "cssPositionBody": "Para posicionar os elementos das páginas usa grid, flexbox, float e position.",
+    "cssAnimationHeader": "Animações",
+    "cssAnimationBody": "faz uso de animações, transitions e transform.",
+    "cssResponsivenessHeader": "Responsividade",
+    "cssResponsivenessBody": "Possui responsividade para dispositivos com largura de tela de 350px até 2560px",
+    "screenshotsHeader": "Capturas de tela"
+}

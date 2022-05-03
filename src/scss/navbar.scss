@@ -1,120 +1,120 @@
+@import './colors.scss';
+
 #navbar {
-    width: 5rem;
+    width: 9rem;
     height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #32474a1c;
+    flex-direction: column;
     position: fixed;
-    transition: all .25s ease-in-out;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+}
 
-    &:hover {
+#navbar {    
+    .navBtn, .navSpamBtn {
+        display: flex;
+        justify-content: space-between;
+        margin: 0  auto;
+        font-size: .8rem;
+        color: #ffffffba;
+        background-color: $blueDark;
+        border-bottom: 1px solid $gray_line;
+        box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
         width: 8.5rem;
+        cursor: pointer;
+        transition: opacity .5s;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: .8rem;
+        }
+
+        .noSpanExtended {
+            margin: .85rem auto;
+        }
+
+        span {
+            width: 100%;
+            margin: auto .5rem;
+            transition: all .2s;
+        }
+
+        &:hover {
+            background-color: #405c79a6;
+            box-shadow: none;
+        }
+    }
+
+    .navBtn {
+        &:first-of-type {
+            margin-top: 12rem;
+            border-radius: .3rem .3rem 0 0 !important;
+        }
+
+        &:last-of-type {
+            border-bottom: none;
+            border-radius: 0 0 .3rem .3rem !important;
+        }        
     }
 }
 
-.navBarExpandida {
-    left: 0px;
-    width: 8.5rem;
+#navbar .langBlock .langBtn {
+    background-color: $lightBlueDark;
+    height: 0;
+    opacity: 0;
+    border: none;
+    transition: all .3s;
+
+    h3 {
+        color: $darkWhite;
+        margin: 1rem 1.1rem;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+        border-radius: .3rem .3rem 0 0 !important;
+    }
+
+    &:hover {
+        background-color: #405c79a6;
+        box-shadow: none;
+    }
 }
 
-.navBarOculta {
-    left: 0px;
-    width: 5rem;
+#navbar .langBlock .navSpan, .langBlock .navSpamBtn {
+    margin: auto auto auto .3rem !important;
+}
+
+.noSpanExtended {
+    margin: 0.85rem auto;
 }
 
 @media screen and (max-width: 1200px) {
     #navbar {
         width: 100%;
         height: auto;
-        background-color: #263238;
-        
-        &:hover {
-            width: 100%;
+        background-color: $maxWhite;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #navbar .navBtn {
+        border-bottom: none;
+        border-radius: .3rem;
+        margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+
+        &:first-of-type {
+            border-radius: .3rem !important;
+        }
+
+        &:last-of-type {
+            border-bottom: none;
+            border-radius: .3rem !important;
         }
     }
 }
 
-.navContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-@media screen and (max-width: 1200px) {
-    .navContainer {
-        flex-direction: row;
-    }
-}
-
-.overNavBtn {
-    background-color: #263238;
-    width: 8rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-
-}
-@media screen and (max-width: 1200px) {
-    .overNavBtn {
-        background-color:  #455a64;
-    }
-
-    .overNavBtn:hover {
-        background-color: #607d8b;
-    }
-}
-
-
-@media screen and (max-width: 1200px) {
-    .outNavBtn {
-        background-color: transparent;        
-    }
-}
-
-#navbar .navBtn {
-    display: flex;
-    justify-content: space-between;
-    margin: .5rem auto;
-    font-size: .8rem;
-    color: #ffffffba;
-    border: none;
-    border-radius: .3rem;
-    cursor: pointer;
-    transition: all .5s;
-
-    img {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: .8rem;
-    }
-
-    span {
-        display: none;
-        opacity: 0;
-        width: 100%;
-        margin: auto .5rem;
-        transition: all .2s;
-    }
-
-    &:hover {
-        opacity: .85;
-    }
-}
-
-#navbar .navBtn:first-child{    
-    margin: 12rem auto .5rem auto;
-}
-
 @media screen and (max-width: 1200px) {
     #navbar .navBtn:first-child, #navbar .navBtn {
-        margin: .5rem;   
-    }
-
-    #navbar .navBtn:last-child {
-        margin: .5rem auto .5rem auto;
-    }
-
-    #navbar .navBtn:first-child {
-        margin: .5rem 0 .5rem auto;
+        margin: 0.5rem 0.2rem 0.5rem 0.2rem;
     }
 }

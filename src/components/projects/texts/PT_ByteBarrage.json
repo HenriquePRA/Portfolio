@@ -1,0 +1,21 @@
+{
+    "header": "Byte Barrage",
+    "about":"Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 e de estilos CSS3. possui 5 páginas, index , pesquisa, contato, cadastro e login. cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main.",
+    "toolsHeader":"Ferramentas",
+    "projStatusHeader":"Info",
+    "projectStatus":"Projeto Finalizado",
+    "projectRepo":"Ir ao Repositório",
+    "htmlHeader":"HTML 5",
+    "htmlDescription": "Faz uso de entidades para a exibição em texto de caracteres reservados, tags variadas como elementos semânticos presentes no HTML5 para as páginas assim como elementos não semânticos e atributos desde os mais comuns como class e id até os menos usados como tabindex para a exploração de suas funcionalidades.",
+    "cssHeader":"CSS 3",
+    "cssDescrition": "As it is a final college project, it is required to demonstrate the domain of multiple CSS3 functionalities, which are:",
+    "cssSelectorsHeader": "Selectors",
+    "cssSelectorsBody": "Makes use of selectors in CSS styling: ID, class, cascade and inheritance, pseudo-classes and pseudo-elements.",
+    "cssPositionHeader": "Positioning",
+    "cssPositionBody": "To position the elements of the pages use grid, flexbox, float and position.",
+    "cssAnimationHeader": "Animations",
+    "cssAnimationBody": "Makes use of animations, transitions and transform.",
+    "cssResponsivenessHeader": "Responsive Design",
+    "cssResponsivenessBody": "Responsive for devices with screen widths from 350px to 2560px",
+    "screenshotsHeader": "Screenshots"
+}

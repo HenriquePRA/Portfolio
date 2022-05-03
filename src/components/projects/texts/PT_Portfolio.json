@@ -3,7 +3,7 @@
     "about":"Uma vez que eu já tinha conhecimento sólido a respeito das ferramentas ECMAScript6/HTML5/CSS em 2021 construí esse projeto com três objetivos domínio das funcionalidades básicas do ReactJS/JSX e SASS para seu uso em projetos futuros, me inserir no mercado profissional de desenvolvimento de software e mostrar aos meus amigos de faculdade e familiares os projetos que tenho trabalhado",
     "toolsHeader":"Ferramentas",
     "projStatusHeader":"Info",
-    "projectStatus":"Finalizado",
+    "projectStatus":"Projeto Finalizado",
     "projectRepo":"Ir ao Repositório",
     "descriptionHeader":"Estrutura do projeto",
     "description": "O Projeto é dividido em dois tipos de páginas: a Portfolio que é a página principal e as páginas de projeto, que apesar de serem várias páginas seu funcionamento interno e layout é muito semelhante todavia não o suficiente para seja utilizado uma unica página para todos.",

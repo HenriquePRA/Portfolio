@@ -1,9 +1,5 @@
-.bg-minicard {
-  color: #ffffff;
-  background-color: #464a52;
-}
-
 .projMain {
+  background: url("../img/misc/pattern.svg");
   background-color: #4586ff;
 }
 
@@ -15,12 +11,12 @@
 }
 .projdetailCont .projDetailBlock {
   background-color: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   width: 828px;
   margin: auto auto 12rem auto;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 }
 .projdetailCont .projDetailBlock .projDetailCards {
   display: flex;
@@ -29,8 +25,8 @@
 }
 .projdetailCont .projDetailCards .projLangCard, .projdetailCont .projectScreenshots {
   margin: 1rem 0;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #ececec;
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+  background-color: #dfe5eb;
   border-radius: 0.3rem;
 }
 
@@ -39,7 +35,7 @@
   flex-direction: row;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(38, 50, 56, 0.2392156863);
+  border-top: 1px solid #a5bdd6;
 }
 .projLangHeader img {
   height: 2.5rem;
@@ -63,34 +59,34 @@
   flex-direction: column;
   margin: auto 2rem auto auto;
   align-items: center;
-  border-left: 1px solid rgba(38, 50, 56, 0.2392156863);
+  border-left: 1px solid #a5bdd6;
 }
 .projBtn h4 {
-  padding-left: 2rem;
+  padding-left: 4rem;
   width: 100%;
 }
 
 .repoLinkButton {
-  background-color: #ececec;
+  background-color: #dfe5eb;
   display: flex;
-  width: 15rem;
+  width: 12rem;
   padding: 0.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 }
 .repoLinkButton:hover {
   filter: contrast(1.2);
   cursor: pointer;
 }
 .repoLinkButton img {
-  height: 3rem;
+  height: 2rem;
 }
 .repoLinkButton span {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: auto;
 }
 .repoLinkButton:not(:first-of-type) {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .repoLinkButton:last-child {
   margin-bottom: 2rem;
@@ -106,25 +102,12 @@
 }
 
 .linkBg {
-  color: #ececec;
-  background-color: #546e7a;
+  color: #dfe5eb;
+  background-color: #516d8a;
 }
 .linkBg img {
-  height: 2.5rem;
+  height: 1.5rem;
   margin: 0.3rem;
-}
-
-.screenshotsheader {
-  border-top: 1px solid rgba(38, 50, 56, 0.2392156863);
-  padding: 1rem 0 0 0;
-  display: flex;
-}
-.screenshotsheader img {
-  height: 2.5rem;
-  margin: 1rem 1rem 1rem 2rem;
-}
-.screenshotsheader h3 {
-  margin: auto auto auto 1rem;
 }
 
 .screenshots {
@@ -143,8 +126,8 @@
 }
 
 .projHeader {
-  border-radius: 0.4rem 0.4rem 0 0;
-  border-bottom: 1px solid rgba(38, 50, 56, 0.2392156863);
+  border-radius: 0.3rem 0.3rem 0 0;
+  border-bottom: 1px solid #a5bdd6;
 }
 
 .projNameHeader {
@@ -196,14 +179,14 @@
   position: fixed;
   padding: 1rem;
   background-color: #dd2c00;
-  border-radius: 0 0 15px 0;
+  border-radius: 0 0 0.3rem 0;
   opacity: 1;
   cursor: pointer;
   transition: all 0.3s;
   display: flex;
 }
 .retornar span {
-  color: #ececec;
+  color: #dfe5eb;
   display: flex;
   margin: auto;
 }
@@ -231,7 +214,7 @@
   flex-direction: column;
 }
 .loneImg .loneImgSubContainer p {
-  color: #546e7a;
+  color: #516d8a;
 }
 .loneImg .loneImgSubContainer img:hover {
   cursor: pointer;
@@ -292,11 +275,11 @@
 
 #carrNavCont {
   border-radius: 0.3rem 0.3rem 0 0;
-  background-color: #263238;
+  background-color: #101b26;
   height: 56px;
   border-top: 1px solid rgba(38, 50, 56, 0.2392156863);
   justify-content: space-between;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 }
 #carrNavCont .screenshotBtnPrx {
   margin-left: 0.5rem;
@@ -315,8 +298,8 @@
   position: fixed;
 }
 .imgContainer .selpic {
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 20px 5px rgba(0, 0, 0, 0.12), 0 1px 20px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
   background-color: white;
 }
 .imgContainer .horizontal_selpic {

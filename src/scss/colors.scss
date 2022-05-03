@@ -1,23 +1,9 @@
 // color palette
-$cor1: #ffffff;
-$cor1_1:#ececec;
-$cor2: #01ecd5;
-$cor3: #4586ff;
-$cor4: #32474a;
-$cor4_1: #32474abe;
-$cor4_2: #546e7a;
-$cor5: #263238;
-
-$txt_cor1: #ffffffba;
-$txt_cor2: #13191dce;
-
-$semitransBlack:  #2632383d;
-
-$navBack: #32474a1c;
-
-//backgrounds
-
-.bg-minicard {
-    color: $cor1;
-    background-color: #464a52;
-}
+$maxWhite: #ffffff;
+$darkWhite: #dfe5eb;
+$bodyBackgroundColor: #4586ff;
+$bodyBackground: url("../img/misc/pattern.svg");
+$blueDark: #334960;
+$lightBlueDark: #516d8a;
+$darkBlueDark: #101b26;
+$gray_line: #a5bdd6;

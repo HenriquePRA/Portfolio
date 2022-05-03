@@ -8,9 +8,10 @@
   width: 15rem;
   height: 20rem;
   border-radius: 3rem;
-  background: #ffffff;
+  background: url("../img/misc/gradient.jpg");
+  background-size: cover;
   flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
   transition: all 0.5s ease-in-out;
 }
 
@@ -20,7 +21,7 @@
   height: 6.8rem;
   width: 6.8rem;
   background: linear-gradient(to top, #01ecd5, #4586ff);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
   border-radius: 50%;
 }
 #ProfileBlock #imgDiv img {
@@ -44,7 +45,7 @@
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 }
 
 .lnk1:hover {

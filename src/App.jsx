@@ -34,6 +34,7 @@ let App = () => {
                         element={
                             <Main 
                                 setIsRedirect={setIsRedirect}
+                                setLang={setLang}
                                 lang={lang}
                             />
                         }
