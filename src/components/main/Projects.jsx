@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { transictionRedirect } from '../util/common';
 import { useNavigate } from "react-router-dom";
-
 import DynamicIMG from '../util/DynamicIMG';
+import PT_Projects from '../main/texts/PT_Projects.json'
+import EN_Projects from '../main/texts/EN_Projects.json'
 
 import svgSetaDireita from '../../img/misc/seta-direita.svg'
 import svgSetaEsquerda from '../../img/misc/seta-esquerda.svg'
@@ -9,55 +11,135 @@ import svgSetaEsquerda from '../../img/misc/seta-esquerda.svg'
 const Projects = (props) => {
 
     const navigate = useNavigate();
+    const [componentText, setComponentText] = useState({})    
 
-    // function to store vertical position in cache and redirect user
+    // function responsible for redirecting to the project page
     const redirectToProject = (project) => {
-        props.setIsRedirect(true);
-        navigate("/projetos/"+project)
+        props.setOnTransition(true);
+        setTimeout(() => {
+            props.setIsRedirect(true);
+            navigate("/projetos/"+project)       
+        }, 550);
     }
+
+    // effect responsible for defining and switching the page language
+    useEffect(() => {
+        switch (props.lang) {
+            case "PT":
+                setComponentText(PT_Projects);
+                break;
+            default:
+                setComponentText(EN_Projects);
+        }
+    }, [props.lang])
 
     // array com um card para cada projeto que pode ser exibido na página de projetos
     const projetos = [
+        <div className="proj" key="prj13">
+            <h4>User AutoWatcher</h4>
+            <p>
+            {componentText.autowatcherDescription}
+            </p>
+            <DynamicIMG type={"icon"} name={"Docker"} className={"langicon col_1-3 row_4-5"} alt={"Postgres"} />
+            <DynamicIMG type={"icon"} name={"GO"} className={"langicon col_2-4 row_4-5"} alt={"Node"} />            
+            <DynamicIMG type={"icon"} name={"SqlServer"} className={"langicon col_3-5 row_4-5"} alt={"Express"} />
+            <DynamicIMG type={"icon"} name={"Kafka"} className={"langicon col_2-3 row_5-6"} alt={"React"} />
+            <DynamicIMG type={"icon"} name={"Swagger"} className={"langicon col_3-4 row_5-6"} alt={"PlayStore"} />
+            <div
+                className="projButton"
+                onClick={() => {
+                    transictionRedirect("mktp", )
+                }}
+            >
+                <span>{componentText.redirectBtnText}</span>
+            </div>
+        </div>,
+        <div className="proj" key="prj12">
+            <h4>GO Bird Fiesta</h4>
+            <p>
+            {componentText.goFiestaDescription}
+            </p>
+            <DynamicIMG type={"icon"} name={"Docker"} className={"langicon col_1-3 row_4-6"} alt={"Node"} />  
+            <DynamicIMG type={"icon"} name={"GO"} className={"langicon col_2-4 row_4-6"} alt={"Golang"} />                      
+            <DynamicIMG type={"icon"} name={"Mongo"} className={"langicon col_3-5 row_4-6"} alt={"Express"} />
+            <div
+                className="projButton"
+                onClick={() => {
+                    redirectToProject("mktp")
+                }}
+            >
+                <span>{componentText.redirectBtnText}</span>
+            </div>
+        </div>,
+        <div className="proj" key="prj11">
+            <h4>MKTP</h4>
+            <p>
+            {componentText.mktpDescription}
+            </p>
+            <DynamicIMG type={"icon"} name={"Postgres"} className={"langicon col_1-3 row_4-5"} alt={"Postgres"} />
+            <DynamicIMG type={"icon"} name={"Node"} className={"langicon col_2-4 row_4-5"} alt={"Node"} />            
+            <DynamicIMG type={"icon"} name={"Express"} className={"langicon col_3-5 row_4-5"} alt={"Express"} />
+            <DynamicIMG type={"icon"} name={"React"} className={"langicon col_2-3 row_5-6"} alt={"React"} />
+            <DynamicIMG type={"icon"} name={"Bootstrap"} className={"langicon col_3-4 row_5-6"} alt={"PlayStore"} />
+            <div
+                className="projButton"
+                onClick={() => {
+                    redirectToProject("mktp")
+                }}
+            >
+                <span>{componentText.redirectBtnText}</span>
+            </div>
+        </div>,
         <div className="proj" key="prj10">
             <h4>Must-Do List</h4>
             <p>
-                Esse é meu primeiro desenvolvendo apps para plataformas android, é um
-                to do list com dados persistentes.
+               {componentText.mustDoListDescription}
             </p>
-            <DynamicIMG type={"icon"} name={"Android"} className={"langicon col_1-3 row_4-6"} alt={"Android Icon"} />
-            <DynamicIMG type={"icon"} name={"Spring"} className={"langicon col_2-4 row_4-6"} alt={"Spring Icon"} />
-            <DynamicIMG type={"icon"} name={"Mongo"} className={"langicon col_3-5 row_4-6"} alt={"Mongo Icon"} />
+            <DynamicIMG type={"icon"} name={"Android"} className={"langicon col_1-3 row_4-5"} alt={"Android Icon"} />
+            <DynamicIMG type={"icon"} name={"Spring"} className={"langicon col_2-4 row_4-5"} alt={"Node Icon"} />            
+            <DynamicIMG type={"icon"} name={"Mongo"} className={"langicon col_3-5 row_4-5"} alt={"Express Icon"} />
+            <DynamicIMG type={"icon"} name={"AWS"} className={"langicon col_2-3 row_5-6"} alt={"AWS Icon"} />
+            <DynamicIMG type={"icon"} name={"Playstore"} className={"langicon col_3-4 row_5-6"} alt={"Play Store Icon"} />
             <div
                 className="projButton"
                 onClick={() => {
                     redirectToProject("mustDoList")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
+            </div>
+        </div>,        
+        <div className="proj" key="prj9">
+            <h4>IF Mobile</h4>
+            <p>
+                {componentText.ifMobileDescription}
+            </p>            
+            <DynamicIMG type={"icon"} name={"Python"} className={"langicon col_1-3 row_4-6"} alt={"Python Icon"} />
+            <DynamicIMG type={"icon"} name={"Postgres"} className={"langicon col_2-4 row_4-6"} alt={"Postgres Icon"} />
+            <div
+                className="projButton"
+            >
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>,
-        <div className="proj" key="prj9">
-            <h4>IF MKTP</h4>
-            <p>
-                Projeto final de bancos de dados relacionais da disciplina de banco de dados 2
-            </p>            
-            <DynamicIMG type={"icon"} name={"Postgres"} className={"langicon col_1-3 row_4-5"} alt={"Postgres Icon"} />
-            <DynamicIMG type={"icon"} name={"Express"} className={"langicon col_2-4 row_4-5"} alt={"Express Icon"} />
-            <DynamicIMG type={"icon"} name={"React"} className={"langicon col_3-5 row_4-5"} alt={"React Icon"} />
-            <DynamicIMG type={"icon"} name={"Node"} className={"langicon col_2-3 row_5-6"} alt={"Node Icon"} />
-            <DynamicIMG type={"icon"} name={"Bootstrap"} className={"langicon col_3-4 row_5-6"} alt={"Bootstrap Icon"} />
+        <div className="proj" key="prj6">
+            <h4>Portfolio</h4>
+            <p>{componentText.portfolioDescription}</p>
+            <DynamicIMG type={"icon"} name={"React"} className={"langicon col_1-3 row_4-6"} alt={"React Icon"} />
+            <DynamicIMG type={"icon"} name={"Sass"} className={"langicon col_2-4 row_4-6"} alt={"Sass Icon"} />
+            <DynamicIMG type={"icon"} name={"AWS"} className={"langicon col_3-5 row_4-6"} alt={"AWS Icon"} />
             <div
                 className="projButton"
                 onClick={() => {
-                    redirectToProject("ifMktp")
+                    redirectToProject("Portfolio")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
-        </div>,
+        </div>,         
         <div className="proj" key="prj8">
             <h4>Vendor Pop</h4>
-            <p>Projeto final da disciplina de POO nele eu exploro conceitos avançados de programação orientada a objetos com a linguagem java.</p>
+            <p>{componentText.vendorPopDescription}</p>
             <DynamicIMG type={"icon"} name={"Java"} className={"langicon col_1-3 row_4-6"} alt={"Java Icon"} />
             <div
                 className="projButton"
@@ -65,12 +147,12 @@ const Projects = (props) => {
                     redirectToProject("vendorPop")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
-        </div>,
+        </div>,       
         <div className="proj" key="prj7">
             <h4>Swing Memory Game</h4>
-            <p>Projeto inicial da disciplina de Programação orientada a objetos, consiste em dois jogos de Memória onde um faz o uso do java swing e outro faz uso do console.</p>
+            <p>{componentText.swingMemoryGameDescription}</p>
             <DynamicIMG type={"icon"} name={"Java"} className={"langicon col_1-3 row_4-6"} alt={"Java Icon"} />
             <div
                 className="projButton"
@@ -78,26 +160,12 @@ const Projects = (props) => {
                     redirectToProject("swingMemoryGame")
                 }}
             >
-                <span>VER MAIS</span>
-            </div>
-        </div>,
-        <div className="proj" key="prj6">
-            <h4>React Portfolio</h4>
-            <p>Criado para mostrar de forma mais fluida os projetos que tenho trabalhado e as tecnologias que venho aprendendo.</p>
-            <DynamicIMG type={"icon"} name={"React"} className={"langicon col_1-3 row_4-6"} alt={"React Icon"} />
-            <DynamicIMG type={"icon"} name={"Sass"} className={"langicon col_2-4 row_4-6"} alt={"Sass Icon"} />
-            <div
-                className="projButton"
-                onClick={() => {
-                    redirectToProject("Portfolio")
-                }}
-            >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>,
         <div className="proj" key="prj5">
             <h4>Visar Livros</h4>
-            <p>Projeto final da disciplina de linguagens de script, com suporte a navegadores antigos trata-se de uma página de busca integrada com a API de livros do Google.</p>
+            <p>{componentText.visarLivrosDescription}</p>
             <DynamicIMG type={"icon"} name={"HTML"} className={"langicon col_1-3 row_4-5"} alt={"HTML Icon"} />
             <DynamicIMG type={"icon"} name={"CSS"} className={"langicon col_2-4 row_4-5"} alt={"CSS Icon"} />
             <DynamicIMG type={"icon"} name={"Bootstrap"} className={"langicon col_3-5 row_4-5"} alt={"Bootstrap Icon"} />
@@ -110,12 +178,12 @@ const Projects = (props) => {
                     redirectToProject("visarLivros")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>,
         <div className="proj" key="prj4">
             <h4>Synonyms Detection Framework</h4>
-            <p>Feito em 2019 como projeto da disciplina de Estruturas de Dados, capaz de realizar buscas de forma a detectar sinônimos do que for pesquisado.</p>
+            <p>{componentText.synonymsFrameworkDescription}</p>
             <DynamicIMG type={"icon"} name={"Python"} className={"langicon col_1-3 row_4-6"} alt={"Python Icon"} />
                         <div
                 className="projButton"
@@ -123,12 +191,12 @@ const Projects = (props) => {
                     redirectToProject("synonymsFramework")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>,
         <div className="proj" key="prj3">
-            <h4>Modelagem de BD Relacional</h4>
-            <p>Projeto final da disciplina de Banco de Dados 1, nele eu modelo um banco de dados relacional, passando pelos modelos Conceitual, Lógico e Físico.</p>
+            <h4>RPG DB Design</h4>
+            <p>{componentText.databaseModelingDescription}</p>
             <DynamicIMG type={"icon"} name={"Mysql"} className={"langicon col_1-3 row_4-6"} alt={"MySql Icon"} />
             <div
                 className="projButton"
@@ -136,12 +204,12 @@ const Projects = (props) => {
                     redirectToProject("modelagemBD")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>,
         <div className="proj" key="prj2">
             <h4>Naval Battle</h4>
-            <p>Feito em python trata-se de um jogo de batalha naval que pode ser jogado entre jogadores ou contra o computador</p>
+            <p>{componentText.navalBattleDescription}</p>
             <DynamicIMG type={"icon"} name={"Python"} className={"langicon col_1-3 row_4-6"} alt={"Python Icon"} />
             <div
                 className="projButton"
@@ -149,12 +217,12 @@ const Projects = (props) => {
                     redirectToProject("navalBattle")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>,
         <div className="proj" key="prj1">
             <h4>Byte Barrage</h4>
-            <p>Esse é meu primeiro projeto front-end, simula um site catalogo de venda de propriedades em jogos.</p>
+            <p>{componentText.byteBarrageDescription}</p>
             <DynamicIMG type={"icon"} name={"HTML"} className={"langicon col_1-3 row_4-6"} alt={"HTML Icon"} />
             <DynamicIMG type={"icon"} name={"CSS"} className={"langicon col_2-4 row_4-6"} alt={"CSS Icon"} />
             <div
@@ -163,7 +231,7 @@ const Projects = (props) => {
                     redirectToProject("byteBarrage")
                 }}
             >
-                <span>VER MAIS</span>
+                <span>{componentText.redirectBtnText}</span>
             </div>
         </div>
     ]
@@ -183,10 +251,10 @@ const Projects = (props) => {
             new Promise((resolve) => {
                 if ((fim + 6) >= projetos.length) {
                     setFim(projetos.length)
-                    setIni(projetos.length - 6)                    
+                    setIni(projetos.length - 6)
                 } else {
-                    setFim(fim + 6)
-                    setIni(fim - 6)
+                    setIni(fim)
+                    setFim(fim + 6)                    
                 }
                 resolve()
             }).then(() => {
@@ -220,29 +288,29 @@ const Projects = (props) => {
     }
 
     return (
-        <div className="Proj_container">
+        <div 
+            className = {props.darkMode ? "Projects dark-projects" : "Projects light-projects"}
+            style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}
+        >
             <div className="blockDescription">
-                <h3>PROJETOS</h3>
+                <h3>{componentText.header}</h3>
                 <p>
-                    Aqui estão os projetos que fiz por iniciativa própria ou por requisito de disciplinas na faculdade
-                    esses projetos variam em nível de complexidade e tamanho.
+                    {componentText.description}
                 </p>
             </div>
 
-            {/* 
-                Container dos cards dos projetos ao qual itera projSel retornando cada card contido no mesmo 
-            */}
+            {/* Project cards container over which projSel iterates, returning each project card contained in it. */}
             <div className="Projects">
                 {projSel.map(projeto => { return projeto })}
             </div>
 
-            {/* 
-                Rodapé do módulo com informações e botões para navegação dinamicos, é responsável por definir
-                quais cards serão armazenados pela variável projSel
-            */}
+            {/* Module footer with dynamic information and navigation buttons, it is responsible for defining which cards will be stored by the projSel variable. */}
             <div id="LoadProj">
                 <span id="navGuia">
-                    {"Exibindo " + ini + " a " + fim + " de " + projetos.length + " projetos"}
+                    {componentText.footerTxt1} {ini} 
+                    {componentText.footerTxt2} {fim} 
+                    {componentText.footerTxt3} {projetos.length} 
+                    {componentText.footerTxt4}
                 </span>
                 <div id="ProjNavCont">
                     <div 

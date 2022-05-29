@@ -1,94 +1,97 @@
-.Contact {
+.light-contact, .dark-contact {
   margin: 10rem auto 5rem auto;
-  background-color: #ffffff;
   width: 828px;
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+  transition: all 0.7s ease-in-out;
 }
-.Contact .contactIcon {
+.light-contact .contactIcon, .dark-contact .contactIcon {
   margin-right: 0.8rem;
   height: 2rem;
   width: 2rem;
 }
-.Contact .contactButton {
+.light-contact .contactButton, .dark-contact .contactButton {
   display: flex;
   cursor: pointer;
   border: none;
-  color: #dfe5eb;
   height: 30px;
   width: 5rem;
   font-size: 12px;
-  background-color: #334960;
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
   border-radius: 0.3rem;
   transition: all 0.3s;
   right: 0;
+  color: #dfe5eb;
+  background-color: #334960;
 }
-.Contact .contactButton:hover {
+.light-contact .contactButton:hover, .dark-contact .contactButton:hover {
   background-color: #516d8a;
 }
-.Contact .contactButton span {
+.light-contact span, .dark-contact span {
   margin: auto;
 }
-.Contact .contactHeader {
-  background-color: #ffffff;
+.light-contact .contactHeader, .dark-contact .contactHeader {
   border-radius: 0.3rem 0.3rem 0 0;
-  border-bottom: 1px solid #a5bdd6;
   padding: 0.5rem 3rem;
+  transition: all 0.7s ease-in-out;
 }
-.Contact #tel-wpp, .Contact #email {
-  border: 1px solid #a5bdd6;
+.light-contact #tel-wpp, .light-contact #email, .dark-contact #tel-wpp, .dark-contact #email {
   border-radius: 0.3rem;
   padding: 1rem;
   width: 300px;
   margin: 3rem auto auto auto;
-  background-color: #dfe5eb;
 }
-.Contact #tel-wpp #tel-header {
+.light-contact #tel-wpp, .dark-contact #tel-wpp {
+  transition: all 0.7s ease-in-out;
+}
+.light-contact #tel-wpp #tel-header, .dark-contact #tel-wpp #tel-header {
   margin: auto;
   display: flex;
   align-items: center;
 }
-.Contact #tel-wpp .numero {
+.light-contact #tel-wpp .numero, .dark-contact #tel-wpp .numero {
   display: flex;
   justify-content: space-between;
 }
-.Contact #tel-wpp .numero .tel-1 {
+.light-contact #tel-wpp .numero .tel-1, .dark-contact #tel-wpp .numero .tel-1 {
   margin: 8px 20px auto 3px;
 }
-.Contact #email #email-Header {
+.light-contact #email, .dark-contact #email {
+  transition: all 0.7s ease-in-out;
+}
+.light-contact #email #email-Header, .dark-contact #email #email-Header {
   display: flex;
   height: 3.5rem;
   align-items: center;
 }
-.Contact #email #email-Header h4 {
+.light-contact #email #email-Header h4, .dark-contact #email #email-Header h4 {
   margin: auto 0;
 }
-.Contact #email #emails {
+.light-contact #email #emails, .dark-contact #email #emails {
   display: flex;
   margin: 10px 0 0 0;
   font-size: 14px;
   justify-content: space-between;
   flex-direction: column;
 }
-.Contact #email #emails .emailBlock {
+.light-contact #email #emails .emailBlock, .dark-contact #email #emails .emailBlock {
   display: flex;
   font-size: 14px;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.Contact #email #emails .email-1, .Contact #email #emails .email-2, .Contact #email #emails .email-3 {
+.light-contact #email #emails .email-1, .light-contact #email #emails .email-2, .light-contact #email #emails .email-3, .dark-contact #email #emails .email-1, .dark-contact #email #emails .email-2, .dark-contact #email #emails .email-3 {
   margin: 8px 20px auto 3px;
 }
-.Contact .socialCards {
+.light-contact .socialCards, .dark-contact .socialCards {
   margin: 3rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.Contact .socialCards .socialCard {
+.light-contact .socialCards .socialCard, .dark-contact .socialCards .socialCard {
   text-decoration: none;
   border-radius: 0.3rem 0.2rem 0.2rem 0.3rem;
   display: flex;
@@ -97,55 +100,88 @@
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
   cursor: pointer;
 }
-.Contact .socialCards .socialCard span {
+.light-contact .socialCards .socialCard span, .dark-contact .socialCards .socialCard span {
   margin: auto;
   font-size: 1.2rem;
-  color: #dfe5eb;
 }
-@media screen and (max-width: 576px) {
-  .Contact .socialCards .socialCard {
-    margin: auto 0.3rem;
-  }
-}
-.Contact .socialCards .socialCard .SCimgCont {
+.light-contact .socialCard .SCimgCont, .dark-contact .socialCard .SCimgCont {
   border-radius: 0.2rem 0 0 0.2rem;
   display: flex;
-  background-color: #dfe5eb;
 }
-.Contact .socialCards .socialCard .SCimgCont img {
+.light-contact .socialCard .SCimgCont img, .dark-contact .socialCard .SCimgCont img {
   margin: 0.5rem;
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
 }
-.Contact .socialCards .socialCard:first-child {
+.light-contact .socialCard:first-child, .dark-contact .socialCard:first-child {
   background-color: #334960;
 }
-.Contact .socialCards .socialCard:first-child:hover {
+.light-contact .socialCard:first-child:hover, .dark-contact .socialCard:first-child:hover {
   filter: contrast(1.2);
 }
-.Contact .socialCards .socialCard:last-child {
+.light-contact .socialCard:last-child, .dark-contact .socialCard:last-child {
   background-color: #007ab9;
 }
-.Contact .socialCards .socialCard:last-child:hover {
+.light-contact .socialCard:last-child:hover, .dark-contact .socialCard:last-child:hover {
   filter: saturate(1.5);
 }
 
+.light-contact {
+  background-color: #ffffff;
+}
+.light-contact .contactHeader {
+  background-color: #ffffff;
+  border-bottom: 1px solid #a5bdd6;
+}
+.light-contact #tel-wpp, .light-contact #email {
+  border: 1px solid #a5bdd6;
+  background-color: #dfe5eb;
+}
+.light-contact .socialCards .socialCard span {
+  color: #dfe5eb;
+}
+.light-contact .socialCards .socialCard .SCimgCont {
+  background-color: #dfe5eb;
+}
+
+.dark-contact {
+  background-color: #101b26;
+}
+.dark-contact .contactHeader {
+  background-color: #101b26;
+  border-bottom: 1px solid #1e2e3e;
+}
+.dark-contact #tel-wpp, .dark-contact #email {
+  border: 1px solid #1e2e3e;
+  background-color: #15222f;
+}
+.dark-contact .socialCards .socialCard span {
+  color: #dfe5eb;
+}
+.dark-contact .socialCards .socialCard .SCimgCont {
+  background-color: #dfe5eb;
+}
+
 @media screen and (max-width: 992px) {
-  .Contact {
+  .light-contact, .dark-contact {
     width: auto;
     margin: 10rem 5rem auto 5rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .Contact {
+  .light-contact, .dark-contact {
     margin: 10rem 3rem auto 3rem;
   }
 }
 @media screen and (max-width: 576px) {
-  .Contact {
+  .light-contact, .dark-contact {
     margin: 10rem 0.5rem auto 0.5rem;
+  }
+
+  .socialCards .socialCard {
+    margin: auto 0.3rem;
   }
 }
 

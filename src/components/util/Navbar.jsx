@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { dealNavigate } from './common'
+import { useNavigate } from "react-router-dom";
 import sobreSvg from '../../img/misc/sobre.svg'
 import projetosSvg from '../../img/misc/projects.svg'
 import contatoSvg from '../../img/misc/contato.svg'
 import languageSvg from '../../img/misc/language.svg'
+import returnSvg from '../../img/misc/return.svg'
 import lampSvg from '../../img/misc/lamp.svg'
 import PT_Navbar from './texts/PT_Navbar.json';
 import EN_Navbar from './texts/EN_Navbar.json';
@@ -14,17 +17,30 @@ import EN_Navbar from './texts/EN_Navbar.json';
 
 const Navbar = (props) => {
 
+    const navigate = useNavigate();
+
     const [showLang, setShowLang] = useState(false);
     const [componentText, setComponentText] = useState({})
+
+    // function responsible for redirecting the page
+    const transictionNavigate = () => {
+        props.setPageload(true)
+        setTimeout(() => {
+            props.setOnTransition(true)
+        }, 500);
+        setTimeout(() => {
+            dealNavigate(props.isRedirect, navigate)
+        }, 600);
+    } 
 
     // function responsible for ascending to the top of the page
     const scrollProfile = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    // function responsible for scrolling to the beginning  of the div ".Proj_container"
+    // function responsible for scrolling to the beginning  of the div ".Projects"
     const scrollProjects = () => {
-        let projs_div = document.querySelector(".Proj_container");
+        let projs_div = document.querySelector(".Projects");
         if (window.innerHeight > projs_div.offsetHeight) {
             projs_div.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
         } else {
@@ -47,6 +63,10 @@ const Navbar = (props) => {
         'display': 'flex',
         'opacity': '1',
         'height': 'auto',
+    }
+
+    const showLangText = {
+        'display': 'block',
     }
 
     // function responsible to hide smoothly all the divs ".langBtn" 
@@ -77,6 +97,14 @@ const Navbar = (props) => {
         setShowLang(true)
     }
 
+    // functions for timed language change
+    const setLang = (name) => {
+        props.setOnTransition(true)
+        setTimeout(() => {
+            props.setLang(name)
+        }, 300);
+    }
+
     // only on main page, style responsible to highlight the part of the page where the user is located
     const destacar = {
         'backgroundColor': '#405c79',
@@ -93,89 +121,113 @@ const Navbar = (props) => {
         }
     }, [props.lang])
 
-    if (props.page === "main") {
-        return (
-            <div id="navbar">
+    
+    return (
+        <div id="navbar"
+            style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}
+        >
+            {props.page === "main" ?
                 <div 
                     className="navBtn" 
                     onClick={() => scrollProfile()}
                     style={(props.blocoatual === 'sobre') ? destacar : null}
                 >
-                    <img src={sobreSvg} alt="about icon"></img>
+                    <img src={sobreSvg} alt="about"></img>
                     <span className="navSpan" style={{"margin":"auto .5rem auto 1rem"}}>
                         {componentText.about}
                     </span>
                 </div>
+            : null }
+
+            {props.page === "main" ?
                 <div 
                     className="navBtn" 
                     onClick={() => scrollProjects()}
                     style={(props.blocoatual === 'projetos') ? destacar : null}
                 >
-                    <img src={projetosSvg} alt="projects icon"></img>
+                    <img src={projetosSvg} alt="projects"></img>
                     <span className="navSpan">
                         {componentText.projects}
                     </span>
                 </div>
+            : null }
+
+            {props.page === "main" ?
                 <div 
                     className="navBtn"
                     onClick={() => scrollContact()}
                     style={(props.blocoatual === 'contato') ? destacar : null}
                 >
-                    <img src={contatoSvg} alt="contact icon"></img>
+                    <img src={contatoSvg} alt="contact"></img>
                     <span className="navSpan">
                         {componentText.contact}
                     </span>
                 </div>
+            : null }
+
+            {props.page === "proj" ?
                 <div 
-                    className='langBlock' 
-                    onClick={() => {setShowLangBtn()}}
-                    onMouseLeave={() => {hideLangBtn()}}
+                    className="navBtn retornar"
+                    onClick={() => transictionNavigate()}
                 >
-                    {props.lang !== "EN" ?
-                            <div 
-                                className="navBtn langBtn" 
-                                style={showLang ? showLangBtn : null}
-                                onClick={() => {props.setLang("EN")}}
-                            >
-                                <h3>EN</h3>
-                                <span className="navSpan">
-                                    {componentText.enBtn}
-                                </span>
-                            </div>
-                        :
-                            null
-                    }
-                    {props.lang !== "PT" ?
-                            <div 
-                                className="navBtn langBtn" 
-                                style={showLang ? showLangBtn : null}
-                                onClick={() => {props.setLang("PT")}}
-                            >
-                                <h3 >PT</h3>
-                                <span className="navSpan">
-                                    {componentText.ptBtn}
-                                </span>
-                            </div>
-                        :
-                            null
-                    }
-                    <div className="navSpamBtn">
-                        <img src={languageSvg} alt="linguagem icon"></img>
-                        <span className="navSpan">
-                            {componentText.language}
+                    <img src={returnSvg} alt="return"></img>
+                    <span className="navSpan">
+                        {props.isRedirect ? componentText.return : componentText.goToPort}
+                    </span>
+                </div>
+            : null }
+
+            <div 
+                className='langBlock' 
+                onMouseEnter={() => {setShowLangBtn()}}
+                onMouseLeave={() => {hideLangBtn()}}
+            >
+                {props.lang !== "EN" ?
+                    <div 
+                        className="navBtn langBtn" 
+                        style={showLang ? showLangBtn : null}
+                        onClick={() => {setLang("EN")}}
+                    >
+                        <h3 style={showLang ? showLangText : null}>EN</h3>
+                        <span 
+                            className='navSpan'
+                            style={showLang ? showLangText : null}
+                        >
+                            {componentText.enBtn}
                         </span>
                     </div>
-                </div>
-                <div className="navBtn configBtn">
-                    <img src={lampSvg} alt="light/dark icon" className="noSpanExtended"></img>
+                : null }
+                {props.lang !== "PT" ?
+                    <div 
+                        className="navBtn langBtn" 
+                        style={showLang ? showLangBtn : null}
+                        onClick={() => {setLang("PT")}}
+                    >
+                        <h3 style={showLang ? showLangText : null}>PT</h3>
+                        <span 
+                            className='navSpan'
+                            style={showLang ? showLangText : null}
+                        >
+                            {componentText.ptBtn}
+                        </span>
+                    </div>
+                : null }
+                <div className="navSpamBtn">
+                    <img src={languageSvg} alt="linguagem icon"></img>
+                    <span className="navSpan">
+                        {componentText.language}
+                    </span>
                 </div>
             </div>
-        )
-    } else {
-
-    }
-
-
+            <div 
+                className="navBtn configBtn"
+                onClick={() => props.setDarkMode(!props.darkMode)}
+            >
+                <img src={lampSvg} alt="light/dark icon" className="noSpanExtended"></img>
+            </div>
+        </div>
+    )
+    
 }
 
 export default Navbar;

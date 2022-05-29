@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.bg-modal {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.light-modal {
+  background-color: #4586ff;
+}
+
+.dark-modal {
+  background-color: #020509;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex !important;
+}
+
+/* animação de loading */
+#loading {
+  position: fixed;
+}
+
+#loading svg {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  animation: rodar 1s linear infinite;
+  margin: auto;
+}
+
+#loading svg circle {
+  margin: auto;
+  fill: none;
+  stroke: rgba(107, 129, 255, 0.5960784314);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  transform: translate(5px, 5px);
+  animation: loadAnimation 3s infinite;
+}
+
+@keyframes rodar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadAnimation {
+  0%, 100% {
+    stroke-dashoffset: 250;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    stroke: #64ffda;
+  }
+  50.1% {
+    stroke-dashoffset: 580;
+  }
+}
+
+/*# sourceMappingURL=transitions.css.map */

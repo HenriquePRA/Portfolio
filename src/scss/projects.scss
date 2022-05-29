@@ -1,185 +1,138 @@
 @import './colors.scss';
 
-.Proj_container {
+// COMMON STYLES
+
+.light-projects, .dark-projects {
     display: flex;
     justify-content: center;
     width: 828px;
     overflow-anchor: none;
     margin: 10rem auto auto auto;
     border-radius: .3rem;
-    background-color: $maxWhite;
     flex-direction: column;
     box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+    transition: all .7s ease-in-out;
 
     .blockDescription {
-        background-color: $maxWhite;
         border-radius: .3rem .3rem 0 0;
-        border-bottom: 1px solid $gray_line;
         margin: 0 0 1rem 0 ;
         padding: .5rem 3rem;
-    
-        h3, p {
-            font-family: "RobotoCondensed";
-        }
+        transition: all .7s ease-in-out;
     }
-}
 
-@media screen and (max-width: 992px) {
-    .Proj_container {
-        width:  auto;
-        margin: 10rem 5rem auto 5rem;
+    .blockDescription h3, .blockDescription p {
+        font-family: "RobotoCondensed";
     }
-}
-@media screen and (max-width: 768px) {
-    .Proj_container {
-        margin: 10rem 3rem auto 3rem;
+
+    .Projects {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
-}
-@media screen and (max-width: 576px) {
-    .Proj_container {
-        margin: 10rem .5rem auto .5rem;
+
+    .Projects .proj {
+        margin: 10px;
+        overflow: hidden;
+        display: grid;
+        border-radius: .3rem;
+        width: 46%;
+        grid-template-columns: 3fr 3fr 3fr 3fr 4fr 7fr;
+        grid-template-rows: 3.5rem 2.5rem 2rem 3rem 3rem;
+        transition: all .7s ease-in-out;        
     }
-}
 
-.Projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.Projects .proj {
-    margin: 10px;
-    background-color: $darkWhite;
-    overflow: hidden;
-    border: 1px solid $gray_line;
-    display: grid;
-    border-radius: .3rem;
-    width: 46%;
-    grid-template-columns: 3fr 3fr 3fr 3fr 4fr 7fr;
-    grid-template-rows: 3.5rem 2.5rem 2rem 3rem 3rem;
-
-    h4 {
+    .Projects .proj h4 {
         grid-column: 1/7;
         grid-row: 1/2;
-        color: $darkBlueDark;
         margin: 1rem 1rem .5rem 1.5rem;
-        align-self: center;
+        align-self: center;          
     }
 
-    p {
+    .Projects .proj p {
         grid-column: 1/7;
         grid-row: 2/4;
         font-size: 14px;
         padding: 0;
         margin: .5rem 1.5rem 0 1.5rem;
     }
-    .langicon {
+
+    .Projects .proj .langicon {
         justify-self: center;
         align-self: center;
         width: 30px;
         height: 30px;
     }
 
-    .projButton {
-        grid-column: 6/7;
-        grid-row: 5/6;
-        margin: 0 .5rem .5rem 0;
-        display: flex;
-        font-size: .8rem;
-        background-color: $blueDark;
-        color: $darkWhite;
-        border: none;
-        border-radius: .3rem;
-        cursor: pointer;
-        transition: all .3s;
-        box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
-
-        span {
-            margin: auto;
-        }
-
-        &:hover {
-            background-color: $lightBlueDark;
-        }
-    }
-
-    .col_1-3 {
-        grid-column: 1/3;
-    }
-    .col_2-4 {
-        grid-column: 2/4;
-    }
-    .col_3-5 {
-        grid-column: 3/5;
-    }
-    .col_2-3 {
-        grid-column: 2/3;
-    }
-    .col_3-4 {
-        grid-column: 3/4;
-    }
-    .row_4-6 {
-        grid-row: 4/6;
-    }
-    .row_4-5 {
-        grid-row: 4/5;
-    }
-    .row_5-6 {
-        grid-row: 5/6;
-        margin-bottom: .8rem;
-    }
-
-    // long text style
-    .long_stk {
+    .Projects .proj .long_stk {
         height: auto;
         width: 3rem;
         justify-self: center;
     }
 
-    @media screen and (max-width: 992px) {
-        .long_stk {
-            width: 4rem;
-            justify-self: right;
+    .Projects .proj .projButton {
+        grid-column: 6/7;
+        grid-row: 5/6;
+        margin: 0 .5rem .5rem 0;
+        display: flex;
+        font-size: .8rem;
+        border: none;
+        border-radius: .3rem;
+        cursor: pointer;
+        transition: all .3s;
+        box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+        background-color: $BlueDark-500;
+        color: $White-850;
+        
+        &:hover {
+            background-color: $BlueDark-400;
         }
     }
-    @media screen and (max-width: 850px) {
-        .long_stk {
-            width: 3rem;
-            justify-self: center;
-        }
-        .row_4-6, .row_4-5 {
-            margin-bottom: 2rem;
-        }
-        .row_5-6 {
-            margin-bottom: 2.8rem;
-        }
-    }
-}
 
-@media screen and (max-width: 992px) {
-    .Projects .proj {
-        grid-template-rows: 3.5rem 2.5rem 3rem 3rem 3rem;
+    .Projects .proj .projButton span {
+        margin: auto;
     }
-}
-@media screen and (max-width: 850px) {
-    .Projects .proj {
-        width: 25rem;
-        grid-template-rows: 3.5rem 3rem 3.5rem 3.5rem 3.5rem;
-    }
-}
-@media screen and (max-width: 576px) {
-    .Projects .proj {
+
+    #LoadProj {
+        display: flex;
+        height: 3.5rem;
         width: 100%;
-        grid-template-rows: 3.5rem 3rem 3rem 3rem 3rem;
+        margin-top: 1rem;
+        border-radius: 0 0 .3rem .3rem;
+        justify-content: space-between;
+        transition: all .7s ease-in-out;
     }
 }
 
-
+.col_1-3 {
+    grid-column: 1/3;
+}
+.col_2-4 {
+    grid-column: 2/4;
+}
+.col_3-5 {
+    grid-column: 3/5;
+}
+.col_2-3 {
+    grid-column: 2/3;
+}
+.col_3-4 {
+    grid-column: 3/4;
+}
+.row_4-6 {
+    grid-row: 4/6;
+}
+.row_4-5 {
+    grid-row: 4/5;
+}
+.row_5-6 {
+    grid-row: 5/6;
+    margin-bottom: .8rem;
+}
 
 .alterPgBtnAnt, .alterPgBtnPrx, .screenshotBtnPrx, .screenshotBtnAnt {
     border-radius: .3rem;
     width: 3.0rem;
-    background-color: $blueDark;
+    background-color: $BlueDark-500;
     border: none;
     display: flex;
     justify-content: center;
@@ -200,15 +153,16 @@
 
     &:hover {
         cursor: pointer;
-        background-color: $lightBlueDark;
+        background-color: $BlueDark-400;
     }
-} 
-.alterPgBtnAnt:hover, .alterPgBtnPrx:hover, .screenshotBtnPrx, .screenshotBtnAnt {
-    border-color: rgba(0, 0, 0, 0.24);
-} 
+}
 
 .alterPgBtnAnt {
     margin-right: 2.5rem;
+}
+
+.alterPgBtnAnt:hover, .alterPgBtnPrx:hover, .screenshotBtnPrx, .screenshotBtnAnt {
+    border-color: rgba(0, 0, 0, 0.24);
 }
 
 #ProjNavCont, #carrNavCont {
@@ -217,23 +171,117 @@
     justify-content: center;
 }
 
-#LoadProj {
-    display: flex;
-    height: 3.5rem;
-    width: 100%;
-    margin-top: 1rem;
-    background-color: $maxWhite;
-    border-top: 1px solid $gray_line;
-    border-radius: 0 0 .3rem .3rem;
-    justify-content: space-between;
+#navGuia {
+    margin: auto 2.5rem;
+}
 
-    #navGuia {
-        margin: auto 2.5rem;
+// LIGHT MODE
+
+.light-projects {
+    background-color: $White-900;
+
+    .blockDescription {
+        background-color: $White-900;
+        border-bottom: 1px solid $BlueDark-100;
     }
 
-    @media screen and (max-width: 576px) {
-        #navGuia {
-            margin: auto 0rem auto .5rem;
-        }
+    .Projects .proj {
+        background-color: $White-850;
+        border: 1px solid $BlueDark-100;
+    }
+
+    .Projects .proj h4 {
+        color: $BlueDark-900;
+    }
+    
+    #LoadProj {
+        background-color: $White-900;
+        border-top: 1px solid $BlueDark-100;
+
+    }
+}
+
+// DARK MODE
+
+.dark-projects {
+    background-color: $BlueDark-900;
+
+    .blockDescription {
+        background-color: $BlueDark-900;
+        border-bottom: 1px solid $BlueDark-800;
+    }
+
+    .Projects .proj {
+        background-color: $BlueDark-850;
+        border: 1px solid $BlueDark-800;
+    }
+
+    .Projects .proj h4 {
+        color: $BlueDark-100;
+    }
+
+    #LoadProj {
+        background-color: $BlueDark-900;
+        border-top: 1px solid $BlueDark-800;
+    }
+}
+
+// RESPONSIVITY
+
+@media screen and (max-width: 992px) {
+    .light-projects, .dark-projects {
+        width:  auto;
+        margin: 10rem 5rem auto 5rem;
+    }
+
+    .Projects .proj {
+        grid-template-rows: 3.5rem 2.5rem 3rem 3rem 3rem;
+    }    
+
+    .long_stk {
+        width: 4rem;
+        justify-self: right;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .Projects .proj {
+        width: 25rem;
+        grid-template-rows: 3.5rem 3rem 3.5rem 3.5rem 3.5rem;
+    }    
+
+    .long_stk {
+        width: 3rem;
+        justify-self: center;
+    }
+
+    .row_4-6, .row_4-5 {
+        margin-bottom: 2rem;
+    }
+
+    .row_5-6 {
+        margin-bottom: 2.8rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .light-projects, .dark-projects {
+        margin: 10rem 3rem auto 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .light-projects, .dark-projects {
+        margin: 10rem .5rem auto .5rem;
+    }
+
+    .Projects .proj {
+        width: 100%;
+        grid-template-rows: 3.5rem 3rem 3rem 3rem 3rem;
+    }
+
+    #navGuia {
+        margin: auto 0rem auto .5rem;
     }
 }

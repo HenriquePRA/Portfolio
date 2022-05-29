@@ -17,7 +17,7 @@
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
   width: 8.5rem;
   cursor: pointer;
-  transition: opacity 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 #navbar .navBtn img, #navbar .navSpamBtn img {
   width: 1.5rem;
@@ -44,6 +44,15 @@
   border-bottom: none;
   border-radius: 0 0 0.3rem 0.3rem !important;
 }
+#navbar .retornar {
+  background-color: #dd2c00;
+}
+#navbar .retornar span {
+  color: #dfe5eb;
+}
+#navbar .retornar:hover {
+  background-color: #ff3d00;
+}
 
 #navbar .langBlock .langBtn {
   background-color: #516d8a;
@@ -53,8 +62,12 @@
   transition: all 0.3s;
 }
 #navbar .langBlock .langBtn h3 {
+  display: none;
   color: #dfe5eb;
   margin: 1rem 1.1rem;
+}
+#navbar .langBlock .langBtn .navSpan {
+  display: none;
 }
 #navbar .langBlock .langBtn:first-of-type {
   margin-top: 0;
@@ -63,10 +76,6 @@
 #navbar .langBlock .langBtn:hover {
   background-color: rgba(64, 92, 121, 0.6509803922);
   box-shadow: none;
-}
-
-#navbar .langBlock .navSpan, .langBlock .navSpamBtn {
-  margin: auto auto auto 0.3rem !important;
 }
 
 .noSpanExtended {

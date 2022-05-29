@@ -1,9 +1,15 @@
-// color palette
-$maxWhite: #ffffff;
-$darkWhite: #dfe5eb;
-$bodyBackgroundColor: #4586ff;
+$LightModeBg: #4586ff;
+$DarkModeBg: #020509;
 $bodyBackground: url("../img/misc/pattern.svg");
-$blueDark: #334960;
-$lightBlueDark: #516d8a;
-$darkBlueDark: #101b26;
-$gray_line: #a5bdd6;
+
+// color palette
+$White-900: #ffffff;
+$White-850: #dfe5eb;
+
+$BlueDark-900: #101b26;
+$BlueDark-850: #15222f;
+$BlueDark-800: #1e2e3e;
+$BlueDark-500: #334960;
+$BlueDark-400: #516d8a;
+$BlueDark-200: #809ab5;
+$BlueDark-100: #a5bdd6;

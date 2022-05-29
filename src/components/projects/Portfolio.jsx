@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg, getLangText } from './UtilFunctions';
+import { dealNavigate, showImg, hideImg, getLangText } from '../util/common';
 import DynamicIMG from '../util/DynamicIMG';
 import PT_Portfolio from './texts/PT_Portfolio.json';
 import EN_Portfolio from './texts/EN_Portfolio.json';
@@ -37,7 +37,7 @@ const Portfolio = (props) => {
       }, []);
 
     return (
-        <div id="bg-modal" className="projMain">
+        <div id="bg-modal" className = {props.darkMode ? "dark-project" : "light-project"}>
             <div
                 className="retornar"
                 onClick={() => {
@@ -49,33 +49,31 @@ const Portfolio = (props) => {
                 </span>
             </div>
 
-            <div className="projdetailCont">
-                <div className="projDetailBlock">
-                    <div className="projHeader">
-                        <div className="projNameHeader">
+            <div className="detail-container">
+                <div className="detail">
+                    <div className="project-header">
+                        <div className="project-name">
                             <h2>{pageText.header}</h2>
                         </div>
                     </div>
-                    <p className="detailDescription">
+                    <p className="project-description">
                         {pageText.about}
                     </p>
 
-                    <div className='statusAndTools'>
-                        <div className="badgeBlock">
-                            <h4>{pageText.toolsHeader}</h4>
+                    <div className='status-and-tools'>
+                        <div className="badges">
                             <DynamicIMG type={"badge"} name={"React"} />
                             <DynamicIMG type={"badge"} name={"Sass"} />
                         </div>
                         
-                        <div className="projBtn">
-                            <h4>{pageText.projStatusHeader}</h4>
-                            <div className='repoLinkButton greenCheckBg'>
+                        <div className="project-btn">
+                            <div className='link-btn green-btn-bg'>
                                 <img src={Checkmark} alt="greenCheck"></img> 
                                 <span>{pageText.projectStatus}</span>
                             </div>
 
                             <div 
-                                className='repoLinkButton'
+                                className='link-btn'
                                 onClick={
                                     () => window.location.href = "https://github.com/HenriquePRA/Visar-Livros"
                                 }
@@ -87,14 +85,14 @@ const Portfolio = (props) => {
                     </div>
 
                      {/* Project structure description */}
-                     <div className="projLangHeader">
+                     <div className="header">
                         <DynamicIMG type="icon" name={"React"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>{pageText.descriptionHeader}</h4>
                         </div>
                     </div>
                     
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>{pageText.description}</p>
                     </div>
 
@@ -103,9 +101,9 @@ const Portfolio = (props) => {
                         <div className="loneImgSubContainer">
                             <img 
                                 src={Img1} 
-                                className="width_100"
+                                className="width_100 ml_1_auto "
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>{pageText.imgDescription_1}</em>
@@ -114,21 +112,21 @@ const Portfolio = (props) => {
                     </div>
 
                     {/* Project pages and modules description */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"React"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>{pageText.pagesHeader}</h4>
                         </div>
                     </div>
 
-                    <div className="toolDetail pt_0 pb_1">
-                        <ul className="projDescriptionList">
+                    <div className="section-detail pt_0 pb_1">
+                        <ul className="section-detail-list">
                             <li>
-                                <strong>{pageText.mainPageHeader}</strong>
+                                {pageText.mainPageHeader}
                                 <p>{pageText.mainPage}</p>
                             </li>
                             <li>
-                                <strong>{pageText.projectPageHeader}</strong>
+                                {pageText.projectPageHeader}
                                 <p>{pageText.projectPage}</p>
                             </li>                            
                         </ul>
@@ -141,7 +139,7 @@ const Portfolio = (props) => {
                                 src={Img2} 
                                 className="width_100"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>{pageText.imgDescription_2}</em>
@@ -150,24 +148,24 @@ const Portfolio = (props) => {
                     </div>
 
                      {/* Support modules description */}
-                     <div className="projLangHeader">
+                     <div className="header">
                         <DynamicIMG type="icon" name={"React"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>{pageText.supportModHeader}</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>{pageText.supModMain}</p>
-                        <ul className="projDescriptionList">
+                        <ul className="section-detail-list">
                             <li>
                                 <p>
-                                    <strong>{pageText.navBarHeader}: </strong>
+                                    {pageText.navBarHeader}: 
                                     {pageText.navBar}
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <strong>{pageText.dynamicIMGHeader}: </strong>
+                                    {pageText.dynamicIMGHeader}: 
                                     {pageText.dynamicIMG}
                                 </p>
                             </li>
@@ -181,7 +179,7 @@ const Portfolio = (props) => {
                                 src={Img3} 
                                 className="width_80 ml_1_auto"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "horizontal"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>{pageText.imgDescription_3}</em>
@@ -189,11 +187,11 @@ const Portfolio = (props) => {
                         </div>
                     </div>
 
-                    <div className="toolDetail pt_0 pb_1">
-                        <ul className="projDescriptionList">
+                    <div className="section-detail pt_0 pb_1">
+                        <ul className="section-detail-list">
                             <li>
                                 <p>
-                                    <strong>{pageText.effectsHeader}: </strong>
+                                    {pageText.effectsHeader}: 
                                     {pageText.effects}
                                 </p>
                             </li>
@@ -215,8 +213,8 @@ const Portfolio = (props) => {
                 onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
-                    <div className="fechar" id="fecharImg" >
-                        <img src={CruzSvg} className="fechar_btn" alt="fechar modal" />
+                    <div className="close" id="fecharImg" >
+                        <img src={CruzSvg} className="close-svg" alt="" />
                     </div>
                     {selPic.map(img => {return img})}
                 </div>                

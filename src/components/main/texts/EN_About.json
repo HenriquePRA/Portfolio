@@ -1,0 +1,6 @@
+{
+    "header":"ABOUT ME",
+    "paragraph_1":"I am a software developer for approximately 4 years where I have been acquiring experience and knowledge about the development, maintenance and improvement of web applications, I am currently a student of the Internet Systems higher course in the Federal Institute of Paraíba (IFPB) since 2018, today being in the last semester, from knowledge acquired in college and certification programs i have used the following technologies in multiple projects:",
+    "paragraph_2":"In the 3rd semester i started an internship at the dock where i played the role of database analyst in which i was responsible for making complex queries, debugging procedures and changing records on different databases in order to detect, correct bugs and their effects.",
+    "paragraph_3":"Months later in order to become a backend developer i migrated to a team focused on the development and analysis of multi-tenancy microservices where i have been developing REST APIs using GoLang, Postgres, Kafka and other tools. Due to my work experience i have mastered the following tools and technologies:"
+}

@@ -1,8 +1,6 @@
 {
     "header":"Portfolio",
     "about":"Since I already had solid knowledge about ECMAScript6/HTML5/CSS tools in 2021 I built this project with three objectives: master the basic functionalities of ReactJS/JSX and SASS for its use in future projects, enter the professional development market software and show my friends and family the projects I've been working on",
-    "toolsHeader":"Tools",
-    "projStatusHeader":"Info",
     "projectStatus":"Finished",
     "projectRepo":"Go to Repository",
     "descriptionHeader":"Project Structure",

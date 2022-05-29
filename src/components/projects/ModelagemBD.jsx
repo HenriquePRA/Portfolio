@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg } from './UtilFunctions';
+import { dealNavigate, showImg, hideImg } from '../util/common';
 import DynamicIMG from '../util/DynamicIMG';
 
 import Github from '../../img/tools/icons/github.svg'
@@ -26,7 +26,7 @@ const ModelagemBD = (props) => {
       }, []);
 
     return (
-        <div id="bg-modal" className="projMain">
+        <div id="bg-modal" className="project">
             <div
                 className="retornar"
                 onClick={() => {
@@ -38,29 +38,29 @@ const ModelagemBD = (props) => {
                 </span>
             </div>
 
-            <div className="projdetailCont">
+            <div className="detail-container">
                 <div 
-                    className="projDetailBlock"                       
+                    className="detail"                       
                 >
-                    <div className="projHeader">
-                        <div className="projNameHeader">
+                    <div className="project-header">
+                        <div className="project-name">
                             <h2>Modelagem de Banco de Dados Relacional</h2>
                         </div>
                     </div>
-                    <p className="detailDescription">
+                    <p className="project-description">
                         Feito em 2019 como projeto final da disciplina de Banco de Dados 1 esse projeto engloba a modelagem de um 
                         banco de dados relacional desde a idealização de como seria o minimundo em que será inserido passando 
                         pelos modelos conceitual, lógico até chegar ao físico usando MySQL.
                     </p>
 
-                    <div className="projBtn">
-                        <div className='repoLinkButton greenCheckBg'>
+                    <div className="project-btn">
+                        <div className='link-btn green-btn-bg'>
                             <img src={Checkmark} alt="greenCheck"></img> 
                             <span>Projeto Finalizado</span>
                         </div>
 
                         <div 
-                            className='repoLinkButton'
+                            className='link-btn'
                             onClick={
                                 () => window.location.href = "https://github.com/HenriquePRA/Modelagem-BD-RPG"
                             }
@@ -71,53 +71,53 @@ const ModelagemBD = (props) => {
                     </div>
                     
                     {/* Requisitos */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"SQL"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Requisitos do Projeto </h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>
                             Por se tratar de um projeto final de disciplina, este projeto possúi vários requisitos técnicos 
                             em suas diversas etapas de modelagem especialmente quanto ao script SQL em seu modelo físico, sendo eles:
                         </p>
-                        <ul className="projDescriptionList">
+                        <ul className="section-detail-list">
                             <li>
                                 <p>
-                                    <strong>Introdução</strong>: descrição da finalidade do banco de dados. A introdução deverá conter as informações 
+                                    Introdução: descrição da finalidade do banco de dados. A introdução deverá conter as informações 
                                     da realidade a ser modelada (minimundo) com a descrição detalhada das regras de negócio e a definição do escopo do 
                                     projeto.
                                 </p> 
                             </li>
                             <li>
                                 <p>
-                                    <strong>Esquema Conceitual:</strong> Foi modelado diagrama E-R (Entidade-Relacionamento) contendo as cardinalidades 
+                                    Esquema Conceitual: Foi modelado diagrama E-R (Entidade-Relacionamento) contendo as cardinalidades 
                                     máxima e mínima de cada relacionamento onde foi Uilizada a notação de Peter Chen com o brModelo.
                                 </p> 
                             </li>
                             <li>
                                 <p>
-                                    <strong>Esquema lógico:</strong> foi modelado o diagrama relacional normalizado contendo as cardinalidades máxima e
+                                    Esquema lógico: foi modelado o diagrama relacional normalizado contendo as cardinalidades máxima e
                                      mínima de cada relacionamento onde foi utilizado a notação crow's foot (IE) com o MySQL Workbench. 
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <strong>Dicionário de Dados:</strong> feito de modo a descrever tabelas e seus atributos de forma a detalhar seu tipo, 
+                                    Dicionário de Dados: feito de modo a descrever tabelas e seus atributos de forma a detalhar seu tipo, 
                                     descrição, se pode receber valores nulos, o domínio de origem (em caso de chave estrangeira) e se o atributo é chave 
                                     estrangeira our primária. 
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <strong>Script de Criaçao:</strong> Sript separado para criação das tabelas do projeto escrito utilizando a 
+                                    Script de Criaçao: Sript separado para criação das tabelas do projeto escrito utilizando a 
                                     linguagem de consulta estruturada SQL. 
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <strong>Script de Povoamento:</strong> Um sript separado para o povoamento das tabelas do projeto escrito utilizando a linguagem de 
+                                    Script de Povoamento: Um sript separado para o povoamento das tabelas do projeto escrito utilizando a linguagem de 
                                     consulta estruturada SQL, deve possuir uma quantidade mínima de dados necessários para o uso do script de consultas. 
                                 </p>
                             </li>                        
@@ -125,13 +125,13 @@ const ModelagemBD = (props) => {
                     </div>
 
                     {/* Minimundo */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Txt"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Minimundo</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_1 pb_1">
+                    <div className="section-detail pt_1 pb_1">
                         Representa a descrição de um banco de dados de um jogo de fantasia RPG, nesse jogo é determinado que os 
                         jogadores podem interagir, fazer missões, obter conquistas, chefiar e fazer parte de uma guilda que pode 
                         possuir ou não alinhamento e outras entidades e relações comuns em um jogo de fantasia RPG que são descritos
@@ -139,13 +139,13 @@ const ModelagemBD = (props) => {
                     </div>
 
                     {/* Modelo Conceitual */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Entity"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Modelo Conceitual</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_1 pb_1">
+                    <div className="section-detail pt_1 pb_1">
                         <p>O esquema conceitual atendem aos seguintes requisitos técnicos.</p>
                         <ul>
                             <li>Entidade fraca com relacionamento identificador</li> 
@@ -165,7 +165,7 @@ const ModelagemBD = (props) => {
                                     src={Img1} 
                                     className="width_100"
                                     alt="Imagem Modelo Entidade-Relacionamento" 
-                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                     />
                                 <p className="ml_1_auto">
                                     <em>Modelo Entidade-Relacionamento</em>
@@ -178,7 +178,7 @@ const ModelagemBD = (props) => {
                                     src={Img2} 
                                     className="width_100"
                                     alt="Modelo Lógico" 
-                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                     />
                                 <p className="ml_1_auto">
                                     <em>Modelo Lógico</em>
@@ -191,7 +191,7 @@ const ModelagemBD = (props) => {
                                     src={Img3} 
                                     className="width_100"
                                     alt="Modelo Lógico" 
-                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                     />
                                 <p className="ml_1_auto">
                                     <em>Dicionário de Dados</em>
@@ -201,13 +201,13 @@ const ModelagemBD = (props) => {
                     </div>
 
                     {/* Modelo Físico */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Mysql"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Modelo Físico (Criação, Povoamento, Atualização)</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_1 pb_1">
+                    <div className="section-detail pt_1 pb_1">
                         <p>O Script de criação, povoamento e Atualização seguintes requisitos técnicos.</p>
                         <ul>
                             <li>(Criação) Uso da constraint CHECK (mínimo de 3, diferentes)</li> 
@@ -224,7 +224,7 @@ const ModelagemBD = (props) => {
                                 <img 
                                     src={Img4}
                                     alt="Imagem Modelo Entidade-Relacionamento" 
-                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                    onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                     />
                                 <p className="ml_1_auto">
                                     <em>Modelo Entidade-Relacionamento</em>
@@ -234,13 +234,13 @@ const ModelagemBD = (props) => {
                     </div>
 
                     {/* Modelo Físico parte2 */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Mysql"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Modelo Físico (Consultas)</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_1 pb_1">
+                    <div className="section-detail pt_1 pb_1">
                         <p>O Script de consultas com suas respostas comentadas, tendo como requisito o uso das seguintes cláusulas</p>
                         <ul>
                             <li>IN</li>
@@ -279,8 +279,8 @@ const ModelagemBD = (props) => {
                 onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
-                    <div className="fechar" id="fecharImg" >
-                        <img src={CruzSvg} className="fechar_btn" alt="fechar modal" />
+                    <div className="close" id="fecharImg" >
+                        <img src={CruzSvg} className="close-svg" alt="" />
                     </div>
                     {selPic.map(img => {return img})}
                 </div>                

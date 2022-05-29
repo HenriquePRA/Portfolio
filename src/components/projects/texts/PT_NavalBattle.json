@@ -1,0 +1,19 @@
+{
+    "header":"Naval Battle",
+    "about":"Feito em python como projeto final da disciplina de Algoritimo e Programação Estruturada, trata-se de um jogo de batalha naval que pode ser jogado usando o console do python no modo jogador contra jogador ou jogador contra bot, faz uso de modularização, funções, POO básico, e estruturas de dados simples.",
+    "projectStatus":"Projeto Finalizado",
+    "projectRepo":"Ir ao Repositório",
+    "caracteristcsHeader":"Características",
+    "caracteristcsDescription":"Possúi 5 módulos: main.py, Escolha.py, Jogador.py, Embarcacao.py, Partida.py, PosicionarFrota.py",
+    "mainFileDescription":"main.py - Módulo principal, responsável por iniciar e finalizar o jogo e permite que o usuário escolha o modo de jogo, faz uso dos modulos Jogador.py, Escolha.py e Partida.py",
+    "imgDescription_1":"Menu Principal",
+    "jogadorFileDescription":"Jogador.py - Módulo que contem a classe Jogador, responsável por guardar a frota, numero de embarcoes, matrizes usadas durante o posicionamento e o jogo, string formada a partir da matriz do jogo, o tipo de jogador(player ou bot) e o nome do jogador.",
+    "embarcacaoFileDescription":"Embarcacao.y - Módulo que contem a classe Embarcacao, responavel por armazenar o número de ataques recebidos por uma embarcação o maximo de ataques que uma embarcação pode receber dependendo do seu tipo, a quantidade de células do tabuleiro que a embarcação ocupa, o seu tipo, se esta posicionada em um tabuleiro e as posiçoes que ocupa.",
+    "partidaFileDescription":"Partida.py - Módulo que contém a função responsável por dar andamento ao jogo em si, chama variadas funções para dar andemento ao jogo.",
+    "imgDescription_2":"Jogadas durante uma partida.",
+    "posicionarFileDescription":"PosicionarFrota.py - Módulo que contém funções responsáveis por posicionar a frota de um jogador em seus tabuleiro, apesar do seu objetivo ser simples sua criação foi a parte mais complexa do projeto tendo em vista as regras do jogo que são:",
+    "posicionarDescriptionList_1":"As embarcações não devem estar em células adjacentes umas das outras",
+    "posicionarDescriptionList_2":"As embarcações devem estar posicionadas horizontalmente e verticalmente",
+    "posicionarDescriptionList_3":"Todas as embarcaçoes devem formar uma linha reta no tabuleiro",
+    "imgDescription_3":"Finalização de uma partida"
+}

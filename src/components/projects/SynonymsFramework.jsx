@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg } from './UtilFunctions';
+import { dealNavigate, showImg, hideImg } from '../util/common';
 import DynamicIMG from '../util/DynamicIMG';
 
 import Github from '../../img/tools/icons/github.svg'
@@ -26,7 +26,7 @@ const SynonymsFramework = (props) => {
       }, []);
 
     return (
-        <div id="bg-modal" className="projMain">
+        <div id="bg-modal" className="project">
             <div
                 className="retornar"
                 onClick={() => {
@@ -38,30 +38,28 @@ const SynonymsFramework = (props) => {
                 </span>
             </div>
 
-            <div className="projdetailCont">
-                <div 
-                    className="projDetailBlock"                       
-                >
-                    <div className="projHeader">
-                        <div className="projNameHeader">
+            <div className="detail-container">
+                <div className="detail">
+                    <div className="project-header">
+                        <div className="project-name">
                             <h2>Synonyms-Detection-Framework</h2>
                         </div>
                     </div>
-                    <p className="detailDescription">
+                    <p className="project-description">
                         Feito em 2019 como projeto da disciplina de Estruturas de Dados, 
                         esse projeto tem por objetivo de criar um framework capaz de carregar 
                         dados de um arquivo csv, nessa base de dados gerar dados estatísticos e realizar 
                         buscas de forma a detectar sinônimos do que for pesquisado.
                     </p>
 
-                    <div className="projBtn">
-                        <div className='repoLinkButton greenCheckBg'>
+                    <div className="project-btn">
+                        <div className='link-btn green-btn-bg'>
                             <img src={Checkmark} alt="greenCheck"></img> 
                             <span>Projeto Finalizado</span>
                         </div>
 
                         <div 
-                            className='repoLinkButton'
+                            className='link-btn'
                             onClick={
                                 () => window.location.href = "https://github.com/HenriquePRA/Synonyms-Detection-Framework"
                             }
@@ -72,13 +70,13 @@ const SynonymsFramework = (props) => {
                     </div>
                     
                     {/* Processo de carga */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Python"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Carga da Base de dados</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>
                             A parte de carga é feita pela função CreatDicionario() essa função utiliza a biblioteca csv do python, 
                             ela abre o arquivo csv com aproximadamente 1600 registros não tratados e para cada registro do 
@@ -87,13 +85,13 @@ const SynonymsFramework = (props) => {
                     </div>
 
                     {/* Dados Estatísticos sobre a Base de Dados*/}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Python"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Dados Estatísticos sobre a Base de Dados</h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>
                             A geração de dados estatísticos depende apenas da função estatisitcas() que recebe como argumento 
                             a lista de currículos atualmente carregada, que caso não esteja carregada retornará uma mensagem 
@@ -108,7 +106,7 @@ const SynonymsFramework = (props) => {
                                 src={Img1} 
                                 className="width_100"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>Resultado da geração de dados estatísticos</em>
@@ -117,18 +115,18 @@ const SynonymsFramework = (props) => {
                     </div> 
 
                     {/* Framework de busca */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Python"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Framework de Busca</h4>
                         </div>
                     </div>
 
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>
                             São exibidas as opções de pesquisa baseadas nas seguintes chaves:
                         </p>
-                        <ul className="projDescriptionList">
+                        <ul className="section-detail-list">
                             <li>Graduação</li>
                             <li>Especialização</li>
                             <li>Mestrado</li>
@@ -154,7 +152,7 @@ const SynonymsFramework = (props) => {
                                 src={Img2} 
                                 className="width_100"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "horizontal"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>Definição Damerau–Levenshtein distance</em>
@@ -162,7 +160,7 @@ const SynonymsFramework = (props) => {
                         </div>
                     </div>
 
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>
                             A comparação é feita ignorando caracteres com acentos e com todas os caracteres de ambas 
                             as strings em caixa alta, e por fim caso o resultado da comparação apresentar uma 
@@ -177,7 +175,7 @@ const SynonymsFramework = (props) => {
                                 src={Img3} 
                                 className="width_80 ml_1_auto"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>Resultado da Busca</em>
@@ -186,13 +184,13 @@ const SynonymsFramework = (props) => {
                     </div>
 
                     {/* Sobre */}
-                    <div className="projLangHeader">
+                    <div className="header">
                         <DynamicIMG type="icon" name={"Python"}/>
-                        <div className="projLangName">
+                        <div className="header-text">
                             <h4>Sobre </h4>
                         </div>
                     </div>
-                    <div className="toolDetail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1">
                         <p>
                             A opção sobre explica em mais detalhes o funcionamento interno do projeto, desde a 
                             estrutura do dicionário usado pelos registros até a descrição detalhada de funções do
@@ -206,7 +204,7 @@ const SynonymsFramework = (props) => {
                                 src={Img4} 
                                 className="width_100"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
-                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} 
+                                onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
                                 <em>Exibição do Sobre</em>
@@ -227,8 +225,8 @@ const SynonymsFramework = (props) => {
                 onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
-                    <div className="fechar" id="fecharImg" >
-                        <img src={CruzSvg} className="fechar_btn" alt="fechar modal" />
+                    <div className="close" id="fecharImg" >
+                        <img src={CruzSvg} className="close-svg" alt="" />
                     </div>
                     {selPic.map(img => {return img})}
                 </div>                

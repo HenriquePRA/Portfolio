@@ -1,19 +1,51 @@
 @import './colors.scss';
 
-.About {
+// COMMON STYLES
+
+.light-about, .dark-about {
     width: 700px;
     border-radius: .3rem;
     display: flex;
-    background-color: #ffffff;
     margin: auto;
-    padding: 4rem;
+    padding: 4rem 4rem 3rem 3.5rem; 
     box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+    transition: all .7s ease-in-out;
 
     h2 {
         margin-top: 0;
-        color: $darkBlueDark;
+        
+    }
+
+    .imgBlock {
+        margin: 2rem 0;
+    }
+
+    img {
+        margin-right: .25rem;
     }
 }
+
+// LIGHT MODE
+
+.light-about {
+    background-color: $White-900;
+
+    h2 {
+        color: $BlueDark-900;
+    }
+}
+
+// DARK MODE
+
+.dark-about {
+    background-color: $BlueDark-900;
+
+    h2 {
+        color: $BlueDark-100;
+    }
+}
+
+// RESPONSIVITY
 
 @media screen and (max-width: 992px) {
     .About {

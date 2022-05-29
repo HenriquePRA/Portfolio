@@ -23,6 +23,13 @@ import androidSvg from '../../img/tools/icons/android.svg';
 import mongoSvg from '../../img/tools/icons/mongodb.svg';
 import entitySvg from '../../img/tools/icons/entity.svg';
 import txtSvg from '../../img/tools/icons/txt.svg';
+import awsSvg from '../../img/tools/icons/aws.svg';
+import playstoreSvg from '../../img/tools/icons/playstore.svg';
+import goSvg from '../../img/tools/icons/go.svg'
+import dockerSvg from '../../img/tools/icons/docker.svg'
+import kafkaSvg from '../../img/tools/icons/kafka.svg'
+import swaggerSvg from '../../img/tools/icons/swagger.svg'
+import sqlserverSvg from '../../img/tools/icons/sqlserver.svg'
 
 // Badges
 import html_badge from '../../img/tools/badges/html_badge.svg';
@@ -44,7 +51,18 @@ import mysql_badge from '../../img/tools/badges/mysql_badge.svg';
 import angular_badge from '../../img/tools/badges/angular_badge.svg';
 import android_badge from '../../img/tools/badges/android_badge.svg';
 import mongo_badge from '../../img/tools/badges/mongo_badge.svg';
-
+import flask_badge from '../../img/tools/badges/flask_badge.svg';
+import redis_badge from '../../img/tools/badges/redis_badge.svg';
+import azure_badge from '../../img/tools/badges/azure_badge.svg';
+import aws_badge from '../../img/tools/badges/aws_badge.svg';
+import go_badge from '../../img/tools/badges/go_badge.svg';
+import docker_badge from '../../img/tools/badges/docker_badge.svg';
+import kubernetes_badge from '../../img/tools/badges/kubernetes_badge.svg';
+import jira_badge from '../../img/tools/badges/jira_badge.svg';
+import kafka_badge from '../../img/tools/badges/kafka_badge.svg';
+import swagger_badge from '../../img/tools/badges/swagger_badge.svg';
+import sqlserver_badge from '../../img/tools/badges/sqlserver_badge.svg';
+import datadog_badge from '../../img/tools/badges/datadog_badge.svg';
 
 // Esse componente recebe uma string com o nome de um svg e retorna uma elemento
 // html contendo esse svg, acredito que exista uma forma mais facil simples de fazer isso
@@ -97,6 +115,20 @@ const DynamicIMG = (f) => {
                 return <img src={entitySvg} className={f.className} alt={f.alt}></img>
             case "Txt":
                 return <img src={txtSvg} className={f.className} alt={f.alt}></img>
+            case "AWS":
+                return <img src={awsSvg} className={f.className} alt={f.alt}></img>
+            case "Playstore":
+                return <img src={playstoreSvg} className={f.className} alt={f.alt}></img>
+            case "GO":
+                return <img src={goSvg} className={f.className} alt={f.alt}></img>
+            case "Docker":
+                return <img src={dockerSvg} className={f.className} alt={f.alt}></img>
+            case "Kafka":
+                return <img src={kafkaSvg} className={f.className} alt={f.alt}></img>
+            case "Swagger":
+                return <img src={swaggerSvg} className={f.className} alt={f.alt}></img>
+            case "SqlServer":
+                return <img src={sqlserverSvg} className={f.className} alt={f.alt}></img>
             default:
                 return "Icon not found";
         }
@@ -140,6 +172,30 @@ const DynamicIMG = (f) => {
                 return <img src={android_badge} className={f.className} alt={f.alt}></img>
             case "Mongo":
                 return <img src={mongo_badge} className={f.className} alt={f.alt}></img>
+            case "Flask":
+                return <img src={flask_badge} className={f.className} alt={f.alt}></img>
+            case "Redis":
+                return <img src={redis_badge} className={f.className} alt={f.alt}></img>
+            case "Azure":
+                return <img src={azure_badge} className={f.className} alt={f.alt}></img>
+            case "AWS":
+                return <img src={aws_badge} className={f.className} alt={f.alt}></img>
+            case "GO":
+                return <img src={go_badge} className={f.className} alt={f.alt}></img>
+            case "Docker":
+                return <img src={docker_badge} className={f.className} alt={f.alt}></img>
+            case "Kubernetes":
+                return <img src={kubernetes_badge} className={f.className} alt={f.alt}></img>
+            case "Jira":
+                return <img src={jira_badge} className={f.className} alt={f.alt}></img>
+            case "Kafka":
+                return <img src={kafka_badge} className={f.className} alt={f.alt}></img>
+            case "Swagger":
+                return <img src={swagger_badge} className={f.className} alt={f.alt}></img>
+            case "SQL Server":
+                return <img src={sqlserver_badge} className={f.className} alt={f.alt}></img>
+            case "Datadog":
+                return <img src={datadog_badge} className={f.className} alt={f.alt}></img>
             default:
                 return "Badge not found";
         }

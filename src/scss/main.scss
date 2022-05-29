@@ -33,42 +33,48 @@
 
 body {
     margin: 0;
-    color: $blueDark;
+}
+
+.light-app, .dark-app {
     font-family: "RobotoCondensed";
-}
-
-@supports (-moz-appearance:none) {
-    h1, h2, h3, h4, h5, h6 {
-        font-weight:normal;
-        color: $darkBlueDark;
-    } 
-}
-
-.Portfolio {
-    padding: 0 0 7rem 0;
     background: $bodyBackground;
-    background-color: $bodyBackgroundColor;
+    transition: all ease-in-out .7s; 
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 400;
+    }
+}
+
+.light-app {
+    background-color: $LightModeBg;
+}
+
+.dark-app {
+    background-color: $DarkModeBg;
+}
+
+.light-portfolio, .dark-portfolio {
+    padding: 0 0 7rem 0;
     position: relative;
     transition: all .3s;
 }
 
-.proj_mode {
-    height: 100%;
+.light-portfolio, .light-project {
+    color: $BlueDark-500;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $BlueDark-900;
+    }
 }
 
-.filter {
-    filter: contrast(30%) grayscale(90%);
-    height: 100%;
-    overflow: hidden;
+.dark-portfolio, .dark-project {
+    color: $BlueDark-200;
 
-    &::before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(7px);
-        pointer-events: none;
-        transition: all 1s ease;
+    h1, h2, h3, h4, h5, h6 {
+        color: $BlueDark-100;
     }
+}
+
+.proj_mode {
+    height: 100%;
 }

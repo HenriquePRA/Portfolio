@@ -1,8 +1,6 @@
 {
     "header":"Portfolio",
     "about":"Uma vez que eu já tinha conhecimento sólido a respeito das ferramentas ECMAScript6/HTML5/CSS em 2021 construí esse projeto com três objetivos domínio das funcionalidades básicas do ReactJS/JSX e SASS para seu uso em projetos futuros, me inserir no mercado profissional de desenvolvimento de software e mostrar aos meus amigos de faculdade e familiares os projetos que tenho trabalhado",
-    "toolsHeader":"Ferramentas",
-    "projStatusHeader":"Info",
     "projectStatus":"Projeto Finalizado",
     "projectRepo":"Ir ao Repositório",
     "descriptionHeader":"Estrutura do projeto",

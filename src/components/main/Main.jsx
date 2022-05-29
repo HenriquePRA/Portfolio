@@ -64,20 +64,48 @@ let Main = (props) => {
         return () => window.removeEventListener("scroll", lidaScroll)
     }, [blocoatual, setblocoatual])
 
+    
     return (
-        <div className={"Portfolio"}>
+        <div className={ props.darkMode ? "dark-portfolio filter" : "light-portfolio filter"} >
             <Navbar
                 blocoatual={blocoatual}
                 setLang={props.setLang}
                 lang={props.lang}
+                pageLoad={props.pageLoad}
+                setOnTransition={props.setOnTransition}
+                onTransition={props.onTransition}
                 page={"main"}
+                darkMode={props.darkMode}
+                setDarkMode={props.setDarkMode}
+                isRedirect={props.isRedirect}
             />
-            <Profile />
-            <About />
-            <Projects 
+            <Profile 
+                lang={props.lang}
+                setPageload={props.setPageload}
+                setOnTransition={props.setOnTransition}
+                pageLoad={props.pageLoad}
+                darkMode={props.darkMode} 
+            />
+            <About 
+                lang={props.lang} 
+                pageLoad={props.pageLoad}
+                darkMode={props.darkMode}
+            />
+            <Projects
+                lang={props.lang}
                 setIsRedirect={props.setIsRedirect}
+                setOnTransition={props.setOnTransition}
+                pageLoad={props.pageLoad}
+                setPageload={props.setPageload}
+                darkMode={props.darkMode}
             />
-            <Contact />
+            <Contact 
+                setPageload={props.setPageload}
+                setOnTransition={props.setOnTransition}
+                lang={props.lang}
+                pageLoad={props.pageLoad}
+                darkMode={props.darkMode}
+            />
         </div>
     )
 }

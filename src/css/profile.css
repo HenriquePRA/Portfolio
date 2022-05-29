@@ -1,21 +1,20 @@
-#profileBlockCont {
+.Profile {
   padding-top: 12rem;
+  transition: all 0.7s ease-in-out;
 }
 
-#ProfileBlock {
+.light-profile #ProfileBlock, .dark-profile #ProfileBlock {
   display: flex;
   margin: auto auto 8rem auto;
   width: 15rem;
   height: 20rem;
   border-radius: 3rem;
-  background: url("../img/misc/gradient.jpg");
-  background-size: cover;
   flex-direction: column;
-  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
-  transition: all 0.5s ease-in-out;
+  transition: all ease-in-out 0.7s;
 }
 
 #ProfileBlock #imgDiv {
+  z-index: 2;
   display: flex;
   margin: auto;
   height: 6.8rem;
@@ -32,11 +31,12 @@
 }
 
 #ProfileBlock h3, h5 {
-  color: rgba(19, 25, 29, 0.8078431373);
+  z-index: 2;
   margin: 0.6rem auto 0 auto;
 }
 
 #ProfileBlock #links {
+  z-index: 2;
   margin: auto;
 }
 #ProfileBlock #links img {
@@ -54,6 +54,27 @@
 
 .lnk2:hover {
   filter: saturate(1.5);
+}
+
+.gradient {
+  position: absolute;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 3rem;
+  box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+  transition: all ease-in-out 0.7s;
+}
+
+.light-gradient {
+  filter: none;
+}
+
+.dark-gradient {
+  filter: opacity(0.05);
+}
+
+.dark-profile #ProfileBlock {
+  background-color: #101b26;
 }
 
 /*# sourceMappingURL=profile.css.map */

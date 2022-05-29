@@ -1,0 +1,19 @@
+{
+    "header":"Naval Battle",
+    "about":"Made in python as the final project of the Algorithm and Structured Programming discipline, it is a naval battle game that can be played on terminal in player vs player or player vs bot modes, makes use of modularization, functions, basic OOP, and simple data structures.",
+    "projectStatus":"Project Finished",
+    "projectRepo":"Go to Repository",
+    "caracteristcsHeader":"Technical Features",
+    "caracteristcsDescription":"It has 5 modules: main.py, Escolha.py, Jogador.py, Embarcacao.py, Partida.py, PosicionarFrota.py",
+    "mainFileDescription":"main.py - Main module, responsible for starting and ending the game and allows the player to choose game mode, makes use of the Player.py, Escolha.py and Partida.py modules.",
+    "imgDescription_1":"Main menu",
+    "jogadorFileDescription":"Jogador.py - Module that contains the Player class, responsible for storing the vessels, its quantity, matrices used during positioning and the game, string formed from game matrix, type of game (PVP or PVE) and the name of the player.",
+    "embarcacaoFileDescription":"Embarcacao.y - Module that contains the Embarcacao class, responsible for storing the number of attacks received by a vessel, the maximum number of attacks that a vessel can receive depending, the number of cells on the board that the vessel occupies, its type, if it is positioned on a board and the positions it occupies.",
+    "partidaFileDescription":"Module that contains the function responsible for running the game itself, calls multiple functions to run the game.",
+    "imgDescription_2":"Jogadas durante uma partida.",
+    "posicionarFileDescription":"PosicionarFrota.py - Module that contains functions responsible for positioning a player's ships on their board, although its objective is simple, its creation was the most complex part of the project because of the game rules that are:",
+    "posicionarDescriptionList_1":"Ships must not be in cells adjacent to each other.",
+    "posicionarDescriptionList_2":"Ships must be positioned horizontally and vertically.",
+    "posicionarDescriptionList_3":"A ship cannot be divided.",
+    "imgDescription_3":"Ending of a match"
+}

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
 
-import './css/main.css';
+//import './css/main.css';
+
+import Transitions from './components/util/Transitions';
 
 import Main from './components/main/Main';
 
@@ -22,10 +24,13 @@ import MustDoList from './components/projects/mustDoList';
 let App = () => {
 
     const [ isRedirect, setIsRedirect ] = useState(false);
+    const [ pageLoad, setPageload ] = useState(true);
+    const [ onTransition, setOnTransition ] = useState(true);
     const [ lang, setLang ] = useState("PT"); 
+    const [ darkMode, setDarkMode ] = useState(true);
 
     return (
-        <div className="App">
+        <div className = {darkMode ? "App dark-app" : "App light-app"}>
             <BrowserRouter>
                 <Routes>
                     <Route 
@@ -36,6 +41,12 @@ let App = () => {
                                 setIsRedirect={setIsRedirect}
                                 setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -46,7 +57,14 @@ let App = () => {
                         element={
                             <ByteBarrage 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -57,7 +75,14 @@ let App = () => {
                         element={
                             <NavalBattle 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />                
@@ -68,7 +93,14 @@ let App = () => {
                         element={
                             <ModelagemBD
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -79,7 +111,14 @@ let App = () => {
                         element={
                             <SynonymsFramework 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -90,7 +129,14 @@ let App = () => {
                         element={
                             <VisarLivros 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -101,7 +147,14 @@ let App = () => {
                         element={
                             <Portfolio 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -112,7 +165,14 @@ let App = () => {
                         element={
                             <SwingMemoryGame 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -123,7 +183,14 @@ let App = () => {
                         element={
                             <VendorPop 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -134,7 +201,14 @@ let App = () => {
                         element={
                             <IfMktp 
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
@@ -145,13 +219,27 @@ let App = () => {
                         element={
                             <MustDoList
                                 isRedirect={isRedirect}
+                                setLang={setLang}
                                 lang={lang}
+                                setPageload={setPageload}
+                                pageLoad={pageLoad}
+                                setOnTransition={setOnTransition}
+                                onTransition={onTransition}
+                                setDarkMode={setDarkMode}
+                                darkMode={darkMode}
                             />
                         }
                     />
-                    
                 </Routes>
             </BrowserRouter>
+            <Transitions
+                setPageload={setPageload}
+                pageLoad={pageLoad}
+                setOnTransition={setOnTransition}
+                onTransition={onTransition}
+                darkMode={darkMode}
+                page={"main"}
+            />
         </div>
     )
 }

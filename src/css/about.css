@@ -1,15 +1,34 @@
-.About {
+.light-about, .dark-about {
   width: 700px;
   border-radius: 0.3rem;
   display: flex;
-  background-color: #ffffff;
   margin: auto;
-  padding: 4rem;
+  padding: 4rem 4rem 3rem 3.5rem;
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
+  transition: all 0.7s ease-in-out;
 }
-.About h2 {
+.light-about h2, .dark-about h2 {
   margin-top: 0;
+}
+.light-about .imgBlock, .dark-about .imgBlock {
+  margin: 2rem 0;
+}
+.light-about img, .dark-about img {
+  margin-right: 0.25rem;
+}
+
+.light-about {
+  background-color: #ffffff;
+}
+.light-about h2 {
   color: #101b26;
+}
+
+.dark-about {
+  background-color: #101b26;
+}
+.dark-about h2 {
+  color: #a5bdd6;
 }
 
 @media screen and (max-width: 992px) {

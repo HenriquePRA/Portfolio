@@ -1,12 +1,13 @@
 import React,{ useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg } from './UtilFunctions';
+import { showImg, hideImg, getLangText, transictionRedirect } from '../util/common';
 import DynamicIMG from '../util/DynamicIMG';
+import Navbar from '../util/Navbar';
+import PT_NavalBattle from './texts/PT_NavalBattle.json';
+import EN_NavalBattle from './texts/EN_NavalBattle.json';
 
 import Github from '../../img/tools/icons/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
-
 import Img1 from '../../img/project/navalBattle_1.jpg'
 import Img2 from '../../img/project/navalBattle_2.jpg'
 import Img3 from '../../img/project/navalBattle_3.jpg'
@@ -14,10 +15,18 @@ import Img3 from '../../img/project/navalBattle_3.jpg'
 import '../../css/main.css';
 
 const NavalBattle = (props) => {
+
+    // state responsible for storing all the page displayed text on a json
+    const [pageText, setPageText] = useState({})
     
-    const navigate = useNavigate();
+    // states required for displaying images in the page modal
     const [ showPic, setShowPic ] = useState(false)
     const [ selPic, setSelpic ] = useState([])
+
+    // effect responsible for defining and switching the page language
+    useEffect(() => {
+        setPageText(getLangText(props.lang, PT_NavalBattle, EN_NavalBattle))
+    }, [props.lang])
 
     // effect responsible for scrolling to top when loading the page
     useEffect(() => {
@@ -25,150 +34,135 @@ const NavalBattle = (props) => {
       }, []);
 
     return (
-        <div id="bg-modal" className="projMain">
-            <div
-                className="retornar"
-                onClick={() => {
-                    dealNavigate(props.isRedirect, navigate)
-                }}                
-            >
-                <span>
-                    {props.isRedirect ? "VOLTAR" : "IR PARA O PORTFOLIO"}
-                </span>
-            </div>
+        <div className = {props.darkMode ? "dark-project" : "light-project"}>
+            <Navbar 
+                page={"proj"} 
+                isRedirect={props.isRedirect}
+                darkMode={props.darkMode}
+                setDarkMode={props.setDarkMode}
+                setLang={props.setLang}
+                lang={props.lang}
+                setOnTransition={props.setOnTransition}
+                setPageload={props.setPageload}
+                pageLoad={props.pageLoad}
+            />
 
-            <div className="projdetailCont">
-                <div 
-                    className="projDetailBlock"
-                       
+            <div className="detail-container">
+                <div
+                    className="detail"
+                    style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}    
                 >
-                    <div className="projHeader">
-                        <div className="projNameHeader">
-                            <h2>Naval Battle</h2>
+                    <div className="project-header">
+                        <div className="project-name">
+                            <h2>{pageText.header}</h2>
                         </div>
                     </div>
-                    <p className="detailDescription">
-                        Feito em python como projeto final da disciplina de Algoritimo e Programação Estruturada, 
-                        trata-se de um jogo de batalha naval que pode ser jogado usando o console do python no modo 
-                        jogador contra jogador ou jogador contra bot, faz uso de modularização, funções, POO básico, 
-                        e estruturas de dados simples.
+                    <p className="project-description">
+                        {pageText.about}
                     </p>
 
-                    <div className="projBtn">
-                        <div className='repoLinkButton greenCheckBg'>
-                            <img src={Checkmark} alt="greenCheck"></img> 
-                            <span>Projeto Finalizado</span>
+                    <div className='status-and-tools'>
+                        <div className="badges">
+                            <DynamicIMG type={"badge"} name={"Python"} />
                         </div>
+                        
+                        <div className="project-btn">
+                            <div className='link-btn green-btn-bg'>
+                                <img src={Checkmark} alt="greenCheck"></img> 
+                                <span>{pageText.projectStatus}</span>
+                            </div>
 
-                        <div 
-                            className='repoLinkButton'
-                            onClick={
-                                () => window.location.href = "https://github.com/HenriquePRA/Naval-Battle"
-                            }
-                        >
-                            <img src={Github} alt="Github"></img> 
-                            <span>Ir ao Repositório</span>
+                            <div 
+                                className='link-btn'
+                                onClick={
+                                    () => (transictionRedirect("https://github.com/HenriquePRA/Byte-Barrage", props.setPageload, props.setOnTransition))
+                                }
+                            >
+                                <img src={Github} alt="Github"></img> 
+                                <span>{pageText.projectRepo}</span>
+                            </div>
                         </div>
                     </div>
-
                     
-                    <div className="projLangHeader">
-                        <DynamicIMG type="icon" name={"Python"}/>
-                        <div className="projLangName">
-                            <h4>Características </h4>
+                    <div className="header">
+                        <div className="header-text">
+                            <h4>{pageText.caracteristcsHeader}</h4>
                         </div>
                     </div>
-                    <div className="toolDetail">
+                    <div className="section-detail">
                         <p style={{"margin":"0"}}>
-                            Possúi 5 módulos: main.py, Escolha.py, Jogador.py, Embarcacao.py, Partida.py, PosicionarFrota.py
+                            {pageText.caracteristcsDescription}
+                        </p>
+                        <p>
+                            {pageText.mainFileDescription}
                         </p>
 
-                        <ul className="projDescriptionList">
-                            <li key="main_file_description">
-                                <p>
-                                    main.py - Módulo principal, responsável por iniciar e finalizar o 
-                                    jogo e permite que o usuário escolha o modo de jogo, faz uso dos modulos 
-                                    Jogador.py, Escolha.py e Partida.py
+                        <div className="loneImg">
+                            <div className="loneImgSubContainer">
+                                <img src={Img1} alt="" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                                <p className="ml_1_auto">
+                                    <em>{pageText.imgDescription_1}</em>
                                 </p>
-                            </li>
-                            <div className="loneImg">
-                                <div className="loneImgSubContainer">
-                                    <img src={Img1} alt="Menu Principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
-                                    <p className="ml_1_auto">
-                                        <em>Menu Principal.</em>
-                                    </p>
-                                </div>
                             </div>
-                            <li>
-                                <p>
-                                    Jogador.py - Módulo que contem a classe Jogador, responsável por guardar a frota, 
-                                    numero de embarcoes, matrizes usadas durante o posicionamento e o jogo, string formada 
-                                    a partir da matriz do jogo, o tipo de jogador(player ou bot) e o nome do jogador.
+                        </div>
+
+                        <p>
+                            {pageText.jogadorFileDescription}
+                        </p>
+
+                        <p>
+                            {pageText.embarcacaoFileDescription}
+                        </p>
+
+                        <p>
+                            {pageText.partidaFileDescription}
+                        </p>
+                        
+                        <div className="loneImg">
+                            <div className="loneImgSubContainer">
+                                <img src={Img2} alt="Jogadas durante uma partida" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                                <p className="ml_1_auto">
+                                    <em>{pageText.imgDescription_2}</em>
                                 </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Embarcacao.y - Módulo que contem a classe Embarcacao, responavel por armazenar o número 
-                                    de ataques recebidos por uma embarcação o maximo de ataques que uma embarcação pode receber 
-                                    dependendo do seu tipo, a quantidade de células do tabuleiro que a embarcação ocupa, o seu tipo, 
-                                    se esta posicionada em um tabuleiro e as posiçoes que ocupa.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Partida.py - Módulo que contém a função responsável por dar andamento ao jogo em si, invoca variadas 
-                                    funções para dar andemento ao jogo.
-                                </p>
-                            </li>
-                            <div className="loneImg">
-                                <div className="loneImgSubContainer">
-                                    <img src={Img2} alt="Jogadas durante uma partida" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
-                                    <p className="ml_1_auto">
-                                        <em>Jogadas durante uma partida.</em>
-                                    </p>
-                                </div>
                             </div>
-                            <li>
-                                <p>
-                                    PosicionarFrota.py - Módulo que contém funções responsáveis por posicionar a frota de um jogador em seus tabuleiro, 
-                                    apesar do seu objetivo ser simples sua criação foi a parte mais complexa do projeto tendo em vista as regras do jogo 
-                                    que são:
-                                </p>
-                                <ul>
-                                    <li>As embarcações não devem estar em células adjacentes umas das outras</li>
-                                    <li>As embarcações devem estar posicionadas horizontalmente e verticalmente</li>
-                                    <li>Todas as embarcaçoes devem formar uma linha reta no tabuleiro</li>
-                                </ul>
-                            </li>
-                            
-                            <div className="loneImg">
-                                <div className="loneImgSubContainer">
-                                    <img src={Img3} alt="menu_principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic, "vertical"))} />
-                                    <p className="ml_1_auto">
-                                        <em>
-                                            Finalização de uma partida.
-                                        </em>
-                                    </p>                                    
-                                </div>
-                            </div>
+                        </div>           
+
+                        <p>
+                            {pageText.posicionarFileDescription}
+                        </p>
+
+                        <ul>
+                            <li>{pageText.posicionarDescriptionList_1}</li>
+                            <li>{pageText.posicionarDescriptionList_2}</li>
+                            <li>{pageText.posicionarDescriptionList_3}</li>
                         </ul>
+
+                        <div className="loneImg">
+                            <div className="loneImgSubContainer">
+                                <img src={Img3} alt="menu_principal" onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} />
+                                <p className="ml_1_auto">
+                                    <em>
+                                        {pageText.imgDescription_3}
+                                    </em>
+                                </p>                                    
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div 
-                className="bg-modal" 
-                id="bg-modal" 
+                className = {props.darkMode ? "bg-modal dark-modal" : "bg-modal light-modal"}
                 style={!showPic ? 
-                    {"display":"none"}
+                    {"display":"none", "opacity":"0"}
                 :
-                    {"display":"flex"}
+                    {"display":"flex", "opacity":"1"}
                 }
                 onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
-                    <div className="fechar" id="fecharImg" >
-                        <img src={CruzSvg} className="fechar_btn" alt="fechar modal" />
+                    <div className="close" >
+                        <img src={CruzSvg} className="close-svg" alt=" " />
                     </div>
                     {selPic.map(img => {return img})}
                 </div>                

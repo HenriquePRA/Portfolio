@@ -15,12 +15,12 @@
         margin: 0  auto;
         font-size: .8rem;
         color: #ffffffba;
-        background-color: $blueDark;
-        border-bottom: 1px solid $gray_line;
+        background-color: $BlueDark-500;
+        border-bottom: 1px solid $BlueDark-100;
         box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
         width: 8.5rem;
         cursor: pointer;
-        transition: opacity .5s;
+        transition: all .5s ease-in-out;
 
         img {
             width: 1.5rem;
@@ -55,18 +55,34 @@
             border-radius: 0 0 .3rem .3rem !important;
         }        
     }
+
+    .retornar {
+        background-color: #dd2c00;
+        span {
+            color: $White-850;
+        }
+    }
+    
+    .retornar:hover {
+        background-color: #ff3d00;    
+    }
 }
 
 #navbar .langBlock .langBtn {
-    background-color: $lightBlueDark;
+    background-color: $BlueDark-400;
     height: 0;
     opacity: 0;
     border: none;
     transition: all .3s;
 
     h3 {
-        color: $darkWhite;
+        display: none;
+        color: $White-850;
         margin: 1rem 1.1rem;
+    }
+
+    .navSpan {
+        display: none;
     }
 
     &:first-of-type {
@@ -80,10 +96,6 @@
     }
 }
 
-#navbar .langBlock .navSpan, .langBlock .navSpamBtn {
-    margin: auto auto auto .3rem !important;
-}
-
 .noSpanExtended {
     margin: 0.85rem auto;
 }
@@ -92,7 +104,7 @@
     #navbar {
         width: 100%;
         height: auto;
-        background-color: $maxWhite;
+        background-color: $White-900;
         flex-direction: row;
         justify-content: center;
     }

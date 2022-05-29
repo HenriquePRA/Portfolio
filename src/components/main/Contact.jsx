@@ -1,10 +1,37 @@
-import React from 'react' 
+import React, { useState, useEffect } from 'react'
+
+import EN_Contact from './texts/EN_Contact.json';
+import PT_Contact from './texts/PT_Contact.json';
+
 import WhatsIcon from '../../img/misc/whatsapp.svg'
 import EmailIcon from '../../img/misc/email.svg'
 import Github from '../../img/tools/icons/github.svg';
 import Linkedin from '../../img/misc/linkedin.svg';
 
 const Contact = (props) => {
+
+    const [componentText, setComponentText] = useState({});
+
+    const redirect = (link) => {
+        props.setPageload(true)
+        setTimeout(() => {
+            props.setOnTransition(true)
+        }, 500);
+        setTimeout(() => {
+            window.location.href = link
+        }, 600);
+    } 
+
+    // effect responsible for defining and switching the page language
+    useEffect(() => {
+        switch (props.lang) {
+            case "PT":
+                setComponentText(PT_Contact);
+                break;
+            default:
+                setComponentText(EN_Contact);
+        }
+    }, [props.lang])
 
     const copyBtn = (e, cls) => {
         // copia o email
@@ -28,34 +55,26 @@ const Contact = (props) => {
     }
 
     return (
-        <div 
-            style={props.showproj ? 
-                {"display":"none"}
-            :
-                {"display":"flex"}
-            }
-            className="Contact"
-        >
+        <div className = {props.darkMode ? "Contact dark-contact" : "Contact light-contact"}>
             <div className="contactHeader">
-                <h3>Contato</h3>
+                <h3>{componentText.header}</h3>
                 <p>
-                    Sinta-se livre para entrar em contato comigo pelos meios abaixo que 
-                    eu respondo o mais rápido possível.
+                    {componentText.description}
                 </p>
             </div>
             <div id="tel-wpp">
                 <div id="tel-header">
                     <img src={WhatsIcon} className="contactIcon" alt="whatsapp"></img>
-                    <h4>Telefone/Whatsapp</h4>
+                    <h4>{componentText.phoneHeader}</h4>
                 </div>
                 <div className="numero">
-                    <span className="tel-1">(83) 988900948</span>
-                    <span style={{'display':'none'}} className="num_cel">83988900948</span>
+                    <span className="tel-1">(55) 83 988900948</span>
+                    <span style={{'display':'none'}} className="num_cel">5583988900948</span>
                     <div 
                         className="contactButton"
                         onClick={(e) => copyBtn(e, ".num_cel")}
                     >
-                    <span>COPIAR</span>
+                    <span>{componentText.copy}</span>
                     </div>                        
                 </div>
             </div>
@@ -63,7 +82,7 @@ const Contact = (props) => {
             <div id="email">
                 <div id="email-Header">
                     <img src={EmailIcon} className="contactIcon" alt="emails"></img>
-                    <h4>Endereços de e-mail</h4>
+                    <h4>{componentText.mailHeader}</h4>
                 </div>
                 <div id="emails">
                     <div className="emailBlock">
@@ -72,7 +91,7 @@ const Contact = (props) => {
                             className="contactButton" 
                             onClick={(e) => copyBtn(e, ".email-1")}
                         >
-                            <span>COPIAR</span>
+                            <span>{componentText.copy}</span>
                         </div>
                     </div>
                     <div className="emailBlock">
@@ -81,7 +100,7 @@ const Contact = (props) => {
                             className="contactButton"
                             onClick={(e) => copyBtn(e, ".email-2")}
                         >
-                            <span>COPIAR</span>
+                            <span>{componentText.copy}</span>
                         </div>
                     </div>
                 </div>
@@ -90,8 +109,8 @@ const Contact = (props) => {
             <div className="socialCards">
                 <div 
                     onClick={
-                        () => window.location.href = "https://github.com/HenriquePRA"
-                    } 
+                        () => redirect("https://github.com/HenriquePRA")
+                    }
                     className="socialCard"
                 >
                     <div className="SCimgCont">
@@ -101,8 +120,8 @@ const Contact = (props) => {
                 </div>
                 <div 
                     onClick={
-                        () => window.location.href = "https://www.linkedin.com/in/henrique-poggi/"
-                    } 
+                        () => redirect("https://www.linkedin.com/in/henrique-poggi/")
+                    }
                     className="socialCard"
                 >
                     <div className="SCimgCont">

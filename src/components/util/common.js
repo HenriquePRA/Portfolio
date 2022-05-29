@@ -1,5 +1,4 @@
-// Customize user return user to main webpage 
-
+// Customize user return user to main webpage
 export const dealNavigate = (redirect, navigate) => {
     if (redirect) {
         navigate(-1)
@@ -15,7 +14,7 @@ export const showImg = (target, setShowPic, setSelpic, orientation) => {
             <img 
                 src={target.src} 
                 alt={target.alt + " onViewMode"}
-                className={orientation === "vertical" ? "selpic vertical_selpic" : "selpic horizontal_selpic"}
+                className="selpic"
                 key={target.alt}
             />
         ])
@@ -24,7 +23,7 @@ export const showImg = (target, setShowPic, setSelpic, orientation) => {
 // function responsible for hiding an image
 export const hideImg = (target,  setShowPic) => {
         let clsTarget = target.target.className
-        if (!(clsTarget === "selpic")) {
+        if (!(clsTarget.includes("selpic"))) {
             setShowPic(false)
         }
     }
@@ -39,3 +38,14 @@ export const getLangText = (text, pt_text, en_text) => {
             return en_text;
     }
 }
+
+// function responsible for redirecting the page
+export const transictionRedirect = (link, setPageload, setOnTransition) => {
+    setPageload(true)
+    setTimeout(() => {
+        setOnTransition(true)
+    }, 500);
+    setTimeout(() => {
+        window.location.href = link
+    }, 600);
+} 

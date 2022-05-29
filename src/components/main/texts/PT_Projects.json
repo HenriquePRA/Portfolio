@@ -1,0 +1,22 @@
+{
+    "header":"PROJETOS",
+    "description":"Aqui estão os projetos que fiz por iniciativa própria, em programas de certificação e requisitos de disciplinas na universidade, esses projetos variam bastante em tamanho e complexidade.",
+    "redirectBtnText": "VER MAIS",
+    "footerTxt1":"Exibindo ",
+    "footerTxt2":" a ",
+    "footerTxt3":" de ",
+    "footerTxt4":" Projetos",
+    "byteBarrageDescription":"Esse é meu primeiro projeto front-end, simula um site catalogo de venda de imóveis em jogos.",
+    "navalBattleDescription":"Feito em python trata-se de um jogo de batalha naval que pode ser jogado no terminal entre jogadores ou contra um Bot.",
+    "databaseModelingDescription":"Projeto final da disciplina de Banco de Dados 1, nele eu modelo um banco de dados relacional, passando pelos modelos Conceitual, Lógico e Físico.",
+    "synonymsFrameworkDescription":"Feito em 2019 como projeto da disciplina de Estruturas de Dados, capaz de realizar buscas de forma a detectar sinônimos do que for pesquisado.",
+    "visarLivrosDescription":"Projeto final da disciplina de linguagens de script, feito com suporte a navegadores antigos trata-se de uma página de busca integrada com a API de livros do Google.",
+    "portfolioDescription":"Criado a fim de exibir de maneira agradável meu processo de aprendizado, projetos que tenho trabalhado e as tecnologias que tenho usado.",
+    "swingMemoryGameDescription":"Projeto inicial da disciplina de POO, onde foi desenvolvido um jogo de memória que pode ser jogado em um terminal ou em ambiente gráfico.",
+    "vendorPopDescription": "Projeto final da disciplina de POO nele eu exploro conceitos avançados de programação orientada a objetos com a linguagem java.",
+    "ifMobileDescription": "Projeto final do curso universitário de bancos de dados relacionais II, onde exploro consultas e funcionalidades complexas em um banco de dados relacional.",
+    "mustDoListDescription":"Esse é o projeto final da disciplina de programação para dispositivos móveis, nele desenvolvo um App mobile com Backend em nuvem e publicação na playstore.",
+    "mktpDescription":"Reconstrução do projeto final da disciplina de programação para web onde uso outras ferramentas, nele exploro o desenvolvimento completo de um marketplace.",
+    "goFiestaDescription":"Web scraper para monitoramento tópicos no twitter feito em golang que exporta resultados em um BD NoSql.",
+    "autowatcherDescription": "Projeto de SaaS para gerência de usuários, possúi microserviços multi-tenant que se comunicam com um serviço \"externo\" através de mensageria via kafka."
+}

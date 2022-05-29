@@ -1,0 +1,22 @@
+{
+    "header":"PROJECTS",
+    "description":"Here are the projects I've done on my own initiative, in certification programs or university subject requirements, these projects vary greatly in size and complexity.",
+    "redirectBtnText": "SEE MORE",
+    "footerTxt1":"Displaying ",
+    "footerTxt2":" to ",
+    "footerTxt3":" out of ",
+    "footerTxt4":" Projects",
+    "byteBarrageDescription":"This is my first front-end project, it simulates a catalog site for selling real-sate in games.",
+    "navalBattleDescription":"Made with python it is a naval battle game that can be played on terminal between players or against a bot.",
+    "databaseModelingDescription":"Final project of the relational databases university discipline, in it I design a relational database, going through the Conceptual, Logical and Physical models.",
+    "synonymsFrameworkDescription":"Made in 2019 as a project of the Data Structures university discipline, is capable of performing searches in order to detect synonyms of what is searched.",
+    "visarLivrosDescription":"Final project of the script languages university discipline, made with support for old browsers, it is a search page integrated with the Google Books API.",
+    "portfolioDescription":"Created in order to display in a nice way my learning process, projects I've been working on and the technologies I've been using.",
+    "swingMemoryGameDescription":"Initial project of the OOP university discipline, where was developed a memory game that can be played on terminal or in a graphical environment.",
+    "vendorPopDescription": "Final project of the OOP discipline in which I explore advanced concepts of object-oriented programming with the java language.",
+    "ifMobileDescription": "Final project of the relational databases II university course, where i explore complex queries and functionalities in a relational DB.",
+    "mustDoListDescription":"This is the final project of the mobile devices programming discipline, in which I develop a mobile App with Cloud Backend and publication on the playstore.",    
+    "mktpDescription":"Remake of the final project of the web programming discipline where I use other tools, in which I explore the complete development of a web marketplace.",
+    "goFiestaDescription":"Golang web scraper for monitoring topics on twitter that exports results in a NoSql DB.",
+    "autowatcherDescription": "SaaS project for user management, it has multi-tenant microservices that communicate with an \"external\" service via kafka."
+}

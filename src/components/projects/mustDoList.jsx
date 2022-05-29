@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import { dealNavigate } from './UtilFunctions';
+import { dealNavigate } from '../util/common';
 
 const MustDoList = (props) => {
 

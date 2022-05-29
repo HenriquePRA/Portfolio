@@ -1,4 +1,6 @@
 {
+    "return": "RETURN",
+    "goToPort": "GO TO PORTFOLIO",
     "about":"ABOUT",
     "projects":"PROJECTS",
     "contact":"CONTACT",
