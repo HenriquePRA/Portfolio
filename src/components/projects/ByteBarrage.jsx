@@ -15,8 +15,6 @@ import Img4 from '../../img/project/byteBarrage_4.jpg'
 import Img5 from '../../img/project/byteBarrage_5.jpg'
 
 import '../../css/main.css';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
 
 const ByteBarrage = (props) => {
     
@@ -220,7 +218,7 @@ const ByteBarrage = (props) => {
                         <img src={CruzSvg} className="close-svg" alt=" " />
                     </div>
                     {selPic.map(img => {return img})}
-                </div>                
+                </div>
             </div>
         </div>
     )

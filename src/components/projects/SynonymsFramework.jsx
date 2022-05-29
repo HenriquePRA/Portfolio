@@ -1,12 +1,13 @@
 import React,{ useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg } from '../util/common';
+import { showImg, hideImg, getLangText, transictionRedirect } from '../util/common';
 import DynamicIMG from '../util/DynamicIMG';
+import Navbar from '../util/Navbar';
+import PT_SynonymsFramework from './texts/PT_SynonymsFramework.json';
+import EN_SynonymsFramework from './texts/EN_SynonymsFramework.json';
 
 import Github from '../../img/tools/icons/github.svg'
 import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
-
 import Img1 from '../../img/project/synonymsFramework_1.jpg'
 import Img2 from '../../img/project/synonymsFramework_2.svg'
 import Img3 from '../../img/project/synonymsFramework_3.jpg'
@@ -15,10 +16,18 @@ import Img4 from '../../img/project/synonymsFramework_4.jpg'
 import '../../css/main.css';
 
 const SynonymsFramework = (props) => {
+
+    // state responsible for storing all the page displayed text on a json
+    const [pageText, setPageText] = useState({})
     
-    const navigate = useNavigate();
+    // states required for displaying images in the page modal
     const [ showPic, setShowPic ] = useState(false)
     const [ selPic, setSelpic ] = useState([])
+
+    // effect responsible for defining and switching the page language
+    useEffect(() => {
+        setPageText(getLangText(props.lang, PT_SynonymsFramework, EN_SynonymsFramework))
+    }, [props.lang])
 
     // effect responsible for scrolling to top when loading the page
     useEffect(() => {
@@ -26,77 +35,73 @@ const SynonymsFramework = (props) => {
       }, []);
 
     return (
-        <div id="bg-modal" className="project">
-            <div
-                className="retornar"
-                onClick={() => {
-                    dealNavigate(props.isRedirect, navigate)
-                }}                
-            >
-                <span>
-                    {props.isRedirect ? "VOLTAR" : "IR PARA O PORTFOLIO"}
-                </span>
-            </div>
-
+        <div className = {props.darkMode ? "dark-project" : "light-project"}>
+            <Navbar 
+                page={"proj"} 
+                isRedirect={props.isRedirect}
+                darkMode={props.darkMode}
+                setDarkMode={props.setDarkMode}
+                setLang={props.setLang}
+                lang={props.lang}
+                setOnTransition={props.setOnTransition}
+                setPageload={props.setPageload}
+                pageLoad={props.pageLoad}
+            />
             <div className="detail-container">
                 <div className="detail">
                     <div className="project-header">
                         <div className="project-name">
-                            <h2>Synonyms-Detection-Framework</h2>
+                            <h2>{pageText.header}</h2>
                         </div>
                     </div>
                     <p className="project-description">
-                        Feito em 2019 como projeto da disciplina de Estruturas de Dados, 
-                        esse projeto tem por objetivo de criar um framework capaz de carregar 
-                        dados de um arquivo csv, nessa base de dados gerar dados estatísticos e realizar 
-                        buscas de forma a detectar sinônimos do que for pesquisado.
+                        {pageText.about}
                     </p>
 
-                    <div className="project-btn">
-                        <div className='link-btn green-btn-bg'>
-                            <img src={Checkmark} alt="greenCheck"></img> 
-                            <span>Projeto Finalizado</span>
+                    <div className='status-and-tools'>
+                        <div className="badges">
+                            <DynamicIMG type={"badge"} name={"Python"} />
                         </div>
+                        
+                        <div className="project-btn">
+                            <div className='link-btn green-btn-bg'>
+                                <img src={Checkmark} alt="greenCheck"></img> 
+                                <span>{pageText.projectStatus}</span>
+                            </div>
 
-                        <div 
-                            className='link-btn'
-                            onClick={
-                                () => window.location.href = "https://github.com/HenriquePRA/Synonyms-Detection-Framework"
-                            }
-                        >
-                            <img src={Github} alt="Github"></img> 
-                            <span>Ir ao Repositório</span>
+                            <div 
+                                className='link-btn'
+                                onClick={
+                                    () => (transictionRedirect("https://github.com/HenriquePRA/Synonyms-Detection-Framework", props.setPageload, props.setOnTransition))
+                                }
+                            >
+                                <img src={Github} alt="Github"></img> 
+                                <span>{pageText.projectRepo}</span>
+                            </div>
                         </div>
                     </div>
-                    
+
                     {/* Processo de carga */}
                     <div className="header">
-                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="header-text">
-                            <h4>Carga da Base de dados</h4>
+                            <h4>{pageText.loadHeader}</h4>
                         </div>
                     </div>
                     <div className="section-detail pt_0 pb_1">
                         <p>
-                            A parte de carga é feita pela função CreatDicionario() essa função utiliza a biblioteca csv do python, 
-                            ela abre o arquivo csv com aproximadamente 1600 registros não tratados e para cada registro do 
-                            arquivo csv é criado um dicionário de dados de acordo.
+                            {pageText.loadDescription}
                         </p>
                     </div>
 
                     {/* Dados Estatísticos sobre a Base de Dados*/}
                     <div className="header">
-                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="header-text">
-                            <h4>Dados Estatísticos sobre a Base de Dados</h4>
+                            <h4>{pageText.statisticsHeader}</h4>
                         </div>
                     </div>
                     <div className="section-detail pt_0 pb_1">
                         <p>
-                            A geração de dados estatísticos depende apenas da função estatisitcas() que recebe como argumento 
-                            a lista de currículos atualmente carregada, que caso não esteja carregada retornará uma mensagem 
-                            de erro. caso essa lista exista a função retorna ao usuário o número de currículos, número de palavras, 
-                            porcentagem de Graduações, Especializações, Mestrados, Doutorados e Pós Doutorados.
+                            {pageText.statisticsDescription}
                         </p>
                     </div>
                     
@@ -116,33 +121,27 @@ const SynonymsFramework = (props) => {
 
                     {/* Framework de busca */}
                     <div className="header">
-                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="header-text">
-                            <h4>Framework de Busca</h4>
+                            <h4>{pageText.searchFrameworkHeader}</h4>
                         </div>
                     </div>
 
                     <div className="section-detail pt_0 pb_1">
                         <p>
-                            São exibidas as opções de pesquisa baseadas nas seguintes chaves:
+                            {pageText.searchFrameworkListHeader}
                         </p>
                         <ul className="section-detail-list">
-                            <li>Graduação</li>
-                            <li>Especialização</li>
-                            <li>Mestrado</li>
-                            <li>Doutorado</li>
-                            <li>Pós-Doutorado</li>        
+                            <li>{pageText.searchFrameworkListIten_1}</li>
+                            <li>{pageText.searchFrameworkListIten_2}</li>
+                            <li>{pageText.searchFrameworkListIten_3}</li>
+                            <li>{pageText.searchFrameworkListIten_4}</li>      
+                            <li>{pageText.searchFrameworkListIten_5}</li>
                         </ul>
                         <p>
-                            Após o usuário informar a qualificação desejada desejada outro input 
-                            espera receber uma string que será utilizada como filtro para o campo 
-                            qualificação de todos os registros.
+                            {pageText.searchFrameworkDescription_1}
                         </p>
                         <p>
-                            Com a chave qualificação e a string com área do conhecimento uma função percorre 
-                            todos os registros carregados utilizando uma implementação da distância 
-                            de edição damerau levenshtein para comparar a string informada com cada string 
-                            armazenada no array da qualificação cuja chave foi informada.
+                            {pageText.searchFrameworkDescription_2}
                         </p>
                     </div>
 
@@ -150,22 +149,19 @@ const SynonymsFramework = (props) => {
                         <div className="loneImgSubContainer">
                             <img 
                                 src={Img2} 
-                                className="width_100"
-                                alt="Imagem Modelo Entidade-Relacionamento" 
+                                alt="Imagem Modelo Entidade-Relacionamento"
+                                style={{"backgroundColor": "#dfe5eb", "padding":"1rem"}}
                                 onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
-                                <em>Definição Damerau–Levenshtein distance</em>
+                                <em>{pageText.imgDescription_2}</em>
                             </p>
                         </div>
                     </div>
 
                     <div className="section-detail pt_0 pb_1">
                         <p>
-                            A comparação é feita ignorando caracteres com acentos e com todas os caracteres de ambas 
-                            as strings em caixa alta, e por fim caso o resultado da comparação apresentar uma 
-                            similaridade aceitável entre ambas as strings o currículo do docente é inserido ao 
-                            final de uma lista que é retornada ao usuário.
+                            {pageText.searchFrameworkDescription_3}
                         </p>
                     </div>
 
@@ -178,23 +174,20 @@ const SynonymsFramework = (props) => {
                                 onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
-                                <em>Resultado da Busca</em>
+                                <em>{pageText.imgDescription_3}</em>
                             </p>
                         </div>
                     </div>
 
                     {/* Sobre */}
                     <div className="header">
-                        <DynamicIMG type="icon" name={"Python"}/>
                         <div className="header-text">
-                            <h4>Sobre </h4>
+                            <h4>{pageText.aboutFuncHeader}</h4>
                         </div>
                     </div>
                     <div className="section-detail pt_0 pb_1">
                         <p>
-                            A opção sobre explica em mais detalhes o funcionamento interno do projeto, desde a 
-                            estrutura do dicionário usado pelos registros até a descrição detalhada de funções do
-                            projeto. 
+                            {pageText.aboutFuncDescription}
                         </p>
                     </div>
 
@@ -207,7 +200,7 @@ const SynonymsFramework = (props) => {
                                 onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
                             <p className="ml_1_auto">
-                                <em>Exibição do Sobre</em>
+                                <em>{pageText.imgDescription_4}</em>
                             </p>
                         </div>
                     </div>
@@ -215,21 +208,20 @@ const SynonymsFramework = (props) => {
             </div>
 
             <div 
-                className="bg-modal" 
-                id="bg-modal" 
+                className = {props.darkMode ? "bg-modal dark-modal" : "bg-modal light-modal"}
                 style={!showPic ? 
-                    {"display":"none"}
+                    {"display":"none", "opacity":"0"}
                 :
-                    {"display":"flex"}
+                    {"display":"flex", "opacity":"1"}
                 }
                 onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
-                    <div className="close" id="fecharImg" >
-                        <img src={CruzSvg} className="close-svg" alt="" />
+                    <div className="close" >
+                        <img src={CruzSvg} className="close-svg" alt=" " />
                     </div>
                     {selPic.map(img => {return img})}
-                </div>                
+                </div>
             </div>
         </div>
     )
