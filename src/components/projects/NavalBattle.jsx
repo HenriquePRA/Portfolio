@@ -33,6 +33,15 @@ const NavalBattle = (props) => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }, []);
 
+    // fade effect when loading the page
+    useEffect(() => {
+        if (props.projTransiction) {
+            setTimeout(() => {
+                props.setProjTransiction(false);
+            }, 300);
+        }
+    }, [props.projTransiction, props.setProjTransiction]);
+
     return (
         <div className = {props.darkMode ? "dark-project" : "light-project"}>
             <Navbar 
@@ -42,6 +51,7 @@ const NavalBattle = (props) => {
                 setDarkMode={props.setDarkMode}
                 setLang={props.setLang}
                 lang={props.lang}
+                setProjTransiction={props.setProjTransiction}
                 setOnTransition={props.setOnTransition}
                 setPageload={props.setPageload}
                 pageLoad={props.pageLoad}
@@ -50,7 +60,7 @@ const NavalBattle = (props) => {
             <div className="detail-container">
                 <div
                     className="detail"
-                    style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}
+                    style={props.projTransiction ? {"opacity":"0"} : {"opacity":"1"}}
                 >
                     <div className="project-header">
                         <div className="project-name">

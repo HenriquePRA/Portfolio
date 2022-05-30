@@ -20,33 +20,17 @@ let Transitions = (props) => {
     useEffect(() => {
         // lock scroll
         if (props.onTransition) {
-            if (props.pageLoad) {
-                lockScroll()
-                setModalClass(defaultModalClass + " flex show")
-                setTimeout(() => {
-                    setModalClass(defaultModalClass + " flex hide")
-                }, 1050);
-                setTimeout(() => {
-                    unLockScroll()
-                    setModalClass(defaultModalClass + " none hide")
-                    props.setOnTransition(false)
-                    props.setPageload(false)
-                }, 1350);   
-            } else {
-                lockScroll()
-                setModalClass(defaultModalClass + " flex")
-                setTimeout(() => {
-                    setModalClass(defaultModalClass + " flex show")
-                }, 50);
-                setTimeout(() => {
-                    setModalClass(defaultModalClass + " flex hide")
-                }, 750);
-                setTimeout(() => {
-                    unLockScroll()
-                    setModalClass(defaultModalClass + " none hide")
-                    props.setOnTransition(false)
-                }, 1050);                
-            }
+            lockScroll()
+            setModalClass(defaultModalClass + " flex show")
+            setTimeout(() => {
+                setModalClass(defaultModalClass + " flex hide")
+            }, 150);
+            setTimeout(() => {
+                unLockScroll()
+                setModalClass(defaultModalClass + " none hide")
+                props.setOnTransition(false)
+                props.setPageload(false)
+            }, 975);
         }
     }, [props.onTransition, props.setOnTransition, defaultModalClass])
 
@@ -62,18 +46,6 @@ let Transitions = (props) => {
         <div 
             className={modalClass}
         >
-            {/* loading spinner spinner*/}
-            <div 
-                id="loading" 
-                style={props.pageLoad ? 
-                    {"display":"none"} 
-                : 
-                    {"display":"block"}}
-                >
-                <svg>
-                    <circle cx="40" cy="40" r="40"></circle>
-                </svg>
-            </div>            
         </div>
     )
 }

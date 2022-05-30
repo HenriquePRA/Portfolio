@@ -95,6 +95,7 @@ let Main = (props) => {
                 lang={props.lang}
                 setIsRedirect={props.setIsRedirect}
                 setOnTransition={props.setOnTransition}
+                setProjTransiction={props.setProjTransiction}
                 pageLoad={props.pageLoad}
                 setPageload={props.setPageload}
                 darkMode={props.darkMode}

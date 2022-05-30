@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(64, 92, 121, 0.12), 0 1px 2px rgba(64, 92, 121, 0.24);
-  transition: all 0.7s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .dark-project .detail-container .project-header, .light-project .detail-container .project-header {
   border-radius: 0.3rem 0.3rem 0 0;
@@ -120,7 +120,7 @@
   margin-right: 40px;
 }
 .dark-project .detail-container .loneImg, .light-project .detail-container .loneImg {
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,7 +181,7 @@
 }
 
 .mt_0 {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .mt_1 {

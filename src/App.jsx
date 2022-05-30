@@ -25,6 +25,7 @@ let App = () => {
 
     const [ isRedirect, setIsRedirect ] = useState(false);
     const [ pageLoad, setPageload ] = useState(true);
+    const [ projTransiction, setProjTransiction ] = useState(true)
     const [ onTransition, setOnTransition ] = useState(true);
     const [ lang, setLang ] = useState("PT"); 
     const [ darkMode, setDarkMode ] = useState(true);
@@ -43,6 +44,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -61,6 +64,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -79,6 +84,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -97,6 +104,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -115,6 +124,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -133,6 +144,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -151,6 +164,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -169,6 +184,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -187,6 +204,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -205,6 +224,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -223,6 +244,8 @@ let App = () => {
                                 lang={lang}
                                 setPageload={setPageload}
                                 pageLoad={pageLoad}
+                                setProjTransiction={setProjTransiction}
+                                projTransiction={projTransiction}
                                 setOnTransition={setOnTransition}
                                 onTransition={onTransition}
                                 setDarkMode={setDarkMode}
@@ -235,6 +258,8 @@ let App = () => {
             <Transitions
                 setPageload={setPageload}
                 pageLoad={pageLoad}
+                setProjTransiction={setProjTransiction}
+                projTransiction={projTransiction}
                 setOnTransition={setOnTransition}
                 onTransition={onTransition}
                 darkMode={darkMode}

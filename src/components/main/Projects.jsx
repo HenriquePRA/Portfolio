@@ -15,11 +15,9 @@ const Projects = (props) => {
 
     // function responsible for redirecting to the project page
     const redirectToProject = (project) => {
-        props.setOnTransition(true);
-        setTimeout(() => {
-            props.setIsRedirect(true);
-            navigate("/projetos/"+project)       
-        }, 550);
+        props.setProjTransiction(true);
+        props.setIsRedirect(true);
+        navigate("/projetos/"+project) 
     }
 
     // effect responsible for defining and switching the page language

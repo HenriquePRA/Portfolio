@@ -34,6 +34,15 @@ const SynonymsFramework = (props) => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }, []);
 
+    // fade effect when loading the page
+    useEffect(() => {
+        if (props.projTransiction) {
+            setTimeout(() => {
+                props.setProjTransiction(false);
+            }, 300);
+        }
+    }, [props.projTransiction]);
+
     return (
         <div className = {props.darkMode ? "dark-project" : "light-project"}>
             <Navbar 
@@ -43,12 +52,16 @@ const SynonymsFramework = (props) => {
                 setDarkMode={props.setDarkMode}
                 setLang={props.setLang}
                 lang={props.lang}
+                setProjTransiction={props.setProjTransiction}
                 setOnTransition={props.setOnTransition}
                 setPageload={props.setPageload}
                 pageLoad={props.pageLoad}
             />
             <div className="detail-container">
-                <div className="detail">
+                <div 
+                    className="detail"
+                    style={props.projTransiction ? {"opacity":"0"} : {"opacity":"1"}}    
+                >
                     <div className="project-header">
                         <div className="project-name">
                             <h2>{pageText.header}</h2>

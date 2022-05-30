@@ -13,13 +13,12 @@ const Contact = (props) => {
     const [componentText, setComponentText] = useState({});
 
     const redirect = (link) => {
-        props.setPageload(true)
         setTimeout(() => {
             props.setOnTransition(true)
-        }, 500);
+        }, 250);
         setTimeout(() => {
             window.location.href = link
-        }, 600);
+        }, 400);
     } 
 
     // effect responsible for defining and switching the page language
@@ -55,7 +54,10 @@ const Contact = (props) => {
     }
 
     return (
-        <div className = {props.darkMode ? "Contact dark-contact" : "Contact light-contact"}>
+        <div 
+            className = {props.darkMode ? "Contact dark-contact" : "Contact light-contact"}
+            style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}
+        >
             <div className="contactHeader">
                 <h3>{componentText.header}</h3>
                 <p>

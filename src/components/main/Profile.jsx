@@ -14,10 +14,10 @@ const Profile = (props) => {
         props.setPageload(true)
         setTimeout(() => {
             props.setOnTransition(true)
-        }, 500);
+        }, 250);
         setTimeout(() => {
             window.location.href = link
-        }, 600);
+        }, 400);
     } 
 
     return (

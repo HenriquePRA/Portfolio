@@ -24,13 +24,11 @@ const Navbar = (props) => {
 
     // function responsible for redirecting the page
     const transictionNavigate = () => {
-        props.setPageload(true)
+        props.setProjTransiction(true)
         setTimeout(() => {
             props.setOnTransition(true)
-        }, 500);
-        setTimeout(() => {
             dealNavigate(props.isRedirect, navigate)
-        }, 600);
+        }, 300);
     } 
 
     // function responsible for ascending to the top of the page
@@ -71,18 +69,16 @@ const Navbar = (props) => {
 
     // function responsible to hide smoothly all the divs ".langBtn" 
     const hideLangBtn = () => {
-        setTimeout(() => {
-            const btn = document.querySelectorAll(".langBtn")
-            btn.forEach(langBtn => {
-                const txt = langBtn.childNodes
-                txt.forEach(txt => {
-                    txt.style.opacity = 0;
-                })
+        const btn = document.querySelectorAll(".langBtn")
+        btn.forEach(langBtn => {
+            const txt = langBtn.childNodes
+            txt.forEach(txt => {
+                txt.style.opacity = 0;
             })
-            setTimeout(() => {
-                setShowLang(false)
-            }, 300);            
-        }, 500)
+        })
+        setTimeout(() => {
+            setShowLang(false)
+        }, 300); 
     }
     
     // function responsible to show smoothly all the divs ".langBtn"
@@ -179,7 +175,7 @@ const Navbar = (props) => {
 
             <div 
                 className='langBlock' 
-                onMouseEnter={() => {setShowLangBtn()}}
+                onClick={() => {setShowLangBtn()}}
                 onMouseLeave={() => {hideLangBtn()}}
             >
                 {props.lang !== "EN" ?
