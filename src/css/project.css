@@ -102,7 +102,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 .dark-project .detail-container .header .header-text, .light-project .detail-container .header .header-text {
   width: 100%;
@@ -114,13 +114,13 @@
   text-align: center;
 }
 .dark-project .detail-container .section-detail, .light-project .detail-container .section-detail {
-  padding: 0.5rem 2rem 2rem 2rem;
+  padding: 0rem 2rem 1rem 2rem;
 }
 .dark-project .detail-container .section-detail-list, .light-project .detail-container .section-detail-list {
   margin-right: 40px;
 }
 .dark-project .detail-container .loneImg, .light-project .detail-container .loneImg {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -50,7 +50,7 @@ const NavalBattle = (props) => {
             <div className="detail-container">
                 <div
                     className="detail"
-                    style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}    
+                    style={props.pageLoad ? {"opacity":"0"} : {"opacity":"1"}}
                 >
                     <div className="project-header">
                         <div className="project-name">
