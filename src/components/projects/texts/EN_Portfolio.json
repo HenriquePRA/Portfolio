@@ -1,7 +1,7 @@
 {
     "header":"Portfolio",
     "about":"Since I already had solid knowledge about ECMAScript6/HTML5/CSS tools in 2021 I built this project with three objectives: master the basic functionalities of ReactJS/JSX and SASS for its use in future projects, enter the professional development market software and show my friends and family the projects I've been working on",
-    "projectStatus":"Finished",
+    "projectStatus":"Project Finished",
     "projectRepo":"Go to Repository",
     "descriptionHeader":"Project Structure",
     "description": "The Project is divided into two types of pages: the Portfolio, which is the main page, and the project pages, which despite being several pages, their internal functioning and layout is very similar, but not enough to use a single page for all.",
