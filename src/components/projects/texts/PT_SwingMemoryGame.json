@@ -1,0 +1,19 @@
+{
+    "header": "Swing Memory Game",
+    "about":"Fiz esse jogo quando estava começando a disciplina de POO, escrito em java faz uso da API para interfaces gráficas Swing. Esse projeto consiste em um jogo da memória que pode ser jogado em um ambiente gráfico com o uso do java swing ou no console.",
+    "projectStatus":"Projeto Finalizado",
+    "projectRepo":"Ir ao Repositório",
+    "memoryGameHeader":"Classe MemoryGame",
+    "memoryGameAbout": "Tanto o jogo em ambiente gráfico quanto em console usam a classe MemoryGame para executar o jogo internamente ou seja essa classe é o jogo e a responsabilidade do SwingGame e o ConsoleGame é apenas de receber os comandos do usuáro e exibir o jogo.",
+    "listItem_1": "Variáveis de controle - as variáveis de controle criada são usadas para definir quantas jogadas o jogador possúi e quantas vezes a função adivinhar retornou true.",
+    "listItem_2": "Matrizes - A Classe MemoryGame cria uma matriz 4x4 do tipo color nela cada cor é alocada duas vezes para se ter um controle do posicionamento das cores, é utilizado um hashmap com o código rgb da cor sendo a chave e o número de vezes que cada cor foi usada iniciado com 0 e tendo como máximo 2 cada cor é alocada posição aleatoria duas vezes formando assim um par de cor igual em locais diferentes até que a primeira matriz seja totalmente povoada pelas cores, após isso uma segunda matriz é povoada por strings em branco.",
+    "listItem_3": "Função adivinhar - para chamar a função adivinhar de um objeto MemoryGame é necessário fornecer linha e coluna de duas posições diferentes se as posições indicadas estiverem dentro dos limites do jogo as duas posições são comparadas e o número de tentativas é reduzido em um, se a cor das duas posições for igual o é incrementado um ao número de acertos e é retornado true, caso sejam diferentes é retornado false.",
+    "listItem_4": "Função getCor retorna o objeto .Color contido em determinada posição da matriz de cores desde que a posição informada esteja dentro dos limites da matriz",
+    "consoleGameHeader":"Classe ConsoleGame",
+    "consoleGameAbout":"A classe ConsoleGame cria um array do tipo Color que é passado a classe MemoryGame ao iniciar uma instancia da mesma, verificando a situaçao do jogo a cada jogada a classe ConsoleGame recebe os inputs do usuário e interage com MemoryGame através de seus métodos.",
+    "imgDescription_1":"Exibiçao do jogo no console",
+    "SwingGameHeader": "Classe SwingGame",
+    "SwingGameAbout": "Diferentemente da classe ConsoleGame que recebe a matriz exibida diretamente da classe MemoryGame, a classe SwingGame utiliza o retorno dos métodos da classe MemoryGame para alterar a exibição dos labels do swing, alterando o fundo em branco do label pelas cores selecionadas, se as cores são iguais o jogo as mantém, se forem diferentes o jogo exige que o usuário dê um duplo clique para que o fundo branco retorne e ele possa fazer outra jogada.",
+    "imgDescription_2": "Exibiçao do jogo em ambiente gráfico"
+
+}

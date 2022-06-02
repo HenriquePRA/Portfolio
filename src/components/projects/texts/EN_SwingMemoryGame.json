@@ -1,0 +1,19 @@
+{
+    "header": "Swing Memory Game",
+    "about":"I made this game when I was starting the OOP discipline, written in java makes use of the Swing API. This project consists of a memory game that can be played in a graphical environment or on a console.",
+    "projectStatus":"Project Finished",
+    "projectRepo":"Go to Repository",
+    "memoryGameHeader":"MemoryGame Class",
+    "memoryGameAbout": "Both the game in a graphical environment and in console use the MemoryGame class to run the game internally, that is, this class is the game and the responsibility of SwingGame and ConsoleGame is only to receive the user's commands and display the game.",
+    "listItem_1": "Control variables - the created control variables are used to define how many moves the player has and how many times the adivinhar function returned true.",
+    "listItem_2": "Matrices - The MemoryGame Class creates a 4x4 matrix of type Color in which each color is allocated twice to control the positioning of the colors, a hashmap is used with the rgb code of the color being the key and the number of times each color was used, starting with 0 and having a maximum of 2, each color is allocated a random position twice thus forming a pair of equal color in different places, this will repeat until the first matrix is completely populated by the colors, after that a second matrix is populated by blank strings.",
+    "listItem_3": "Adivinhar (guess) Function - to call the adivinhar function of a MemoryGame instance it is necessary to provide row and column of two different positions if the indicated positions are within the limits of the game the two positions are compared and the number of attempts is reduced by one if the colors of the two positions is equal or the number of hits is increased by one and returns true, if they are different, returns false.",
+    "listItem_4": "getCor Function - returns the .Color object contained in a given position of the color matrix as long as the informed position is within the limits of the matrix.",
+    "consoleGameHeader":"ConsoleGame Class",
+    "consoleGameAbout":"The ConsoleGame class creates an array of type Color that is passed to the MemoryGame class when starting an instance, checking the game's situation at each playthrough, ConsoleGame receives user inputs and interacts with MemoryGame through its methods.",
+    "imgDescription_1":"Gameplay on console",
+    "SwingGameHeader": "SwingGame Class",
+    "SwingGameAbout": "Unlike ConsoleGame class that receives the displayed matrix directly from MemoryGame class, the SwingGame class makes use of the return of the methods from MemoryGame class in order to change the display of swing labels, changing the blank background of the label by the selected colors, if the colors are equal the game keeps them, if they are different the game requires the user to double click in order to return the white background so that he can make another move.",
+    "imgDescription_2": "Gameplay on graphic environment"
+
+}
