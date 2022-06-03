@@ -207,6 +207,9 @@
 .pt_1 {
     padding-top: 1rem
 }
+.pb_0 {
+    padding-bottom: 0 !important;
+}
 .pb_1 {
     padding-bottom: 1rem;
 }
@@ -217,10 +220,10 @@
     margin-top: 1rem;
 }
 .mb_0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 .mb_1 {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
 }
 .ml_1_auto {
     margin: 1rem auto;

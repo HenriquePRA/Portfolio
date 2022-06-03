@@ -1,0 +1,21 @@
+{
+    "header": "Vendor Pop",
+    "about":"Feito em 2020, como projeto final da disciplina de programação orientada a objetos neste projeto são explorados conceitos avançados de POO, como herança, polimorfismo, relacionamentos entre objetos (1:1, 1:*, *:*), sobrecarga de métodos e construtores.",
+    "projectStatus":"Projeto Finalizado",
+    "projectRepo":"Ir ao Repositório",
+    "classesHeader":"Estrutura do Projeto",
+    "classesAbout": "O Sistema é separado em duas aplicações principais a console e a swing, a aplicão console é responsavel por por iniciar a base de dados em memória, cadastrar produtos, cadastrar clientes, cadastrar pedidos e fazer testes unitários para os métodos das classes.",
+    "listItem_1": "Classe Produto - Guarda os campos id, nome, preço e pedidos (ArrayList com os pedidos que contém esse produto), possui getters para todos os campos todavia setters apenas para nomes e preço. possúi metodos específicos para adicionar ou remover pedidos a sua lista de pedidos.",
+    "listItem_2": "Classe Cliente - Guarda os campos, telefone (id), nome, endereço e pedidos (ArrayList com os pedidos associados ao cliente), possui getters para todos os seus campos todavia setters apenas para os campos telefone, nome e endereço e dispõe de métodos específicos para adicionar ou remover pedidos a sua lista de pedidos.",
+    "listItem_3": "Classe Pedido - Guarda os campos, id (auto incrementado), datahora, valortotal (soma do valor de todos os produtos + entrega), entregador, pago (chave booleana), cliente (objeto cliente), produtos (arraylist com os produtos do pedido).",
+    "listItem_4": "Classe PedidoExpress - Especialização de pedido que herda todas os atributos e métodos do mesmo, o pedido express possui um atributo taxa entrega assim como getter e setter para essa axa",
+    "listItem_5": "Classe Repositório - Guarda arraylists para objetos do tipo produto, cliente e pedido. possui métodos para adicionar e buscar objetos as listas de cliente, produto, e pedido. também possui 3 métodos get onde cada um retorna uma das listas de objeto e por fim um método para cancelar pedidos.",
+    "listItem_6": "Classe Fachada - É responsável por criar e realizar a comunicação entre as aplicações (console e gráfica) com o repositório, a fachada realiza testes sobre o que deseja-se adicionar ao repositório assim como para remover, levanta exceção caso os requisitos desses testes não sejam satisfeitos. possui métodos que listam clientes produtos e pedidos com filtros específicos, métodos para alterar o estado de um pedido adicionando e removendo produtos e tornando-o pago.",
+    "consoleAppHeader":"Aplicação Console",
+    "consoleAppAbout":"É responsável por criar a fachada e realizar os testes necessários a fim de captar exceções antes imprevistas, a aplicação console não interage com o usuário apesar de poder ser executada independentemente da aplicação gráfica.",
+    "imgDescription_1": "Aplicação console iniciando os objetos em memória.",
+    "imgDescription_2": "Aplicação console realizando os testes unitários",
+    "swingAppHeader":"Aplicação Swing",
+    "swingAppAbout":"É por onde o usuário final interage com a aplicação dispõe de cinco telas: principal, criação de pedido, alteração de pedido, pagamento de pedido, cancelamento de pedido e listagem. todas as telas são acessadas a partir da tela principal, todas as telas que requerem interação com o usuário possuem label para exibição de exceções.",
+    "imgDescription_3":"Aplicação swing em execução"
+}

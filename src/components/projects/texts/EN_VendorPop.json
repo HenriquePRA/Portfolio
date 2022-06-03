@@ -1,0 +1,21 @@
+{
+    "header": "Vendor Pop",
+    "about":"Made in 2020, as the final project of the object-oriented programming discipline in this project are explored advanced concepts of OOP, such as inheritance, polymorphism, relationships between objects (1:1, 1:*, *:*), method overload and constructor overload.",
+    "projectStatus":"Project Finished",
+    "projectRepo":"Go to Repository",
+    "classesHeader":"Project Structure",
+    "classesAbout":"The system is separated into two main applications, console and swing. The console application is responsible for starting the database in memory, registering Products, registering Customers, registering Orders and doing unit tests for the methods of the classes. The swing application is resposible for interacting with the user.",
+    "listItem_1":"Product Class - Stores the fields id, name, price and orders (ArrayList with orders that contain this product), has getters for all fields but setters only for name and price. has specific methods to add or remove order objects from their ArrayList.",
+    "listItem_2":"Customer Class - Has the fields, phone (id), name, address and orders (ArrayList with orders associated with the customer). has getters for all its fields, but setters only for the phone, name and address fields and has specific methods to add and remove order objects from their ArrayList.",
+    "listItem_3": "Order Class - Stores the fields, id (auto increment), datetime, totalvalue (sum of the value of all products + delivery), delivery person, paid (Boolean key), customer (Customer object), Products (ArrayList with the products of the order).",
+    "listItem_4": "OrderExpress Class - Order specialization that inherits all attributes and methods of the order, the express order has a delivery rate attribute as well as a getter and setter for this rate",
+    "listItem_5": "Repository Class - Stores ArrayLists for Product, Customer and Order classes. has methods for adding and fetching instances to Customer, Product, and order ArrayLists. It also has 3 get methods where each one returns one of the object lists and finally a method to cancel orders.",
+    "listItem_6": "Facade Class - It is responsible for the communication between applications (console and graphics) with the repository, the facade performs unity tests on what you want to add to the repository as well as to remove it, and raises an exception if the requirements of these tests are not satisfied. has methods that list customers products and orders with specific filters, methods to change the status of an order by adding and removing products and making it paid.",
+    "consoleAppHeader":"Console Application",
+    "consoleAppAbout":"It is responsible for creating the facade and carrying out the necessary tests in order to catch previously unforeseen exceptions. The console application does not interact with the user, although it can be executed independently of the graphical application.",
+    "imgDescription_1": "Console application starting objects in memory.",
+    "imgDescription_2": "Console application performing unit tests",
+    "swingAppHeader":"Swing application",
+    "swingAppAbout":"It is where the end user interacts with the application, it has five screens: main, order creation, order change, order payment, order cancellation and listing. all screens are accessed from the main screen, all screens require user interaction and have a label for displaying exceptions.",
+    "imgDescription_3":"Swing application running"
+}
