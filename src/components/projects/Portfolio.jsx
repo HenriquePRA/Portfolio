@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { dealNavigate, showImg, hideImg, getLangText } from '../util/common';
+import { showImg, hideImg, getLangText, transictionRedirect } from '../util/common';
 import DynamicIMG from '../util/DynamicIMG';
+import Navbar from '../util/Navbar';
 import PT_Portfolio from './texts/PT_Portfolio.json';
 import EN_Portfolio from './texts/EN_Portfolio.json';
 
@@ -10,18 +10,19 @@ import CruzSvg from '../../img/misc/cruz.svg'
 import Checkmark from '../../img/misc/check.svg'
 
 import Img1 from '../../img/project/portfolio_1.png'
+import Img1_2 from '../../img/project/portfolio_1_2.png'
 import Img2 from '../../img/project/portfolio_2.png'
+import Img2_2 from '../../img/project/portfolio_2_2.png'
 import Img3 from '../../img/project/portfolio_3.png'
+import Img3_2 from '../../img/project/portfolio_3_2.png'
 
 import '../../css/main.css';
 
 const Portfolio = (props) => {
     
-    const navigate = useNavigate();
-    
-    // State responsible for storing all the page displayed text on a json
+    // state responsible for storing all the page displayed text on a json
     const [pageText, setPageText] = useState({})
-
+        
     // states required for displaying images in the page modal
     const [ showPic, setShowPic ] = useState(false)
     const [ selPic, setSelpic ] = useState([])
@@ -34,23 +35,36 @@ const Portfolio = (props) => {
     // effect responsible for scrolling to top when loading the page
     useEffect(() => {
         window.scrollTo({top: 0, behavior: 'smooth'});
-      }, []);
+    }, []);
+
+    // fade effect when loading the page
+    useEffect(() => {
+        if (props.projTransiction) {
+            setTimeout(() => {
+                props.setProjTransiction(false);
+            }, 300);
+        }
+    }, [props.projTransiction]);
 
     return (
-        <div id="bg-modal" className = {props.darkMode ? "dark-project" : "light-project"}>
-            <div
-                className="retornar"
-                onClick={() => {
-                    dealNavigate(props.isRedirect, navigate)
-                }}                
-            >
-                <span>
-                    {props.isRedirect ? "VOLTAR" : "IR PARA O PORTFOLIO"}
-                </span>
-            </div>
-
+        <div className = {props.darkMode ? "dark-project" : "light-project"}>
+            <Navbar 
+                page={"proj"} 
+                isRedirect={props.isRedirect}
+                darkMode={props.darkMode}
+                setDarkMode={props.setDarkMode}
+                setLang={props.setLang}
+                lang={props.lang}
+                setProjTransiction={props.setProjTransiction}
+                setOnTransition={props.setOnTransition}
+                setPageload={props.setPageload}
+                pageLoad={props.pageLoad}
+            />
             <div className="detail-container">
-                <div className="detail">
+                <div 
+                    className="detail"
+                    style={props.projTransiction ? {"opacity":"0"} : {"opacity":"1"}}
+                >
                     <div className="project-header">
                         <div className="project-name">
                             <h2>{pageText.header}</h2>
@@ -64,6 +78,7 @@ const Portfolio = (props) => {
                         <div className="badges">
                             <DynamicIMG type={"badge"} name={"React"} />
                             <DynamicIMG type={"badge"} name={"Sass"} />
+                            <DynamicIMG type={"badge"} name={"AWS"} />
                         </div>
                         
                         <div className="project-btn">
@@ -75,7 +90,7 @@ const Portfolio = (props) => {
                             <div 
                                 className='link-btn'
                                 onClick={
-                                    () => window.location.href = "https://github.com/HenriquePRA/Visar-Livros"
+                                    () => (transictionRedirect("https://github.com/HenriquePRA/Portfolio"))
                                 }
                             >
                                 <img src={Github} alt="Github"></img> 
@@ -86,7 +101,6 @@ const Portfolio = (props) => {
 
                      {/* Project structure description */}
                      <div className="header">
-                        <DynamicIMG type="icon" name={"React"}/>
                         <div className="header-text">
                             <h4>{pageText.descriptionHeader}</h4>
                         </div>
@@ -100,8 +114,8 @@ const Portfolio = (props) => {
                     <div className="loneImg mt_0 mb_0">
                         <div className="loneImgSubContainer">
                             <img 
-                                src={Img1} 
-                                className="width_100 ml_1_auto "
+                                src={props.darkMode ? Img1_2 : Img1} 
+                                className="width_80 ml_1_auto "
                                 alt="Imagem Modelo Entidade-Relacionamento" 
                                 onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
                                 />
@@ -113,7 +127,6 @@ const Portfolio = (props) => {
 
                     {/* Project pages and modules description */}
                     <div className="header">
-                        <DynamicIMG type="icon" name={"React"}/>
                         <div className="header-text">
                             <h4>{pageText.pagesHeader}</h4>
                         </div>
@@ -136,11 +149,11 @@ const Portfolio = (props) => {
                     <div className="loneImg mt_0 mb_0">
                         <div className="loneImgSubContainer">
                             <img 
-                                src={Img2} 
-                                className="width_100"
+                                src={props.darkMode ? Img2_2 : Img2} 
+                                className="width_80 ml_1_auto"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
                                 onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
-                                />
+                            />
                             <p className="ml_1_auto">
                                 <em>{pageText.imgDescription_2}</em>
                             </p>
@@ -149,7 +162,6 @@ const Portfolio = (props) => {
 
                      {/* Support modules description */}
                      <div className="header">
-                        <DynamicIMG type="icon" name={"React"}/>
                         <div className="header-text">
                             <h4>{pageText.supportModHeader}</h4>
                         </div>
@@ -176,23 +188,23 @@ const Portfolio = (props) => {
                     <div className="loneImg mt_0 mb_0">
                         <div className="loneImgSubContainer">
                             <img 
-                                src={Img3} 
-                                className="width_80 ml_1_auto"
+                                src={props.darkMode ? Img3_2 : Img3}
+                                className="width_60 ml_1_auto"
                                 alt="Imagem Modelo Entidade-Relacionamento" 
                                 onClick={(e) => (showImg(e.currentTarget, setShowPic, setSelpic))} 
-                                />
+                            />
                             <p className="ml_1_auto">
                                 <em>{pageText.imgDescription_3}</em>
                             </p>
                         </div>
                     </div>
 
-                    <div className="section-detail pt_0 pb_1">
+                    <div className="section-detail pt_0 pb_1 mb_1">
                         <ul className="section-detail-list">
                             <li>
                                 <p>
-                                    {pageText.effectsHeader}: 
-                                    {pageText.effects}
+                                    {pageText.transitionsHeader}:
+                                    {pageText.transitionsAbout}
                                 </p>
                             </li>
                         </ul>
@@ -203,21 +215,20 @@ const Portfolio = (props) => {
 
             
             <div 
-                className="bg-modal" 
-                id="bg-modal" 
+                className = {props.darkMode ? "bg-modal dark-modal" : "bg-modal light-modal"}
                 style={!showPic ? 
-                    {"display":"none"}
+                    {"display":"none", "opacity":"0"}
                 :
-                    {"display":"flex"}
+                    {"display":"flex", "opacity":"1"}
                 }
                 onClick={(e) => (hideImg(e, setShowPic))}
             >
                 <div className="imgContainer">
-                    <div className="close" id="fecharImg" >
-                        <img src={CruzSvg} className="close-svg" alt="" />
+                    <div className="close" >
+                        <img src={CruzSvg} className="close-svg" alt=" " />
                     </div>
                     {selPic.map(img => {return img})}
-                </div>                
+                </div>
             </div>
         </div>
     )

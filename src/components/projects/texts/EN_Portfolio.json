@@ -15,10 +15,10 @@
     "supportModHeader":"Support Modules",
     "supModMain": "Shared between the project pages and the main page, the support modules are 3:",
     "navBarHeader": "NavBar",
-    "navBar": "Adapts and helps the navigation inside the page and between pages, changes application display states such as dark mode and displayed language.",
+    "navBar": " Adapts and helps the navigation inside the page and between pages, changes application display states such as dark mode and displayed language.",
     "dynamicIMGHeader":"DynamicIMG",
-    "dynamicIMG":"Used exclusively to return an img with the svg corresponding to a string passed as a parameter, being able to apply properties and style to the returned img.",
+    "dynamicIMG":" Used exclusively to return an img with the svg corresponding to a string passed as a parameter, being able to apply properties and style to the returned img.",
     "imgDescription_3":"Behavior of DynamicIMG",
-    "effectsHeader":"Effects",
-    "effects":"Responsible for animation effects when loading a page, interacting with a module, switching language and changing light/dark display styles."
+    "transitionsHeader":"Effects",
+    "transitionsAbout":" Responsible for transition effects when loading a page, interacting with a module, switching language and changing light/dark display styles. every applied effect use react hooks from main component."
 }

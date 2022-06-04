@@ -15,10 +15,10 @@
     "supportModHeader":"Módulos de Suporte",
     "supModMain": "Compartilhados entre as páginas de projeto e a página principal os módulos de suporte são 3:",
     "navBarHeader": "NavBar",
-    "navBar": "Se adapta e auxilia a navegação interna da página e entre as páginas, altera estados de exibição da aplicação como modo noturno e linguagem exibida",
+    "navBar": " Se adapta e auxilia a navegação interna da página e entre as páginas, altera estados de exibição da aplicação como modo noturno e linguagem exibida",
     "dynamicIMGHeader":"DynamicIMG",
-    "dynamicIMG":"Usada exclusivamente para retornar uma img com o svg correspondente a uma string passada como parametro, sendo capaz de aplicar propriedades e estilo a img de retorno.",
-    "effectsHeader":"Effects",
-    "effects":"Responsável por efeitos de animação ao carregar uma página, interagir com um módulo, trocar linguagem e alterar os estilos de exibição claro/escuro",
+    "dynamicIMG":" Usada exclusivamente para retornar uma img com o svg correspondente a uma string passada como parametro, sendo capaz de aplicar propriedades e estilo a img de retorno.",
+    "transitionsHeader":"Transitions",
+    "transitionsAbout":" Responsável por efeitos de transição ao carregar uma página ou redirecionar de uma página a outra seja a página externa ou interna, trocar linguagem e alterar os estilos de exibição claro/escuro. todos os efeitos aplicados com o uso de hooks do componente principal",
     "imgDescription_3":"Funcionamento do DynamicIMG"
 }

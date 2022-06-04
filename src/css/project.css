@@ -204,6 +204,10 @@
   margin: 1rem auto;
 }
 
+.width_60 {
+  width: 60%;
+}
+
 .width_80 {
   width: 80%;
 }
